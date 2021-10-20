@@ -1,9 +1,16 @@
-"use strict";
-
 const { app, BrowserWindow, ipcMain } = require("electron");
+const isDev = require("electron-is-dev");
+
+// If in development use electron-reload to watch for
+// changes in the current directory
+if (isDev) {
+	require("electron-reload")(__dirname, {
+		electron: require(`${__dirname}/node_modules/electron`),
+	});
+}
 
 async function createWindow() {
-	// Create the browser window.
+	// Create the browser window with node integration
 	const win = new BrowserWindow({
 		minWidth: 800,
 		minHeight: 600,
@@ -19,7 +26,11 @@ async function createWindow() {
 		},
 	});
 
-	win.loadFile("./src/index.html");
+	win.loadFile("./public/index.html");
+
+	// Open the DevTools only if app is in development
+	// If in production, don't show.
+	if (isDev) win.webContents.openDevTools();
 
 	ipcMain.on("shutdown-prompt", () => {
 		app.quit();
