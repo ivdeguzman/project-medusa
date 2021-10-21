@@ -2,13 +2,20 @@
 	import TitleBar from './components/TitleBar.svelte';
 	import MainContainer from './components/MainContainer.svelte';
 	import AddButton from './components/inferace/AddButton.svelte';
+	import AddScreen from './components/AddScreen.svelte';
 	let tabIndex = 0;
+	let addPressed = false;
 </script>
 
-<main>
+{#if addPressed}
+	<AddScreen bind:addPressed />
+{/if}
+<main class:blur="{addPressed}">
 	<TitleBar bind:tabIndex />
 	<MainContainer {tabIndex} />
-	<AddButton />
+	{#if tabIndex != 2}
+		<AddButton bind:addPressed />
+	{/if}
 </main>
 
 <style>
@@ -19,4 +26,7 @@
 		display: grid;
 		grid-template-rows: auto 1fr;
 	}
+	.blur {
+		filter: blur(2.5px);
+	} 
 </style>

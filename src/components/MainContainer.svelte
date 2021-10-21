@@ -7,25 +7,30 @@
   let searchValue = "";
 </script>
 
-<div>
+<div class="wrapper">
   {#if tabIndex === 0 || tabIndex === 1}
     <SearchBar bind:searchValue />
   {/if}
   {#if tabIndex === 0}
-    <StudentsContainer {searchValue} />
+    <div class="body">
+      <StudentsContainer {searchValue} />
+    </div>
   {:else if tabIndex === 1}
-    <InstructorsContainer {searchValue} />
+    <div class="body">
+      <InstructorsContainer {searchValue} />
+    </div>
   {:else}
     <LogbookContainer />
   {/if}
 </div>
 
 <style>
-  div {
+  .wrapper {
     width: 100vw;
 		height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr;
     overflow: auto;
+  }
+  .body {
+    margin-top: 67px;
   }
 </style>

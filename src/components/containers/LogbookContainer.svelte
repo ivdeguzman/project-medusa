@@ -1,5 +1,4 @@
 <div>
-  <p>Logbook</p>
 </div>
 
 <style>

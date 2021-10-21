@@ -1,6 +1,6 @@
 <script>
   const { ipcRenderer } = require("electron");
-  export let tabIndex; 
+  export let tabIndex;
 
   function shutdownPrompt() {
     ipcRenderer.send("shutdown-prompt");
@@ -42,13 +42,11 @@
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
-          fill="#000"
         />
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
-          fill="#000"
         />
       </svg>
     </button>
@@ -66,7 +64,6 @@
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"
-          fill="#000"
         />
       </svg>
     </button>
@@ -104,13 +101,15 @@
 
 <style>
   .titlebar {
-	width: 100vw;
-	height: 65px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.025);
-	border-radius: 10px 10px 0px 0px;
-	display: grid;
-	grid-template-columns: 1fr auto 1fr;
-	align-items: center;
+    width: 100vw;
+    height: 65px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.025);
+    border-radius: 10px 10px 0px 0px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background: #efefef;
+    z-index: 10;
   }
   .button {
     display: flex;
@@ -121,11 +120,17 @@
     place-items: center;
     margin: 0 7px;
     border: none;
+    background: none;
+    transition: ease-in-out 100ms;
   }
   .button button:hover,
   .button.tab button.active {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+  }
+  .button button:hover {
+    fill: #FAD02C;
+    color: #FAD02C;
   }
   .button button:active,
   .button.tab button.active:active {
