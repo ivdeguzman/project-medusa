@@ -1,3 +1,6 @@
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
 const { app, BrowserWindow, ipcMain } = require("electron");
 const isDev = require("electron-is-dev");
 
@@ -6,6 +9,74 @@ const isDev = require("electron-is-dev");
 if (isDev) {
 	require("electron-reload")(__dirname, {
 		electron: require(`${__dirname}/node_modules/electron`),
+	});
+}
+
+async function loadRest(win) {
+	win.webContents.send("status-message", "RESTful API is loading...");
+
+	// Routes
+	const StudentRoute = require("./rest/routes/StudentRoute.js");
+	const InstructorRoute = require("./rest/routes/InstructorRoute.js");
+
+	// RESTful API
+	const rest = express();
+	rest.use(express.urlencoded({ extended: true }));
+	rest.use(express.json());
+	rest.use(cors());
+
+	rest.use("/student", StudentRoute);
+	rest.use("/instructor", InstructorRoute);
+
+	rest.get("/", (req, res) => {
+		res.send("Home Directory");
+	});
+
+	const uri =
+		"mongodb://127.0.0.1:27017/project_medusa&gssapiServiceName=mongodb";
+	rest.listen(process.env.PORT || 14500, () => {
+		setTimeout(() => {
+			win.webContents.send(
+				"status-message",
+				"RESTful API loaded successfully..."
+			);
+			setTimeout(() => {
+				win.webContents.send("status-message", "Connecting to database...");
+				setTimeout(() => {
+					// Database
+					mongoose.connect(
+						uri,
+						{ useNewUrlParser: true, useUnifiedTopology: true },
+						(err) => {
+							if (err != null) {
+								setTimeout(() => {
+									win.webContents.send(
+										"status-message",
+										"Connection error, exiting application..."
+									);
+									setTimeout(() => {
+										app.quit();
+									}, 1000);
+								}, 1500);
+							} else {
+								setTimeout(() => {
+									win.webContents.send(
+										"status-message",
+										"Connection established..."
+									);
+									setTimeout(() => {
+										win.webContents.send(
+											"status-message",
+											"Starting application..."
+										);
+									}, 1000);
+								}, 1500);
+							}
+						}
+					);
+				});
+			}, 1000);
+		}, 1500);
 	});
 }
 
@@ -27,6 +98,11 @@ async function createWindow() {
 	});
 
 	win.loadFile("./public/index.html");
+	win.once("ready-to-show", () => {
+		setTimeout(() => {
+			loadRest(win);
+		}, 2000);
+	});
 
 	// Open the DevTools only if app is in development
 	// If in production, don't show.

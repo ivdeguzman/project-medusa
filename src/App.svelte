@@ -3,20 +3,26 @@
 	import MainContainer from './components/MainContainer.svelte';
 	import AddButton from './components/inferace/AddButton.svelte';
 	import AddScreen from './components/AddScreen.svelte';
+	import LoadingScreen from './components/LoadingScreen.svelte'
 	let tabIndex = 0;
 	let addPressed = false;
+	let doneLoading = false;
 </script>
 
-{#if addPressed}
-	<AddScreen bind:addPressed />
-{/if}
-<main class:blur="{addPressed}">
-	<TitleBar bind:tabIndex />
-	<MainContainer {tabIndex} />
-	{#if tabIndex != 2}
-		<AddButton bind:addPressed />
+{#if !doneLoading}
+	<LoadingScreen bind:doneLoading />
+{:else}
+	{#if addPressed}
+		<AddScreen bind:addPressed />
 	{/if}
-</main>
+	<main class:blur="{addPressed}">
+		<TitleBar bind:tabIndex />
+		<MainContainer {tabIndex} />
+		{#if tabIndex != 2}
+			<AddButton bind:addPressed />
+		{/if}
+	</main>
+{/if}
 
 <style>
 	main {

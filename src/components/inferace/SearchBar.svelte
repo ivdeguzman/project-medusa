@@ -61,9 +61,9 @@
     height: auto;
     display: flex;
     justify-content: center;
-    margin-top: 17.5px;
-    position: absolute;
+    position: sticky;
     z-index: 5;
+    top: 20px;
   }
   input, button {
     border: none;
@@ -89,7 +89,7 @@
     transition: ease-in-out 100ms;
   }
   svg.delete:hover {
-    stroke: #FAD02C;
+    stroke: #63b9db;
     transition: ease-in-out 100ms;
   }
 </style>

@@ -21,7 +21,7 @@
     padding: 7.5px;
     border: none;
     border-radius: 100%;
-    background: #FAD02C;
+    background: #63b9db;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   }
   button svg {

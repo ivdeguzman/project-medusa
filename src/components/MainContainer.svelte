@@ -29,8 +29,10 @@
     width: 100vw;
 		height: 100%;
     overflow: auto;
+    display: flex;
+    flex-flow: column nowrap;
   }
   .body {
-    margin-top: 67px;
+    margin-top: 40px;
   }
 </style>

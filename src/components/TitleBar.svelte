@@ -1,4 +1,5 @@
 <script>
+  import { fly } from 'svelte/transition';
   const { ipcRenderer } = require("electron");
   export let tabIndex;
 
@@ -25,7 +26,7 @@
   }
 </script>
 
-<div class="titlebar" style="-webkit-app-region: drag">
+<div transition:fly={{ y: -50, duration: 250 }} class="titlebar" style="-webkit-app-region: drag">
   <!-- UI Button Left | Start -->
   <div class="button control">
     <!-- Close Button-->
@@ -129,8 +130,8 @@
     border-radius: 10px;
   }
   .button button:hover {
-    fill: #FAD02C;
-    color: #FAD02C;
+    fill: #63b9db;
+    color: #63b9db;
   }
   .button button:active,
   .button.tab button.active:active {
@@ -167,6 +168,6 @@
     width: 125px;
     height: 40px;
     border-radius: 10px;
-    font-weight: 375;
+    font-weight: 350;
   }
 </style>
