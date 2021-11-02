@@ -15,7 +15,7 @@
   });
 
   onDestroy(() => {
-    statusMessage = null;
+    statusMessage = undefined;
   })
 
 </script>
@@ -33,13 +33,14 @@
     </linearGradient>
     </defs>
   </svg>
+  <p class="subtitle">"We're always watching."</p>
   <p>{statusMessage}</p>
 </div>
   
 
 <style>
   .eye {
-    animation: blink 1s infinite;
+    animation: blink 1.5s infinite;
   }
   div {
     width: 100vw;
@@ -57,6 +58,10 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     color: #63b9db;
+  }
+  .subtitle {
+    font-size: 22px;
+    font-weight: 350;
   }
   @keyframes blink {
     0% {

@@ -6,7 +6,7 @@
 	import LoadingScreen from './components/LoadingScreen.svelte'
 	let tabIndex = 0;
 	let addPressed = false;
-	let doneLoading = false;
+	let doneLoading = true;
 </script>
 
 {#if !doneLoading}

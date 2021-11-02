@@ -29,7 +29,14 @@
 	"dependencies": {
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
+		"moment": "^2.29.1",
 		"mongoose": "^6.0.12",
-		"sirv-cli": "^1.0.0"
+		"sirv-cli": "^1.0.0",
+		"socket.io": "^4.3.1",
+		"socket.io-client": "^4.3.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kNaiph/project-medusa.git"
 	}
 }

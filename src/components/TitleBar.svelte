@@ -16,7 +16,7 @@
     tabIndex = 0;
     console.log(tabIndex);
   }
-  function instructorsTab() {
+  function employeesTab() {
     tabIndex = 1;
     console.log(tabIndex);
   }
@@ -74,7 +74,7 @@
   <!-- UI Button Center | Start -->
   <div class="button tab">
     <button class:active="{tabIndex === 0}" id="studentsTab" on:click={studentsTab}>Students</button>
-    <button class:active="{tabIndex === 1}" id="instructorsTab" on:click={instructorsTab}>Instructors</button>
+    <button class:active="{tabIndex === 1}" id="employeesTab" on:click={employeesTab}>Employees</button>
     <button class:active="{tabIndex === 2}" id="logbookTab" on:click={logbookTab}>Logbook</button>
   </div>
   <!-- UI Button Center | End -->

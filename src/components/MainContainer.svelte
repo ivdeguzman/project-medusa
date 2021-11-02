@@ -1,6 +1,6 @@
 <script>
   import StudentsContainer from "./Containers/StudentsContainer.svelte";
-  import InstructorsContainer from "./Containers/InstructorsContainer.svelte";
+  import EmployeesContainer from "./Containers/EmployeesContainer.svelte";
   import LogbookContainer from "./Containers/LogbookContainer.svelte";
   import SearchBar from "../components/inferace/SearchBar.svelte";
   export let tabIndex;
@@ -13,11 +13,11 @@
   {/if}
   {#if tabIndex === 0}
     <div class="body">
-      <StudentsContainer {searchValue} />
+      <StudentsContainer bind:searchValue />
     </div>
   {:else if tabIndex === 1}
     <div class="body">
-      <InstructorsContainer {searchValue} />
+      <EmployeesContainer bind:searchValue />
     </div>
   {:else}
     <LogbookContainer />
@@ -33,6 +33,6 @@
     flex-flow: column nowrap;
   }
   .body {
-    margin-top: 40px;
+    margin: 32px 75px;
   }
 </style>

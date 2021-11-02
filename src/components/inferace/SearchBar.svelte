@@ -89,7 +89,7 @@
     transition: ease-in-out 100ms;
   }
   svg.delete:hover {
-    stroke: #63b9db;
+    stroke: #E6C2BF;
     transition: ease-in-out 100ms;
   }
 </style>
