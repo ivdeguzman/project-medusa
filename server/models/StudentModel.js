@@ -25,10 +25,6 @@ const StudentModel = mongoose.Schema({
 			required: true,
 		},
 	},
-	UserImage: {
-		type: String,
-		require: true,
-	},
 	LoggedIn: {
 		type: Boolean,
 		require: true,

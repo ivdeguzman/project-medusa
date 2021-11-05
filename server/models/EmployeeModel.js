@@ -11,10 +11,6 @@ const EmployeeModel = mongoose.Schema({
 			required: true,
 		},
 	},
-	UserImage: {
-		type: String,
-		require: true,
-	},
 	Occupation: {
 		type: String,
 		require: true,

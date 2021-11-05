@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const { app, BrowserWindow, ipcMain } = require("electron");
+const { app, BrowserWindow, ipcMain, dialog } = require("electron");
 const isDev = require("electron-is-dev");
 const http = require("http");
 const socketio = require("socket.io");
@@ -107,7 +107,6 @@ async function loadRest(win) {
 							First: change.fullDocument.Name.First,
 							Last: change.fullDocument.Name.Last,
 						},
-						UserImage: change.fullDocument.UserImage,
 						Occupation: change.fullDocument.Occupation,
 						LoggedIn: change.fullDocument.LoggedIn,
 					};
@@ -120,7 +119,6 @@ async function loadRest(win) {
 							First: change.fullDocument.Name.First,
 							Last: change.fullDocument.Name.Last,
 						},
-						UserImage: change.fullDocument.UserImage,
 						Occupation: change.fullDocument.Occupation,
 						LoggedIn: change.fullDocument.LoggedIn,
 					};
@@ -176,9 +174,10 @@ async function loadRest(win) {
 		});
 	});
 
-	// Fetch Data Upon Connection (No User Interaction-)
 	io.on("connection", (socket) => {
 		console.log(socket.id + " has connected.");
+
+		// Fetch Data Upon Connection (No User Interaction)
 		socket.on("employeeDataGet", async () => {
 			try {
 				const employeeData = await EmployeeModel.find();
@@ -187,13 +186,52 @@ async function loadRest(win) {
 				socket.emit("employeeDataRetriveList", "Error");
 			}
 		});
-
 		socket.on("studentDataGet", async () => {
 			try {
 				const studentData = await StudentModel.find();
 				socket.emit("studentDataRetriveList", studentData);
 			} catch (err) {
 				socket.emit("studentDataRetriveList", "Error");
+			}
+		});
+
+		// Post Data Upon Request (User Interaction Available)
+		socket.on("student-data-post-request", (StudentData) => {
+			const newStudentData = new StudentModel({
+				Name: {
+					First: StudentData.Name.First,
+					Last: StudentData.Name.Last,
+				},
+				Student: {
+					Course: StudentData.Student.Course,
+					Year: StudentData.Student.Year,
+					Section: StudentData.Student.Section,
+				},
+				LoggedIn: false,
+			});
+
+			try {
+				newStudentData.save();
+				socket.emit("user-data-post-status", 1);
+			} catch (err) {
+				socket.emit("user-data-post-status", 0);
+			}
+		});
+		socket.on("employee-data-post-request", (EmployeeData) => {
+			const newEmployeeData = new EmployeeModel({
+				Name: {
+					First: EmployeeData.Name.First,
+					Last: EmployeeData.Name.Last,
+				},
+				Occupation: EmployeeData.Occupation,
+				LoggedIn: false,
+			});
+
+			try {
+				newEmployeeData.save();
+				socket.emit("user-data-post-status", 1);
+			} catch (err) {
+				socket.emit("user-data-post-status", 0);
 			}
 		});
 	});
@@ -235,9 +273,29 @@ async function createWindow() {
 	});
 
 	ipcMain.on("maximize-window", () => {
-		if (win.isMaximized()) {
-			win.restore();
-		} else win.maximize();
+		win.isMaximized() ? win.restore() : win.maximize();
+	});
+
+	ipcMain.on("select-image", (event) => {
+		dialog
+			.showOpenDialog(win, {
+				properties: ["openFile"],
+				filters: [
+					{
+						name: "Images",
+						extensions: ["jpg", "jpeg", "png"],
+					},
+				],
+			})
+			.then((result) => {
+				filePath = result.filePaths[0];
+				filePath == undefined
+					? (event.returnValue = "")
+					: (event.returnValue = filePath);
+			})
+			.catch((e) => {
+				window.alert("An error occured: ", e);
+			});
 	});
 }
 

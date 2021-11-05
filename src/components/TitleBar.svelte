@@ -137,6 +137,8 @@
   .button.tab button.active:active {
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    fill: #63b9db;
+    color: #63b9db;
   }
   .button.control:first-child {
     display: flex;

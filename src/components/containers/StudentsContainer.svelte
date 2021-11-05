@@ -1,6 +1,6 @@
 <script>
   import { onDestroy, onMount } from "svelte";
-  import StudentsCard from "../inferace/StudentsCard.svelte";
+  import StudentsCard from "../interface/StudentsCard.svelte";
   export let searchValue;
   let StudentData;
 
@@ -29,7 +29,6 @@
         Student.Student.Course = update.Student.Course;
         Student.Student.Year = update.Student.Year;
         Student.Student.Section = update.Student.Section;
-        Student.UserImage = update.UserImage;
         Student.LoggedIn = update.LoggedIn;
       }
     });

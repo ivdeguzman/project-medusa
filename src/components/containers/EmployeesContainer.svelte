@@ -1,6 +1,6 @@
 <script>
   import { onDestroy, onMount } from "svelte";
-  import EmployeesCard from "../inferace/EmployeesCard.svelte";
+  import EmployeesCard from "../interface/EmployeesCard.svelte";
   export let searchValue;
   let EmployeeData;
 
@@ -26,7 +26,6 @@
       if (Employee._id == update._id) {
         Employee.Name.First = update.Name.First;
         Employee.Name.Last = update.Name.Last;
-        Employee.UserImage = update.UserImage;
         Employee.Occupation = update.Occupation;
         Employee.LoggedIn = update.LoggedIn;
       }

@@ -1,8 +1,8 @@
 <script>
-  import StudentsContainer from "./Containers/StudentsContainer.svelte";
-  import EmployeesContainer from "./Containers/EmployeesContainer.svelte";
-  import LogbookContainer from "./Containers/LogbookContainer.svelte";
-  import SearchBar from "../components/inferace/SearchBar.svelte";
+  import StudentsContainer from "./containers/StudentsContainer.svelte";
+  import EmployeesContainer from "./containers/EmployeesContainer.svelte";
+  import LogbookContainer from "./containers/LogbookContainer.svelte";
+  import SearchBar from "./interface/SearchBar.svelte";
   export let tabIndex;
   let searchValue = "";
 </script>
@@ -28,7 +28,8 @@
   .wrapper {
     width: 100vw;
 		height: 100%;
-    overflow: auto;
+    overflow: scroll;
+    overflow-x: hidden;
     display: flex;
     flex-flow: column nowrap;
   }
