@@ -38,8 +38,8 @@
     align-items: center;
   }
   svg {
-    width: 150px;
-    height: 150px;;
+    width: 125px;
+    height: 125px;;
   }
   h1 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

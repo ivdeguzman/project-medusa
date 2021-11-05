@@ -4877,7 +4877,7 @@ var app = (function () {
     		c: function create() {
     			h1 = element("h1");
     			h1.textContent = "Request failed, please contact admin or try again later.";
-    			attr_dev(h1, "class", "svelte-6rmlqb");
+    			attr_dev(h1, "class", "svelte-xc3jhf");
     			add_location(h1, file$3, 26, 4, 9001);
     		},
     		m: function mount(target, anchor) {
@@ -4907,7 +4907,7 @@ var app = (function () {
     		c: function create() {
     			h1 = element("h1");
     			h1.textContent = "Request complete, please restart the Raspberry Pi.";
-    			attr_dev(h1, "class", "svelte-6rmlqb");
+    			attr_dev(h1, "class", "svelte-xc3jhf");
     			add_location(h1, file$3, 24, 4, 8907);
     		},
     		m: function mount(target, anchor) {
@@ -4937,7 +4937,7 @@ var app = (function () {
     		c: function create() {
     			h1 = element("h1");
     			h1.textContent = "Processing your request...";
-    			attr_dev(h1, "class", "svelte-6rmlqb");
+    			attr_dev(h1, "class", "svelte-xc3jhf");
     			add_location(h1, file$3, 22, 4, 8837);
     		},
     		m: function mount(target, anchor) {
@@ -5029,9 +5029,9 @@ var app = (function () {
     			attr_dev(svg, "viewBox", "0 0 60 68");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			attr_dev(svg, "class", "svelte-6rmlqb");
+    			attr_dev(svg, "class", "svelte-xc3jhf");
     			add_location(svg, file$3, 9, 2, 157);
-    			attr_dev(div, "class", "container svelte-6rmlqb");
+    			attr_dev(div, "class", "container svelte-xc3jhf");
     			add_location(div, file$3, 8, 0, 130);
     		},
     		l: function claim(nodes) {
@@ -6355,12 +6355,12 @@ var app = (function () {
     			attr_dev(path0, "d", "M30.0002 7.73627e-10C26.0606 -2.5826e-05 22.1595 0.6466 18.5197 1.90296C14.8799 3.15931 11.5727 5.0008 8.78687 7.32227C6.00109 9.64374 3.79128 12.3997 2.28363 15.4329C0.775975 18.466 -3.46703e-06 21.717 0 25C0.0043317 25.7207 0.0460567 26.4409 0.125058 27.1585H59.8749C59.9539 26.4409 59.9956 25.7207 60 25C60 18.3696 56.8393 12.0108 51.2133 7.32242C45.5872 2.63401 37.9567 6.29893e-05 30.0002 7.73624e-10V7.73627e-10ZM2.64842 29.8044C1.25038 29.8044 0.125058 30.752 0.125058 31.9293V48.8378C0.125058 50.0152 1.25038 50.9633 2.64842 50.9633C4.04645 50.9633 5.1723 50.0152 5.1723 48.8378V31.9293C5.1723 30.752 4.04645 29.8044 2.64842 29.8044ZM10.5859 29.8044C9.18788 29.8044 8.06256 30.752 8.06256 31.9293V48.8378C8.06256 50.0152 9.18788 50.9633 10.5859 50.9633C11.984 50.9633 13.1098 50.0152 13.1098 48.8378V31.9293C13.1098 30.752 11.984 29.8044 10.5859 29.8044ZM18.5234 29.8044C17.1254 29.8044 16.0001 30.752 16.0001 31.9293V48.8378C16.0001 50.0152 17.1254 50.9633 18.5234 50.9633C19.9215 50.9633 21.0473 50.0152 21.0473 48.8378V31.9293C21.0473 30.752 19.9215 29.8044 18.5234 29.8044ZM26.9901 29.8044C25.592 29.8044 24.4667 30.752 24.4667 31.9293V48.8378C24.4667 50.0152 25.592 50.9633 26.9901 50.9633C28.3881 50.9633 29.514 50.0152 29.514 48.8378V31.9293C29.514 30.752 28.3881 29.8044 26.9901 29.8044ZM34.9276 29.8044C33.5295 29.8044 32.4042 30.752 32.4042 31.9293V48.8378C32.4042 50.0152 33.5295 50.9633 34.9276 50.9633C36.3256 50.9633 37.4515 50.0152 37.4515 48.8378V31.9293C37.4515 30.752 36.3256 29.8044 34.9276 29.8044ZM50.0631 30.7118C48.4034 30.6528 46.7552 31.0081 45.2672 31.7455C43.7792 32.483 42.4983 33.5794 41.5401 34.9358C40.0556 37.0375 39.4383 39.6306 39.8166 42.1757C40.1949 44.7208 41.5398 47.0222 43.5715 48.6012C45.6031 50.1801 48.1651 50.9152 50.7247 50.6536C53.2844 50.392 55.6447 49.1538 57.3148 47.1966L58.368 45.7057C59.6546 43.4774 60.0328 40.8389 59.4238 38.3389C58.8149 35.8389 57.2657 33.6698 55.0984 32.2828C53.5908 31.3179 51.8519 30.7754 50.0631 30.7118V30.7118Z");
     			attr_dev(path0, "fill", "url(#paint0_linear_2:3)");
     			add_location(path0, file$1, 24, 4, 589);
-    			attr_dev(path1, "class", "eye svelte-242ugj");
+    			attr_dev(path1, "class", "eye svelte-120a2cg");
     			attr_dev(path1, "opacity", "0.8");
     			attr_dev(path1, "d", "M51.9176 42.7785C51.4165 43.3657 50.7084 43.7372 49.9405 43.8157C49.1726 43.8942 48.404 43.6736 47.7945 43.1999C47.185 42.7262 46.7816 42.0358 46.6681 41.2723C46.5546 40.5088 46.7398 39.7309 47.1852 39.1004C47.6305 38.4699 48.3018 38.0353 49.0593 37.8871C49.8169 37.7388 50.6024 37.8883 51.2526 38.3044C51.9028 38.7205 52.3675 39.3712 52.5502 40.1212C52.7329 40.8712 52.6195 41.6627 52.2336 42.3312");
     			attr_dev(path1, "fill", "black");
     			add_location(path1, file$1, 25, 4, 2634);
-    			attr_dev(path2, "class", "eye svelte-242ugj");
+    			attr_dev(path2, "class", "eye svelte-120a2cg");
     			attr_dev(path2, "opacity", "0.8");
     			attr_dev(path2, "d", "M51.7044 40.7437C51.4288 41.0667 51.0393 41.271 50.617 41.3142C50.1946 41.3574 49.7719 41.2361 49.4367 40.9755C49.1015 40.715 48.8796 40.3353 48.8171 39.9153C48.7547 39.4954 48.8566 39.0675 49.1015 38.7208C49.3465 38.374 49.7157 38.135 50.1323 38.0535C50.549 37.9719 50.981 38.0541 51.3386 38.283C51.6962 38.5118 51.9519 38.8697 52.0523 39.2822C52.1528 39.6947 52.0904 40.1301 51.8782 40.4977");
     			attr_dev(path2, "fill", "#D5F6FF");
@@ -6386,13 +6386,13 @@ var app = (function () {
     			attr_dev(svg, "viewBox", "0 0 60 68");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			attr_dev(svg, "class", "svelte-242ugj");
+    			attr_dev(svg, "class", "svelte-120a2cg");
     			add_location(svg, file$1, 23, 2, 488);
-    			attr_dev(p0, "class", "subtitle svelte-242ugj");
+    			attr_dev(p0, "class", "subtitle svelte-120a2cg");
     			add_location(p0, file$1, 35, 2, 9142);
-    			attr_dev(p1, "class", "svelte-242ugj");
+    			attr_dev(p1, "class", "svelte-120a2cg");
     			add_location(p1, file$1, 36, 2, 9194);
-    			attr_dev(div, "class", "svelte-242ugj");
+    			attr_dev(div, "class", "svelte-120a2cg");
     			add_location(div, file$1, 22, 0, 479);
     		},
     		l: function claim(nodes) {
@@ -6565,7 +6565,7 @@ var app = (function () {
     			if (if_block1) if_block1.c();
     			attr_dev(main, "class", "svelte-1xdv1o7");
     			toggle_class(main, "blur", /*addPressed*/ ctx[1]);
-    			add_location(main, file, 17, 1, 523);
+    			add_location(main, file, 17, 1, 525);
     		},
     		m: function mount(target, anchor) {
     			if (if_block0) if_block0.m(target, anchor);
@@ -6958,8 +6958,8 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
     	let tabIndex = 0;
-    	let addPressed = true;
-    	let doneLoading = true;
+    	let addPressed = false;
+    	let doneLoading = false;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {

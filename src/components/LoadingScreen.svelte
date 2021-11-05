@@ -51,8 +51,8 @@
     align-items: center;
   }
   svg {
-    width: 20%;
-    height: 20%;
+    width: 192px;
+    height: 108px;
   }
   p {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
