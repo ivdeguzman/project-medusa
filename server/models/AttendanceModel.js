@@ -14,6 +14,10 @@ const AttendanceModel = mongoose.Schema({
 			type: Number,
 			require: true,
 		},
+		Second: {
+			type: Number,
+			require: true,
+		},
 	},
 	Date: {
 		Day: {
@@ -28,6 +32,14 @@ const AttendanceModel = mongoose.Schema({
 			type: Number,
 			require: true,
 		},
+	},
+	LoggedIn: {
+		type: Boolean,
+		require: true,
+	},
+	Via: {
+		type: String,
+		require: true,
 	},
 });
 

@@ -6,7 +6,8 @@
 	import LoadingScreen from './components/LoadingScreen.svelte'
 	let tabIndex = 0;
 	let addPressed = false;
-	let doneLoading = false;
+	let doneLoading = true;
+	let selectedProfile = null;
 </script>
 
 {#if !doneLoading}
@@ -15,10 +16,10 @@
 	{#if addPressed}
 		<AddScreen bind:addPressed {tabIndex} />
 	{/if}
-	<main class:blur="{addPressed}">
-		<TitleBar bind:tabIndex />
-		<MainContainer {tabIndex} />
-		{#if tabIndex != 2}
+	<main>
+		<TitleBar bind:tabIndex bind:selectedProfile />
+		<MainContainer {tabIndex} bind:selectedProfile />
+		{#if tabIndex != 2 && selectedProfile == null}
 			<AddButton bind:addPressed />
 		{/if}
 	</main>
@@ -33,8 +34,4 @@
 		grid-template-rows: auto 1fr;
 		transition: filter ease-in-out 200ms;
 	}
-	.blur {
-		transition: filter ease-in-out 200ms;
-		filter: blur(2.5px);
-	} 
 </style>

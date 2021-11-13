@@ -1,9 +1,13 @@
 <script>
   import { fly, fade } from 'svelte/transition';
-  export let Student;
+  export let Student, selectedProfile;
+
+  function selectProfile() {
+    selectedProfile = Student;
+  }
 </script>
 
-<div class="card" in:fly={{ delay: 200, y: -50, duration: 250 }} out:fade={{ duration: 200 }}>
+<div class="card" in:fly={{ delay: 350, y: -50, duration: 200 }} out:fade={{ duration: 200 }}>
   <div class="status" class:check={Student.LoggedIn} class:cross={!Student.LoggedIn}>
     {#if Student.LoggedIn}
       <svg xmlns="http://www.w3.org/2000/svg" class="check" fill="none" viewBox="0 0 24 24">
@@ -17,10 +21,10 @@
     {/if}
   </div>
   <div class="details">
-    <p>{Student.Name.First} {Student.Name.Last}</p>
+    <p>{Student.Name.Last}, {Student.Name.First}</p>
     <p>{Student.Student.Course} {Student.Student.Year}-{Student.Student.Section}</p>
   </div>
-  <button on:click={console.log(Student.Name)}>
+  <button on:click={selectProfile}>
     <svg xmlns="http://www.w3.org/2000/svg" class="carat" class:check={Student.LoggedIn} class:cross={!Student.LoggedIn} fill="none" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
     </svg>
@@ -64,6 +68,8 @@
   div.details {
     margin: 0 25px;
     width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   p:nth-child(2) {
     color: rgba(0, 0, 0, 0.5);
@@ -91,5 +97,10 @@
   button:active svg.cross {
     stroke: #E6C2BF;
     stroke-width: 2px;
+  }
+  @media screen and (min-width: 1258px) {
+    div.card {
+      width: 960px;
+    }
   }
 </style>

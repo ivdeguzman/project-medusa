@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const { app, BrowserWindow, ipcMain, dialog } = require("electron");
 const isDev = require("electron-is-dev");
 const http = require("http");
-const socketio = require("socket.io");
 
 // If in development use electron-reload to watch for
 // changes in the current directory
@@ -20,7 +19,12 @@ async function loadRest(win) {
 	// Library Init
 	const rest = express();
 	const server = http.createServer(rest);
-	const io = socketio(server);
+	const io = require("socket.io")(server, {
+		cors: {
+			origin: "*",
+			methods: ["GET", "POST", "PATCH", "INSERT"],
+		},
+	});
 
 	// Routes
 	const StudentRoute = require("./server/routes/StudentRoute.js");
@@ -29,6 +33,7 @@ async function loadRest(win) {
 	// Models
 	const StudentModel = require("./server/models/StudentModel.js");
 	const EmployeeModel = require("./server/models/EmployeeModel.js");
+	const AttendanceModel = require("./server/models/AttendanceModel");
 
 	// RESTful API
 	rest.use(express.urlencoded({ extended: true }));
@@ -96,6 +101,9 @@ async function loadRest(win) {
 		const studentChangeStream = connection
 			.collection("studentmodels")
 			.watch({ fullDocument: "updateLookup" });
+		const attendanceChangeStream = connection
+			.collection("attendancemodels")
+			.watch({ fullDocument: "updateLookup" });
 
 		employeeChangeStream.on("change", (change) => {
 			let Employee;
@@ -145,7 +153,6 @@ async function loadRest(win) {
 							Year: change.fullDocument.Student.Year,
 							Section: change.fullDocument.Student.Section,
 						},
-						UserImage: change.fullDocument.UserImage,
 						LoggedIn: change.fullDocument.LoggedIn,
 					};
 					io.emit("studentDataInsert", Student);
@@ -162,7 +169,6 @@ async function loadRest(win) {
 							Year: change.fullDocument.Student.Year,
 							Section: change.fullDocument.Student.Section,
 						},
-						UserImage: change.fullDocument.UserImage,
 						LoggedIn: change.fullDocument.LoggedIn,
 					};
 					io.emit("studentDataUpdate", Student);
@@ -172,31 +178,149 @@ async function loadRest(win) {
 					break;
 			}
 		});
+
+		attendanceChangeStream.on("change", (change) => {
+			let Attendance;
+			switch (change.operationType) {
+				case "insert":
+					Attendance = {
+						_id: change.fullDocument._id,
+						UserId: change.fullDocument.UserId,
+						Time: {
+							Hour: change.fullDocument.Time.Hour,
+							Minute: change.fullDocument.Time.Minute,
+							Second: change.fullDocument.Time.Second,
+						},
+						Date: {
+							Day: change.fullDocument.Date.Day,
+							Month: change.fullDocument.Date.Month,
+							Year: change.fullDocument.Date.Year,
+						},
+						LoggedIn: change.fullDocument.LoggedIn,
+						Via: change.fullDocument.Via,
+					};
+					io.emit("attendanceDataInsert", Attendance);
+					break;
+				case "update":
+					Attendance = {
+						_id: change.fullDocument._id,
+						UserId: change.fullDocument.UserId,
+						Time: {
+							Hour: change.fullDocument.Time.Hour,
+							Minute: change.fullDocument.Time.Minute,
+							Second: change.fullDocument.Time.Second,
+						},
+						Date: {
+							Day: change.fullDocument.Date.Day,
+							Month: change.fullDocument.Date.Month,
+							Year: change.fullDocument.Date.Year,
+						},
+						LoggedIn: change.fullDocument.LoggedIn,
+						Via: change.fullDocument.Via,
+					};
+					io.emit("attendanceDataUpdate", Attendance);
+					break;
+				case "delete":
+					io.emit("attendanceDataDelete", change.documentKey._id);
+					break;
+			}
+		});
 	});
 
 	io.on("connection", (socket) => {
+		let start = 0;
+		let end = 20;
 		console.log(socket.id + " has connected.");
 
+		// Fetch Document Count Upon Connection (No User Interaction)
+		socket.on("employeeDocumentCountGet", async () => {
+			EmployeeModel.count((err, number) => {
+				if (err) socket.emit("employeeDocumentRetrieveList", "Error");
+				else {
+					let indices = number / end;
+					Number.isInteger(indices) && indices != 1
+						? socket.emit("employeeDocumentRetrieveList", indices)
+						: indices <= 1
+						? socket.emit("employeeDocumentRetrieveList", 0)
+						: socket.emit(
+								"employeeDocumentRetrieveList",
+								parseInt(indices) + 1
+						  );
+					indices = undefined;
+				}
+			});
+		});
+		socket.on("studentDocumentCountGet", async () => {
+			StudentModel.count((err, number) => {
+				if (err) socket.emit("studentDocumentRetrieveList", "Error");
+				else {
+					let indices = number / end;
+					Number.isInteger(indices) && indices != 1
+						? socket.emit("studentDocumentRetrieveList", indices)
+						: indices <= 1
+						? socket.emit("studentDocumentRetrieveList", 0)
+						: socket.emit("studentDocumentRetrieveList", parseInt(indices) + 1);
+					indices = undefined;
+				}
+			});
+		});
+
 		// Fetch Data Upon Connection (No User Interaction)
-		socket.on("employeeDataGet", async () => {
+		socket.on("employeeDataGet", async (index = start) => {
 			try {
-				const employeeData = await EmployeeModel.find();
-				socket.emit("employeeDataRetriveList", employeeData);
+				const employeeData = await EmployeeModel.find()
+					.sort({
+						Occupation: 1,
+						"Name.Last": 1,
+						"Name.First": 1,
+					})
+					.skip(index * end)
+					.limit(end);
+				socket.emit("employeeDataRetrieveList", employeeData);
 			} catch (err) {
-				socket.emit("employeeDataRetriveList", "Error");
+				socket.emit("employeeDataRetrieveList", "Error");
 			}
 		});
-		socket.on("studentDataGet", async () => {
+		socket.on("studentDataGet", async (index = start) => {
 			try {
-				const studentData = await StudentModel.find();
-				socket.emit("studentDataRetriveList", studentData);
+				const studentData = await StudentModel.find()
+					.sort({
+						"Student.Course": 1,
+						"Student.Year": 1,
+						"Student.Section": 1,
+						"Name.Last": 1,
+						"Name.First": 1,
+					})
+					.skip(index * end)
+					.limit(end);
+				socket.emit("studentDataRetrieveList", studentData);
 			} catch (err) {
-				socket.emit("studentDataRetriveList", "Error");
+				socket.emit("studentDataRetrieveList", "Error");
+			}
+		});
+		socket.on("attendanceDataGet", async (id, index = start) => {
+			try {
+				const attendanceData = await AttendanceModel.find({
+					UserId: id,
+				})
+					.sort({
+						"Date.Month": -1,
+						"Date.Day": -1,
+						"Date.Year": -1,
+						"Time.Hour": -1,
+						"Time.Minute": -1,
+						"Time.Second": -1,
+					})
+					.skip(index * end)
+					.limit(end);
+				socket.emit("attendanceDataRetrieveList", attendanceData);
+			} catch (err) {
+				socket.emit("attendanceDataRetrieveList", "Error");
 			}
 		});
 
 		// Post Data Upon Request (User Interaction Available)
-		socket.on("student-data-post-request", (StudentData) => {
+		socket.on("studentDataPostRequest", async (StudentData) => {
 			const newStudentData = new StudentModel({
 				Name: {
 					First: StudentData.Name.First,
@@ -211,13 +335,13 @@ async function loadRest(win) {
 			});
 
 			try {
-				newStudentData.save();
-				socket.emit("user-data-post-status", 1);
+				await newStudentData.save();
+				socket.emit("userDataPostStatus", 1);
 			} catch (err) {
-				socket.emit("user-data-post-status", 0);
+				socket.emit("userDataPostStatus", 0);
 			}
 		});
-		socket.on("employee-data-post-request", (EmployeeData) => {
+		socket.on("employeeDataPostRequest", async (EmployeeData) => {
 			const newEmployeeData = new EmployeeModel({
 				Name: {
 					First: EmployeeData.Name.First,
@@ -228,10 +352,84 @@ async function loadRest(win) {
 			});
 
 			try {
-				newEmployeeData.save();
-				socket.emit("user-data-post-status", 1);
+				await newEmployeeData.save();
+				socket.emit("userDataPostStatus", 1);
 			} catch (err) {
-				socket.emit("user-data-post-status", 0);
+				socket.emit("userDataPostStatus", 0);
+			}
+		});
+
+		// Delete Data Upon Request (User Interaction Available)
+		socket.on("studentDataDeleteRequest", async (selectedProfile) => {
+			try {
+				await StudentModel.deleteOne({ _id: selectedProfile._id });
+				await AttendanceModel.deleteMany({ UserId: selectedProfile._id });
+				socket.emit("userDataDeleteStatus", 1);
+			} catch {
+				socket.emit("userDataDeleteStatus", 0);
+			}
+		});
+		socket.on("employeeDataDeleteRequest", async (selectedProfile) => {
+			try {
+				await EmployeeModel.deleteOne({ _id: selectedProfile._id });
+				await AttendanceModel.deleteMany({ UserId: selectedProfile._id });
+				socket.emit("userDataDeleteStatus", 1);
+			} catch {
+				socket.emit("userDataDeleteStatus", 0);
+			}
+		});
+
+		// Delete History Only Upon Request (User Interaction Available)
+		socket.on("userHistoryDeleteRequest", async (selectedProfile) => {
+			try {
+				await AttendanceModel.deleteMany({ UserId: selectedProfile._id });
+				socket.emit("userHistoryDeleteStatus", 1);
+			} catch {
+				socket.emit("userHistoryDeleteStatus", 0);
+			}
+		});
+
+		// Patch Profile Upon Request (User Interaction Available)
+		socket.on("studentDataPatchRequest", async (selectedProfile) => {
+			try {
+				await StudentModel.updateOne(
+					{ _id: selectedProfile._id },
+					{
+						$set: {
+							Name: {
+								First: selectedProfile.Name.First,
+								Last: selectedProfile.Name.Last,
+							},
+							Student: {
+								Course: selectedProfile.Student.Course,
+								Year: selectedProfile.Student.Year,
+								Section: selectedProfile.Student.Section,
+							},
+						},
+					}
+				);
+				socket.emit("userDataPatchStatus", 1);
+			} catch {
+				socket.emit("userDataPatchStatus", 0);
+			}
+		});
+		socket.on("employeeDataPatchRequest", async (selectedProfile) => {
+			try {
+				await EmployeeModel.updateOne(
+					{ _id: selectedProfile._id },
+					{
+						$set: {
+							Name: {
+								First: selectedProfile.Name.First,
+								Last: selectedProfile.Name.Last,
+							},
+							Occupation: selectedProfile.Occupation,
+						},
+					}
+				);
+				socket.emit("userDataPatchStatus", 1);
+			} catch {
+				socket.emit("userDataPatchStatus", 0);
 			}
 		});
 	});
@@ -296,6 +494,10 @@ async function createWindow() {
 			.catch((e) => {
 				window.alert("An error occured: ", e);
 			});
+	});
+
+	ipcMain.on("refresh-window", () => {
+		win.reload();
 	});
 }
 

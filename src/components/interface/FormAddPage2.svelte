@@ -1,6 +1,10 @@
 <script>
-  export let tabIndex;
-  export let UserData;
+  export let tabIndex, UserData, incomplete;
+  $: if (UserData.Name.First != "" && UserData.Name.Last != "") {
+    incomplete = false;
+  } else {
+    incomplete = true;
+  }
 </script>
 
 <div class="container">

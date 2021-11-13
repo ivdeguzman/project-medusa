@@ -1,6 +1,12 @@
 <script>
-  export let tabIndex;
-  export let UserData;
+  export let tabIndex, UserData, incomplete;
+  $: if (tabIndex == 0 && UserData.Student.Course != "" && UserData.Student.Year != "" && UserData.Student.Section != "") {
+    incomplete = false;
+  } else if (tabIndex == 1 && UserData.Occupation != "") {
+    incomplete = false;
+  } else {
+    incomplete = true;
+  }
 </script>
 
 <div class="container">

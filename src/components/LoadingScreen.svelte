@@ -6,7 +6,6 @@
 
   ipcRenderer.on("status-message", (event, arg) => {
       statusMessage = arg;
-
       if (statusMessage === "Starting application...") {
         setTimeout(() => {
           doneLoading = true;

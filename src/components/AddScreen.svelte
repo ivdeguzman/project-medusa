@@ -6,11 +6,13 @@
   import FormAddPage3 from "./interface/FormAddPage3.svelte";
   import FormAddPage4 from "./interface/FormAddPage4.svelte";
   import FormCompletePage from "./interface/FormCompletePage.svelte";
-  export let addPressed;
-  export let tabIndex;
+  const io = require("socket.io-client");
+  const socket = io("http://127.0.0.1:14500");
+  export let addPressed, tabIndex;
   let completed = 0;
   let UserData = {};
   let cancelPressed = false;
+  let incomplete = false;
 
   switch (tabIndex) {
     case 0:
@@ -56,6 +58,7 @@
   }
 
   function next() {
+    incomplete = true;
     if (completed == 1 && (UserData.Name.First == "" || UserData.Name.Last == ""))
       completed = 1;
     else if (completed == 2 && tabIndex == 0 && (UserData.Student.Course == "" || UserData.Student.Year == "" || UserData.Student.Section == ""))
@@ -69,35 +72,42 @@
   function previous() {
     cancelPressed = false;
     if (!(completed <= 0)) completed -= 1;
+    if (completed == 0) incomplete = false;
   }
 
   function finish() {
-    completed == 4;
     if (completed == 3 && (UserData.Images.First != "" || UserData.Images.Second != "")) {
       switch (tabIndex) {
         case 0:
-          socket.emit("student-data-post-request", UserData);
+          socket.emit("studentDataPostRequest", UserData);
           break;
         case 1:
-          socket.emit("employee-data-post-request", UserData);
+          socket.emit("employeeDataPostRequest", UserData);
           break;
       }
+    } else {
+      completed = 3;
+      return;
     }
+    completed = 4;
   }
 
-  socket.on("user-data-post-status", confirmation => {
-    switch (confirmation) {
-      case 0: // False or Fail
-        completed = 6;
-        break;
-      case 1: // True or Success
-        completed = 5;
-        break;
-    }
+  socket.on("userDataPostStatus", confirmation => {
+    setTimeout(() => {
+      switch (confirmation) {
+        case 0: // False or Fail
+          completed = 6;
+          break;
+        case 1: // True or Success
+          completed = 5;
+          break;
+      }
+    }, 1000);
   });
 
   onDestroy(() => {
-    UserData, completed, cancelPressed = undefined;
+    UserData, completed, cancelPressed, incomplete = undefined;
+    socket.disconnect();
   });
 </script>
 
@@ -118,13 +128,13 @@
       {#if completed == 0}
         <FormAddPage1 {tabIndex} />
       {:else if completed == 1}
-        <FormAddPage2 {tabIndex} bind:UserData />
+        <FormAddPage2 {tabIndex} bind:incomplete bind:UserData />
       {:else if completed == 2}
-        <FormAddPage3 {tabIndex} bind:UserData />
+        <FormAddPage3 {tabIndex} bind:incomplete bind:UserData />
       {:else if completed == 3}
-        <FormAddPage4 bind:UserData />
+        <FormAddPage4 bind:incomplete bind:UserData />
       {:else if completed >= 4}
-        <FormCompletePage {completed} bind:addPressed />
+        <FormCompletePage {completed} />
       {/if}
     </section>
     <section class="bottom-button">
@@ -137,9 +147,9 @@
           <div class="tab-index" class:completed="{completed >= 3}"></div>
         </div>
         {#if completed < 3}
-          <button on:click={next}>Next</button>
+          <button disabled={incomplete} on:click={next}>Next</button>
         {:else}
-          <button on:click={finish}>Finish</button>
+          <button disabled={incomplete} on:click={finish}>Finish</button>
         {/if}
       {:else}
         <div style="width: 100%; display:flex; justify-content: center;">
@@ -159,7 +169,7 @@
     top: 0;
     left: 0;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.35);
     z-index: 20;
     display: flex;
     justify-content: center;

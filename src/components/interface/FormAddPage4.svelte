@@ -1,6 +1,6 @@
 <script>
   const { ipcRenderer } = require("electron");
-  export let UserData;
+  export let UserData, incomplete;
 
   function selectFirst() {
     UserData.Images.First = ipcRenderer.sendSync("select-image");
@@ -8,6 +8,12 @@
 
   function selectSecond() {
     UserData.Images.Second = ipcRenderer.sendSync("select-image");
+  }
+
+  $: if (UserData.Images.First != "" && UserData.Images.Second != "") {
+    incomplete = false;
+  } else {
+    incomplete = true;
   }
 </script>
 
@@ -22,7 +28,7 @@
     {#if UserData.Images.Second == ""}
       <svg on:click={selectSecond} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
     {:else}
-      <img on:click={selectFirst} src="{UserData.Images.Second}" alt="Second">
+      <img on:click={selectSecond} src="{UserData.Images.Second}" alt="Second">
     {/if}
   </div>
 </div>

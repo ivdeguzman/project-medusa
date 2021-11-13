@@ -7,7 +7,7 @@
   }
 </script>
 
-<div transition:fly={{ y: -50, duration: 250 }}>
+<div in:fly={{ delay: 200, y: -50, duration: 200 }} out:fly={{ y: -50, duration: 200 }}>
   <input placeholder="Search..." bind:value={searchValue} />
   <button on:click={clearValue}>
     {#if searchValue == ""}
@@ -88,7 +88,8 @@
     stroke: rgba(0, 0, 0, 0.5);
     transition: ease-in-out 100ms;
   }
-  svg.delete:hover {
+  button:hover svg.delete,
+  button:active svg.delete {
     stroke: #E6C2BF;
     transition: ease-in-out 100ms;
   }
