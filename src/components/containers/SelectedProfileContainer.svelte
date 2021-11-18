@@ -1,6 +1,6 @@
 <script>
   import { onDestroy } from "svelte";
-  import { fly, fade } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import AttendanceContainer from "./AttendanceContainer.svelte";
   import EditScreen from "../EditScreen.svelte";
   const io = require("socket.io-client");
@@ -38,8 +38,8 @@
 </script>
 
 {#if selectedProfile != null}
-  <div class="container">
-    <div class="details-section" in:fly={{ delay: 350, y: -50, duration: 250 }} out:fade={{ duration: 200 }}>
+  <div class="container" in:fade={{ delay: 350, duration: 200 }} out:fade={{ duration: 200 }}>
+    <div class="details-section">
       <h1>{selectedProfile.Name.First} {selectedProfile.Name.Last}</h1>
       {#if tabIndex == 0}
         <p class="subtitle">{selectedProfile.Student.Course} {selectedProfile.Student.Year}-{selectedProfile.Student.Section}</p>
@@ -70,6 +70,7 @@
     display: grid;
     grid-template-rows: auto 1fr;
     justify-content: center;
+    margin-bottom: 32px;
   }
   div.details-section {
     width: 100%;
@@ -120,7 +121,7 @@
     height: 100%;
     width: 150px;
     margin: 0 15px;
-    border-radius: 50px;
+    border-radius: 10px;
     border: none;
     font-size: 17.5px;
     font-weight: 350;

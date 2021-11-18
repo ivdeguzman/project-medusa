@@ -39,9 +39,13 @@ async function loadRest(win) {
 	rest.use(express.urlencoded({ extended: true }));
 	rest.use(express.json());
 	rest.use(cors());
-	rest.use(express.static("./server/app"));
+	rest.use("/", express.static(`${__dirname}/server/app`));
+	rest.use(
+		"/files",
+		express.static(`${process.env.LOCALAPPDATA}/project_medusa`)
+	);
 	rest.get(/.*/, (req, res) =>
-		res.sendFile(__dirname + "/server/app/index.html")
+		res.sendFile(`${__dirname}/server/app/index.html`)
 	);
 
 	// Database And Sockets
@@ -229,7 +233,7 @@ async function loadRest(win) {
 
 	io.on("connection", (socket) => {
 		let start = 0;
-		let end = 20;
+		let end = 5;
 		console.log(socket.id + " has connected.");
 
 		// Fetch Document Count Upon Connection (No User Interaction)
@@ -263,6 +267,34 @@ async function loadRest(win) {
 					indices = undefined;
 				}
 			});
+		});
+		socket.on("attendanceDocumentCountGet", async (id) => {
+			AttendanceModel.find({
+				UserId: id,
+			}).count((err, number) => {
+				if (err) socket.emit("attendanceDocumentRetriveList", "Error");
+				else {
+					let indices = number / end;
+					Number.isInteger(indices) && indices != 1
+						? socket.emit("attendanceDocumentRetrieveList", indices)
+						: indices <= 1
+						? socket.emit("attendanceDocumentRetrieveList", 0)
+						: socket.emit(
+								"attendanceDocumentRetrieveList",
+								parseInt(indices) + 1
+						  );
+					indices = undefined;
+				}
+			});
+		});
+		socket.on("sectionDocumentCountGet", async () => {
+			let indices = (await StudentModel.distinct("Student")).length / 9;
+			Number.isInteger(indices) && indices != 1
+				? socket.emit("sectionDocumentRetrieveList", indices)
+				: indices <= 1
+				? socket.emit("sectionDocumentRetrieveList", 0)
+				: socket.emit("sectionDocumentRetrieveList", parseInt(indices) + 1);
+			indices = undefined;
 		});
 
 		// Fetch Data Upon Connection (No User Interaction)
@@ -316,6 +348,40 @@ async function loadRest(win) {
 				socket.emit("attendanceDataRetrieveList", attendanceData);
 			} catch (err) {
 				socket.emit("attendanceDataRetrieveList", "Error");
+			}
+		});
+		socket.on("sectionDataGet", async (index = start) => {
+			try {
+				const sectionData = await StudentModel.find()
+					.sort({
+						"Student.Course": 1,
+						"Student.Year": 1,
+						"Student.Section": 1,
+					})
+					.distinct("Student");
+				socket.emit(
+					"sectionDataRetrieveList",
+					sectionData.slice(index * 9, (index + 1) * 9)
+				);
+			} catch (err) {
+				socket.emit("sectionDataRetrieveList", "Error");
+			}
+		});
+		socket.on("studentPerSectionDataGet", async (object) => {
+			try {
+				const studentPerSectionData = await StudentModel.find({
+					Student: {
+						Course: object.Student.Course,
+						Year: object.Student.Year,
+						Section: object.Student.Section,
+					},
+				}).sort({
+					"Name.Last": 1,
+					"Name.First": 1,
+				});
+				socket.emit("studentPerSectionDataRetrieveList", studentPerSectionData);
+			} catch (err) {
+				socket.emit("studentPerSectionDataRetrieveList", "Error");
 			}
 		});
 
@@ -430,6 +496,186 @@ async function loadRest(win) {
 				socket.emit("userDataPatchStatus", 1);
 			} catch {
 				socket.emit("userDataPatchStatus", 0);
+			}
+		});
+
+		// Search Query (User Interaction Available)
+		socket.on("searchQuery", async (query, model) => {
+			let regEx = new RegExp(`${query}`, "i");
+			let arrayResults = [];
+			let indices = new Number();
+			if (!(query.length <= 2)) {
+				try {
+					switch (model) {
+						case "student":
+							const studentData = await StudentModel.aggregate([
+								{
+									$sort: {
+										"Student.Course": 1,
+										"Student.Year": 1,
+										"Student.Section": 1,
+										"Name.First": 1,
+										"Name.Last": 1,
+									},
+								},
+								{
+									$project: {
+										Data: {
+											$concat: [
+												"$Name.First",
+												" ",
+												"$Name.Last",
+												" ",
+												"$Student.Course",
+												" ",
+												{
+													$toString: "$Student.Year",
+												},
+												"-",
+												{
+													$toString: "$Student.Section",
+												},
+											],
+										},
+										_id: "$_id",
+										Name: {
+											First: "$Name.First",
+											Last: "$Name.Last",
+										},
+										Student: {
+											Course: "$Student.Course",
+											Year: "$Student.Year",
+											Section: "$Student.Section",
+										},
+										LoggedIn: "$LoggedIn",
+									},
+								},
+							]);
+							studentData.forEach((data) => {
+								if (data.Data.match(regEx)) {
+									arrayResults.push(data);
+								}
+							});
+							break;
+						case "employee":
+							const employeeData = await EmployeeModel.aggregate([
+								{
+									$sort: {
+										"Name.First": 1,
+										"Name.Last": 1,
+										Occupation: 1,
+									},
+								},
+								{
+									$project: {
+										Data: {
+											$concat: [
+												"$Name.First",
+												" ",
+												"$Name.Last",
+												" ",
+												"$Occupation",
+											],
+										},
+										_id: "$_id",
+										Name: {
+											First: "$Name.First",
+											Last: "$Name.Last",
+										},
+										Occupation: "$Occupation",
+										LoggedIn: "$LoggedIn",
+									},
+								},
+							]);
+							employeeData.forEach((data) => {
+								if (data.Data.match(regEx)) {
+									arrayResults.push(data);
+								}
+							});
+							break;
+					}
+					indices = arrayResults.length;
+					socket.emit("searchResults", arrayResults);
+				} catch (err) {
+					socket.emit("searchResults", "Error");
+				}
+			}
+		});
+
+		// Raspberry Pi Init API (DO NOT GIVE TO OTHERS)
+		socket.on("raspberryPiInitRequest", async () => {
+			let usersArray = [];
+			try {
+				const studentData = await StudentModel.aggregate([
+					{
+						$project: {
+							_id: "$_id",
+						},
+					},
+				]);
+				const employeeData = await EmployeeModel.aggregate([
+					{
+						$project: {
+							_id: "$_id",
+						},
+					},
+				]);
+				usersArray = [...studentData, ...employeeData];
+				socket.emit("raspberryPiInitStatus", usersArray);
+			} catch {
+				socket.emit("raspberryPiInitStatus", "Error");
+			}
+		});
+
+		// Login Switcher Either Web Or IoT (User Interaction Available)
+		socket.on("loginChangeRequest", async (id, device) => {
+			try {
+				let dataSeleceted;
+				let modelSeleceted;
+				let modelName;
+				const dateObject = new Date();
+				studentData = await StudentModel.find({ _id: id });
+				employeeData = await EmployeeModel.find({ _id: id });
+				if (studentData.length != 0) {
+					dataSeleceted = studentData[0];
+					modelSeleceted = 0;
+				} else {
+					dataSeleceted = employeeData[0];
+					modelSeleceted = 1;
+				}
+				if (modelSeleceted == 0) modelName = StudentModel;
+				else modelName = EmployeeModel;
+				let newAttendance = new AttendanceModel({
+					UserId: dataSeleceted._id,
+					Time: {
+						Hour: ("0" + dateObject.getHours()).slice(-2),
+						Minute: ("0" + dateObject.getMinutes()).slice(-2),
+						Second: ("0" + dateObject.getSeconds()).slice(-2),
+					},
+					Date: {
+						Day: dateObject.getDate(),
+						Month: ("0" + (dateObject.getMonth() + 1)).slice(-2),
+						Year: dateObject.getFullYear(),
+					},
+					LoggedIn: !dataSeleceted.LoggedIn,
+					Via: device,
+				});
+				try {
+					await newAttendance.save();
+					await modelName.updateOne(
+						{ _id: dataSeleceted._id },
+						{
+							$set: {
+								LoggedIn: !dataSeleceted.LoggedIn,
+							},
+						}
+					);
+					socket.emit("loginChangeStatus", "Success");
+				} catch {
+					socket.emit("loginChangeStatus", "Failure in Post");
+				}
+			} catch (err) {
+				socket.emit("loginChangeStatus", "Failure in Fetch");
 			}
 		});
 	});

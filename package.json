@@ -10,13 +10,21 @@
 		"build": "rollup -c",
 		"dev": "rollup -c -w",
 		"start": "sirv public --no-clear",
-		"electron:svelte": "concurrently \"npm:dev\" \"npm:app\""
+		"electron:svelte": "concurrently \"npm:dev\" \"npm:app\"",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder"
+	},
+	"build": {
+		"win": {
+			"target": "NSIS"
+		}
 	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^17.0.0",
 		"@rollup/plugin-node-resolve": "^11.0.0",
 		"concurrently": "^6.3.0",
 		"electron": "^15.2.0",
+		"electron-builder": "^22.13.1",
 		"electron-is-dev": "^2.0.0",
 		"electron-reload": "^2.0.0-alpha.1",
 		"rollup": "^2.3.4",

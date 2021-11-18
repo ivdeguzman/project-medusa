@@ -61,9 +61,9 @@
     height: auto;
     display: flex;
     justify-content: center;
-    position: sticky;
+    position: fixed;
     z-index: 5;
-    top: 20px;
+    top: 81px;
   }
   input, button {
     border: none;

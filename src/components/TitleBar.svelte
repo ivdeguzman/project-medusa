@@ -12,9 +12,6 @@
   function maximizeWindow() {
     ipcRenderer.send("maximize-window");
   }
-  function refreshWindow() {
-    ipcRenderer.send("refresh-window");
-  }
   function studentsTab() {
     tabIndex = 0;
     selectedProfile = null;
@@ -29,7 +26,7 @@
   }
 </script>
 
-<div transition:fly={{ y: -50, duration: 250 }} class="titlebar" style="-webkit-app-region: drag">
+<div transition:fly={{ y: -50, duration: 200 }} class="titlebar" style="-webkit-app-region: drag">
   <!-- UI Button Left | Start -->
   <div class="button control">
     <!-- Close Button-->
@@ -69,20 +66,6 @@
           clip-rule="evenodd"
           d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"
         />
-      </svg>
-    </button>
-    <button on:click={refreshWindow}>
-      <svg xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        class="bi bi-arrow-clockwise"
-        viewBox="0 0 16 16"
-      >
-        <path fill-rule="evenodd"
-          d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-        <path
-          d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
       </svg>
     </button>
   </div>

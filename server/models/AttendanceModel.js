@@ -7,29 +7,29 @@ const AttendanceModel = mongoose.Schema({
 	},
 	Time: {
 		Hour: {
-			type: Number,
+			type: String,
 			require: true,
 		},
 		Minute: {
-			type: Number,
+			type: String,
 			require: true,
 		},
 		Second: {
-			type: Number,
+			type: String,
 			require: true,
 		},
 	},
 	Date: {
 		Day: {
-			type: Number,
+			type: String,
 			require: true,
 		},
 		Month: {
-			type: Number,
+			type: String,
 			require: true,
 		},
 		Year: {
-			type: Number,
+			type: String,
 			require: true,
 		},
 	},

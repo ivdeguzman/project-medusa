@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -912,22 +912,17 @@ var app = (function () {
     	let svg1;
     	let path2;
     	let t1;
+    	let div1;
     	let button2;
+    	let t3;
+    	let button3;
+    	let t5;
+    	let button4;
+    	let t7;
+    	let div2;
+    	let button5;
     	let svg2;
     	let path3;
-    	let path4;
-    	let t2;
-    	let div1;
-    	let button3;
-    	let t4;
-    	let button4;
-    	let t6;
-    	let button5;
-    	let t8;
-    	let div2;
-    	let button6;
-    	let svg3;
-    	let path5;
     	let div3_transition;
     	let current;
     	let mounted;
@@ -946,101 +941,82 @@ var app = (function () {
     			svg1 = svg_element("svg");
     			path2 = svg_element("path");
     			t1 = space();
+    			div1 = element("div");
     			button2 = element("button");
+    			button2.textContent = "Students";
+    			t3 = space();
+    			button3 = element("button");
+    			button3.textContent = "Employees";
+    			t5 = space();
+    			button4 = element("button");
+    			button4.textContent = "Logbook";
+    			t7 = space();
+    			div2 = element("div");
+    			button5 = element("button");
     			svg2 = svg_element("svg");
     			path3 = svg_element("path");
-    			path4 = svg_element("path");
-    			t2 = space();
-    			div1 = element("div");
-    			button3 = element("button");
-    			button3.textContent = "Students";
-    			t4 = space();
-    			button4 = element("button");
-    			button4.textContent = "Employees";
-    			t6 = space();
-    			button5 = element("button");
-    			button5.textContent = "Logbook";
-    			t8 = space();
-    			div2 = element("div");
-    			button6 = element("button");
-    			svg3 = svg_element("svg");
-    			path5 = svg_element("path");
     			attr_dev(path0, "fill-rule", "evenodd");
     			attr_dev(path0, "clip-rule", "evenodd");
     			attr_dev(path0, "d", "M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z");
-    			add_location(path0, file$k, 44, 8, 1144);
+    			add_location(path0, file$k, 41, 8, 1068);
     			attr_dev(path1, "fill-rule", "evenodd");
     			attr_dev(path1, "clip-rule", "evenodd");
     			attr_dev(path1, "d", "M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z");
-    			add_location(path1, file$k, 49, 8, 1333);
+    			add_location(path1, file$k, 46, 8, 1257);
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "width", "16");
     			attr_dev(svg0, "height", "16");
     			attr_dev(svg0, "fill", "currentColor");
     			attr_dev(svg0, "class", "bi bi-x-lg svelte-1olytxk");
     			attr_dev(svg0, "viewBox", "0 0 16 16");
-    			add_location(svg0, file$k, 36, 6, 950);
+    			add_location(svg0, file$k, 33, 6, 874);
     			attr_dev(button0, "class", "svelte-1olytxk");
-    			add_location(button0, file$k, 35, 4, 908);
+    			add_location(button0, file$k, 32, 4, 832);
     			attr_dev(path2, "fill-rule", "evenodd");
     			attr_dev(path2, "clip-rule", "evenodd");
     			attr_dev(path2, "d", "M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z");
-    			add_location(path2, file$k, 66, 8, 1815);
+    			add_location(path2, file$k, 63, 8, 1739);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "width", "16");
     			attr_dev(svg1, "height", "16");
     			attr_dev(svg1, "fill", "currentColor");
     			attr_dev(svg1, "class", "bi bi-dash-lg svelte-1olytxk");
     			attr_dev(svg1, "viewBox", "0 0 16 16");
-    			add_location(svg1, file$k, 58, 6, 1618);
+    			add_location(svg1, file$k, 55, 6, 1542);
     			attr_dev(button1, "class", "svelte-1olytxk");
-    			add_location(button1, file$k, 57, 4, 1576);
-    			attr_dev(path3, "fill-rule", "evenodd");
-    			attr_dev(path3, "d", "M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z");
-    			add_location(path3, file$k, 81, 8, 2241);
-    			attr_dev(path4, "d", "M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z");
-    			add_location(path4, file$k, 83, 8, 2357);
+    			add_location(button1, file$k, 54, 4, 1500);
+    			attr_dev(div0, "class", "button control svelte-1olytxk");
+    			add_location(div0, file$k, 30, 2, 772);
+    			attr_dev(button2, "id", "studentsTab");
+    			attr_dev(button2, "class", "svelte-1olytxk");
+    			toggle_class(button2, "active", /*tabIndex*/ ctx[0] === 0);
+    			add_location(button2, file$k, 75, 4, 2038);
+    			attr_dev(button3, "id", "employeesTab");
+    			attr_dev(button3, "class", "svelte-1olytxk");
+    			toggle_class(button3, "active", /*tabIndex*/ ctx[0] === 1);
+    			add_location(button3, file$k, 76, 4, 2141);
+    			attr_dev(button4, "id", "logbookTab");
+    			attr_dev(button4, "class", "svelte-1olytxk");
+    			toggle_class(button4, "active", /*tabIndex*/ ctx[0] === 2);
+    			add_location(button4, file$k, 77, 4, 2247);
+    			attr_dev(div1, "class", "button tab svelte-1olytxk");
+    			add_location(div1, file$k, 74, 2, 2008);
+    			attr_dev(path3, "d", "M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z");
+    			add_location(path3, file$k, 93, 8, 2734);
     			attr_dev(svg2, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg2, "width", "16");
     			attr_dev(svg2, "height", "16");
     			attr_dev(svg2, "fill", "currentColor");
-    			attr_dev(svg2, "class", "bi bi-arrow-clockwise svelte-1olytxk");
+    			attr_dev(svg2, "class", "bi bi-fullscreen svelte-1olytxk");
     			attr_dev(svg2, "viewBox", "0 0 16 16");
-    			add_location(svg2, file$k, 74, 6, 2045);
-    			attr_dev(button2, "class", "svelte-1olytxk");
-    			add_location(button2, file$k, 73, 4, 2004);
-    			attr_dev(div0, "class", "button control svelte-1olytxk");
-    			add_location(div0, file$k, 33, 2, 848);
-    			attr_dev(button3, "id", "studentsTab");
-    			attr_dev(button3, "class", "svelte-1olytxk");
-    			toggle_class(button3, "active", /*tabIndex*/ ctx[0] === 0);
-    			add_location(button3, file$k, 92, 4, 2624);
-    			attr_dev(button4, "id", "employeesTab");
-    			attr_dev(button4, "class", "svelte-1olytxk");
-    			toggle_class(button4, "active", /*tabIndex*/ ctx[0] === 1);
-    			add_location(button4, file$k, 93, 4, 2727);
-    			attr_dev(button5, "id", "logbookTab");
+    			add_location(svg2, file$k, 85, 6, 2534);
     			attr_dev(button5, "class", "svelte-1olytxk");
-    			toggle_class(button5, "active", /*tabIndex*/ ctx[0] === 2);
-    			add_location(button5, file$k, 94, 4, 2833);
-    			attr_dev(div1, "class", "button tab svelte-1olytxk");
-    			add_location(div1, file$k, 91, 2, 2594);
-    			attr_dev(path5, "d", "M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z");
-    			add_location(path5, file$k, 110, 8, 3320);
-    			attr_dev(svg3, "xmlns", "http://www.w3.org/2000/svg");
-    			attr_dev(svg3, "width", "16");
-    			attr_dev(svg3, "height", "16");
-    			attr_dev(svg3, "fill", "currentColor");
-    			attr_dev(svg3, "class", "bi bi-fullscreen svelte-1olytxk");
-    			attr_dev(svg3, "viewBox", "0 0 16 16");
-    			add_location(svg3, file$k, 102, 6, 3120);
-    			attr_dev(button6, "class", "svelte-1olytxk");
-    			add_location(button6, file$k, 101, 4, 3078);
+    			add_location(button5, file$k, 84, 4, 2492);
     			attr_dev(div2, "class", "button control svelte-1olytxk");
-    			add_location(div2, file$k, 99, 2, 3014);
+    			add_location(div2, file$k, 82, 2, 2428);
     			attr_dev(div3, "class", "titlebar svelte-1olytxk");
     			set_style(div3, "-webkit-app-region", "drag");
-    			add_location(div3, file$k, 31, 0, 711);
+    			add_location(div3, file$k, 28, 0, 635);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1056,34 +1032,28 @@ var app = (function () {
     			append_dev(div0, button1);
     			append_dev(button1, svg1);
     			append_dev(svg1, path2);
-    			append_dev(div0, t1);
-    			append_dev(div0, button2);
-    			append_dev(button2, svg2);
-    			append_dev(svg2, path3);
-    			append_dev(svg2, path4);
-    			append_dev(div3, t2);
+    			append_dev(div3, t1);
     			append_dev(div3, div1);
+    			append_dev(div1, button2);
+    			append_dev(div1, t3);
     			append_dev(div1, button3);
-    			append_dev(div1, t4);
+    			append_dev(div1, t5);
     			append_dev(div1, button4);
-    			append_dev(div1, t6);
-    			append_dev(div1, button5);
-    			append_dev(div3, t8);
+    			append_dev(div3, t7);
     			append_dev(div3, div2);
-    			append_dev(div2, button6);
-    			append_dev(button6, svg3);
-    			append_dev(svg3, path5);
+    			append_dev(div2, button5);
+    			append_dev(button5, svg2);
+    			append_dev(svg2, path3);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
     					listen_dev(button0, "click", /*shutdownPrompt*/ ctx[1], false, false, false),
     					listen_dev(button1, "click", /*minimizeWindow*/ ctx[2], false, false, false),
-    					listen_dev(button2, "click", /*refreshWindow*/ ctx[4], false, false, false),
-    					listen_dev(button3, "click", /*studentsTab*/ ctx[5], false, false, false),
-    					listen_dev(button4, "click", /*employeesTab*/ ctx[6], false, false, false),
-    					listen_dev(button5, "click", /*logbookTab*/ ctx[7], false, false, false),
-    					listen_dev(button6, "click", /*maximizeWindow*/ ctx[3], false, false, false)
+    					listen_dev(button2, "click", /*studentsTab*/ ctx[4], false, false, false),
+    					listen_dev(button3, "click", /*employeesTab*/ ctx[5], false, false, false),
+    					listen_dev(button4, "click", /*logbookTab*/ ctx[6], false, false, false),
+    					listen_dev(button5, "click", /*maximizeWindow*/ ctx[3], false, false, false)
     				];
 
     				mounted = true;
@@ -1091,29 +1061,29 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*tabIndex*/ 1) {
-    				toggle_class(button3, "active", /*tabIndex*/ ctx[0] === 0);
+    				toggle_class(button2, "active", /*tabIndex*/ ctx[0] === 0);
     			}
 
     			if (dirty & /*tabIndex*/ 1) {
-    				toggle_class(button4, "active", /*tabIndex*/ ctx[0] === 1);
+    				toggle_class(button3, "active", /*tabIndex*/ ctx[0] === 1);
     			}
 
     			if (dirty & /*tabIndex*/ 1) {
-    				toggle_class(button5, "active", /*tabIndex*/ ctx[0] === 2);
+    				toggle_class(button4, "active", /*tabIndex*/ ctx[0] === 2);
     			}
     		},
     		i: function intro(local) {
     			if (current) return;
 
     			add_render_callback(() => {
-    				if (!div3_transition) div3_transition = create_bidirectional_transition(div3, fly, { y: -50, duration: 250 }, true);
+    				if (!div3_transition) div3_transition = create_bidirectional_transition(div3, fly, { y: -50, duration: 200 }, true);
     				div3_transition.run(1);
     			});
 
     			current = true;
     		},
     		o: function outro(local) {
-    			if (!div3_transition) div3_transition = create_bidirectional_transition(div3, fly, { y: -50, duration: 250 }, false);
+    			if (!div3_transition) div3_transition = create_bidirectional_transition(div3, fly, { y: -50, duration: 200 }, false);
     			div3_transition.run(0);
     			current = false;
     		},
@@ -1154,23 +1124,19 @@ var app = (function () {
     		ipcRenderer.send("maximize-window");
     	}
 
-    	function refreshWindow() {
-    		ipcRenderer.send("refresh-window");
-    	}
-
     	function studentsTab() {
     		$$invalidate(0, tabIndex = 0);
-    		$$invalidate(8, selectedProfile = null);
+    		$$invalidate(7, selectedProfile = null);
     	}
 
     	function employeesTab() {
     		$$invalidate(0, tabIndex = 1);
-    		$$invalidate(8, selectedProfile = null);
+    		$$invalidate(7, selectedProfile = null);
     	}
 
     	function logbookTab() {
     		$$invalidate(0, tabIndex = 2);
-    		$$invalidate(8, selectedProfile = null);
+    		$$invalidate(7, selectedProfile = null);
     	}
 
     	const writable_props = ['tabIndex', 'selectedProfile'];
@@ -1181,7 +1147,7 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('tabIndex' in $$props) $$invalidate(0, tabIndex = $$props.tabIndex);
-    		if ('selectedProfile' in $$props) $$invalidate(8, selectedProfile = $$props.selectedProfile);
+    		if ('selectedProfile' in $$props) $$invalidate(7, selectedProfile = $$props.selectedProfile);
     	};
 
     	$$self.$capture_state = () => ({
@@ -1192,7 +1158,6 @@ var app = (function () {
     		shutdownPrompt,
     		minimizeWindow,
     		maximizeWindow,
-    		refreshWindow,
     		studentsTab,
     		employeesTab,
     		logbookTab
@@ -1200,7 +1165,7 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ('tabIndex' in $$props) $$invalidate(0, tabIndex = $$props.tabIndex);
-    		if ('selectedProfile' in $$props) $$invalidate(8, selectedProfile = $$props.selectedProfile);
+    		if ('selectedProfile' in $$props) $$invalidate(7, selectedProfile = $$props.selectedProfile);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -1212,7 +1177,6 @@ var app = (function () {
     		shutdownPrompt,
     		minimizeWindow,
     		maximizeWindow,
-    		refreshWindow,
     		studentsTab,
     		employeesTab,
     		logbookTab,
@@ -1223,7 +1187,7 @@ var app = (function () {
     class TitleBar extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$k, create_fragment$k, safe_not_equal, { tabIndex: 0, selectedProfile: 8 });
+    		init(this, options, instance$k, create_fragment$k, safe_not_equal, { tabIndex: 0, selectedProfile: 7 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1239,7 +1203,7 @@ var app = (function () {
     			console.warn("<TitleBar> was created without expected prop 'tabIndex'");
     		}
 
-    		if (/*selectedProfile*/ ctx[8] === undefined && !('selectedProfile' in props)) {
+    		if (/*selectedProfile*/ ctx[7] === undefined && !('selectedProfile' in props)) {
     			console.warn("<TitleBar> was created without expected prop 'selectedProfile'");
     		}
     	}
@@ -1276,12 +1240,12 @@ var app = (function () {
     			attr_dev(path, "stroke-linecap", "round");
     			attr_dev(path, "stroke-linejoin", "round");
     			attr_dev(path, "d", "M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21");
-    			add_location(path, file$j, 18, 8, 909);
+    			add_location(path, file$j, 18, 8, 946);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			attr_dev(svg, "class", "cross svelte-11ljwr7");
+    			attr_dev(svg, "class", "cross svelte-1xmza8k");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "viewBox", "0 0 24 24");
-    			add_location(svg, file$j, 17, 6, 813);
+    			add_location(svg, file$j, 17, 6, 850);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, svg, anchor);
@@ -1317,16 +1281,16 @@ var app = (function () {
     			attr_dev(path0, "stroke-linecap", "round");
     			attr_dev(path0, "stroke-linejoin", "round");
     			attr_dev(path0, "d", "M15 12a3 3 0 11-6 0 3 3 0 016 0z");
-    			add_location(path0, file$j, 13, 8, 495);
+    			add_location(path0, file$j, 13, 8, 532);
     			attr_dev(path1, "stroke-linecap", "round");
     			attr_dev(path1, "stroke-linejoin", "round");
     			attr_dev(path1, "d", "M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z");
-    			add_location(path1, file$j, 14, 8, 597);
+    			add_location(path1, file$j, 14, 8, 634);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			attr_dev(svg, "class", "check svelte-11ljwr7");
+    			attr_dev(svg, "class", "check svelte-1xmza8k");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "viewBox", "0 0 24 24");
-    			add_location(svg, file$j, 12, 6, 399);
+    			add_location(svg, file$j, 12, 6, 436);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, svg, anchor);
@@ -1410,31 +1374,32 @@ var app = (function () {
     			button = element("button");
     			svg = svg_element("svg");
     			path = svg_element("path");
-    			attr_dev(div0, "class", "status svelte-11ljwr7");
+    			attr_dev(div0, "class", "status svelte-1xmza8k");
     			toggle_class(div0, "check", /*Student*/ ctx[0].LoggedIn);
     			toggle_class(div0, "cross", !/*Student*/ ctx[0].LoggedIn);
-    			add_location(div0, file$j, 10, 2, 280);
-    			attr_dev(p0, "class", "svelte-11ljwr7");
-    			add_location(p0, file$j, 23, 4, 1331);
-    			attr_dev(p1, "class", "svelte-11ljwr7");
-    			add_location(p1, file$j, 24, 4, 1385);
-    			attr_dev(div1, "class", "details svelte-11ljwr7");
-    			add_location(div1, file$j, 22, 2, 1304);
+    			add_location(div0, file$j, 10, 2, 317);
+    			attr_dev(p0, "class", "svelte-1xmza8k");
+    			add_location(p0, file$j, 23, 4, 1368);
+    			attr_dev(p1, "class", "svelte-1xmza8k");
+    			add_location(p1, file$j, 24, 4, 1422);
+    			attr_dev(div1, "class", "details svelte-1xmza8k");
+    			add_location(div1, file$j, 22, 2, 1341);
     			attr_dev(path, "stroke-linecap", "round");
     			attr_dev(path, "stroke-linejoin", "round");
     			attr_dev(path, "d", "M9 5l7 7-7 7");
-    			add_location(path, file$j, 28, 6, 1675);
+    			add_location(path, file$j, 28, 6, 1712);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			attr_dev(svg, "class", "carat svelte-11ljwr7");
+    			attr_dev(svg, "class", "carat svelte-1xmza8k");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "viewBox", "0 0 24 24");
     			toggle_class(svg, "check", /*Student*/ ctx[0].LoggedIn);
     			toggle_class(svg, "cross", !/*Student*/ ctx[0].LoggedIn);
-    			add_location(svg, file$j, 27, 4, 1518);
-    			attr_dev(button, "class", "svelte-11ljwr7");
-    			add_location(button, file$j, 26, 2, 1479);
-    			attr_dev(div2, "class", "card svelte-11ljwr7");
-    			add_location(div2, file$j, 9, 0, 182);
+    			add_location(svg, file$j, 27, 4, 1555);
+    			attr_dev(button, "class", "svelte-1xmza8k");
+    			add_location(button, file$j, 26, 2, 1516);
+    			attr_dev(div2, "class", "card svelte-1xmza8k");
+    			toggle_class(div2, "margin", /*indices*/ ctx[1] != 0);
+    			add_location(div2, file$j, 9, 0, 191);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1463,7 +1428,7 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*selectProfile*/ ctx[1], false, false, false);
+    				dispose = listen_dev(button, "click", /*selectProfile*/ ctx[2], false, false, false);
     				mounted = true;
     			}
     		},
@@ -1498,6 +1463,10 @@ var app = (function () {
 
     			if (dirty & /*Student*/ 1) {
     				toggle_class(svg, "cross", !/*Student*/ ctx[0].LoggedIn);
+    			}
+
+    			if (dirty & /*indices*/ 2) {
+    				toggle_class(div2, "margin", /*indices*/ ctx[1] != 0);
     			}
     		},
     		i: function intro(local) {
@@ -1539,13 +1508,13 @@ var app = (function () {
     function instance$j($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('StudentsCard', slots, []);
-    	let { Student, selectedProfile } = $$props;
+    	let { Student, selectedProfile, indices } = $$props;
 
     	function selectProfile() {
-    		$$invalidate(2, selectedProfile = Student);
+    		$$invalidate(3, selectedProfile = Student);
     	}
 
-    	const writable_props = ['Student', 'selectedProfile'];
+    	const writable_props = ['Student', 'selectedProfile', 'indices'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<StudentsCard> was created with unknown prop '${key}'`);
@@ -1553,7 +1522,8 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('Student' in $$props) $$invalidate(0, Student = $$props.Student);
-    		if ('selectedProfile' in $$props) $$invalidate(2, selectedProfile = $$props.selectedProfile);
+    		if ('selectedProfile' in $$props) $$invalidate(3, selectedProfile = $$props.selectedProfile);
+    		if ('indices' in $$props) $$invalidate(1, indices = $$props.indices);
     	};
 
     	$$self.$capture_state = () => ({
@@ -1561,25 +1531,32 @@ var app = (function () {
     		fade,
     		Student,
     		selectedProfile,
+    		indices,
     		selectProfile
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('Student' in $$props) $$invalidate(0, Student = $$props.Student);
-    		if ('selectedProfile' in $$props) $$invalidate(2, selectedProfile = $$props.selectedProfile);
+    		if ('selectedProfile' in $$props) $$invalidate(3, selectedProfile = $$props.selectedProfile);
+    		if ('indices' in $$props) $$invalidate(1, indices = $$props.indices);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [Student, selectProfile, selectedProfile];
+    	return [Student, indices, selectProfile, selectedProfile];
     }
 
     class StudentsCard extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$j, create_fragment$j, safe_not_equal, { Student: 0, selectedProfile: 2 });
+
+    		init(this, options, instance$j, create_fragment$j, safe_not_equal, {
+    			Student: 0,
+    			selectedProfile: 3,
+    			indices: 1
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1595,8 +1572,12 @@ var app = (function () {
     			console.warn("<StudentsCard> was created without expected prop 'Student'");
     		}
 
-    		if (/*selectedProfile*/ ctx[2] === undefined && !('selectedProfile' in props)) {
+    		if (/*selectedProfile*/ ctx[3] === undefined && !('selectedProfile' in props)) {
     			console.warn("<StudentsCard> was created without expected prop 'selectedProfile'");
+    		}
+
+    		if (/*indices*/ ctx[1] === undefined && !('indices' in props)) {
+    			console.warn("<StudentsCard> was created without expected prop 'indices'");
     		}
     	}
 
@@ -1615,6 +1596,14 @@ var app = (function () {
     	set selectedProfile(value) {
     		throw new Error("<StudentsCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get indices() {
+    		throw new Error("<StudentsCard>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set indices(value) {
+    		throw new Error("<StudentsCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\components\containers\StudentsContainer.svelte generated by Svelte v3.44.0 */
@@ -1626,15 +1615,16 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (99:35) 
-    function create_if_block_2$8(ctx) {
+    // (103:35) 
+    function create_if_block_2$9(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
     			p.textContent = "There is a problem with your request.";
-    			add_location(p, file$i, 99, 4, 2617);
+    			attr_dev(p, "class", "svelte-1gwmtbw");
+    			add_location(p, file$i, 103, 4, 2745);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1649,22 +1639,22 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2$8.name,
+    		id: create_if_block_2$9.name,
     		type: "if",
-    		source: "(99:35) ",
+    		source: "(103:35) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (95:2) {#if StudentData}
+    // (99:2) {#if StudentData}
     function create_if_block_1$c(ctx) {
     	let each_blocks = [];
     	let each_1_lookup = new Map();
     	let each_1_anchor;
     	let current;
-    	let each_value = /*StudentData*/ ctx[3];
+    	let each_value = /*StudentData*/ ctx[2];
     	validate_each_argument(each_value);
     	const get_key = ctx => /*Student*/ ctx[11]._id;
     	validate_each_keys(ctx, each_value, get_each_context$2, get_key);
@@ -1692,8 +1682,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*StudentData, selectedProfile*/ 9) {
-    				each_value = /*StudentData*/ ctx[3];
+    			if (dirty & /*indices, StudentData, selectedProfile*/ 14) {
+    				each_value = /*StudentData*/ ctx[2];
     				validate_each_argument(each_value);
     				group_outros();
     				validate_each_keys(ctx, each_value, get_each_context$2, get_key);
@@ -1730,14 +1720,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$c.name,
     		type: "if",
-    		source: "(95:2) {#if StudentData}",
+    		source: "(99:2) {#if StudentData}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (96:4) {#each StudentData as Student (Student._id)}
+    // (100:4) {#each StudentData as Student (Student._id)}
     function create_each_block$2(key_1, ctx) {
     	let first;
     	let studentscard;
@@ -1745,13 +1735,16 @@ var app = (function () {
     	let current;
 
     	function studentscard_selectedProfile_binding(value) {
-    		/*studentscard_selectedProfile_binding*/ ctx[7](value);
+    		/*studentscard_selectedProfile_binding*/ ctx[8](value);
     	}
 
-    	let studentscard_props = { Student: /*Student*/ ctx[11] };
+    	let studentscard_props = {
+    		indices: /*indices*/ ctx[3],
+    		Student: /*Student*/ ctx[11]
+    	};
 
-    	if (/*selectedProfile*/ ctx[0] !== void 0) {
-    		studentscard_props.selectedProfile = /*selectedProfile*/ ctx[0];
+    	if (/*selectedProfile*/ ctx[1] !== void 0) {
+    		studentscard_props.selectedProfile = /*selectedProfile*/ ctx[1];
     	}
 
     	studentscard = new StudentsCard({
@@ -1777,11 +1770,12 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const studentscard_changes = {};
-    			if (dirty & /*StudentData*/ 8) studentscard_changes.Student = /*Student*/ ctx[11];
+    			if (dirty & /*indices*/ 8) studentscard_changes.indices = /*indices*/ ctx[3];
+    			if (dirty & /*StudentData*/ 4) studentscard_changes.Student = /*Student*/ ctx[11];
 
-    			if (!updating_selectedProfile && dirty & /*selectedProfile*/ 1) {
+    			if (!updating_selectedProfile && dirty & /*selectedProfile*/ 2) {
     				updating_selectedProfile = true;
-    				studentscard_changes.selectedProfile = /*selectedProfile*/ ctx[0];
+    				studentscard_changes.selectedProfile = /*selectedProfile*/ ctx[1];
     				add_flush_callback(() => updating_selectedProfile = false);
     			}
 
@@ -1806,24 +1800,27 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(96:4) {#each StudentData as Student (Student._id)}",
+    		source: "(100:4) {#each StudentData as Student (Student._id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (103:0) {#if indices}
+    // (107:0) {#if indices && navButton}
     function create_if_block$e(ctx) {
     	let div;
     	let button0;
     	let t0;
     	let button0_disabled_value;
     	let t1;
-    	let input;
+    	let p;
     	let t2;
-    	let button1;
     	let t3;
+    	let t4;
+    	let t5;
+    	let button1;
+    	let t6;
     	let button1_disabled_value;
     	let div_intro;
     	let div_outro;
@@ -1837,54 +1834,56 @@ var app = (function () {
     			button0 = element("button");
     			t0 = text("Back");
     			t1 = space();
-    			input = element("input");
-    			t2 = space();
+    			p = element("p");
+    			t2 = text(/*currentIndex*/ ctx[0]);
+    			t3 = text(" out of ");
+    			t4 = text(/*indices*/ ctx[3]);
+    			t5 = space();
     			button1 = element("button");
-    			t3 = text("Next");
-    			button0.disabled = button0_disabled_value = /*currentIndex*/ ctx[2] == 1 || /*currentIndex*/ ctx[2] == 0;
-    			attr_dev(button0, "class", "svelte-3zac9f");
-    			add_location(button0, file$i, 104, 4, 2791);
-    			attr_dev(input, "type", "text");
-    			attr_dev(input, "class", "svelte-3zac9f");
-    			add_location(input, file$i, 105, 4, 2888);
-    			button1.disabled = button1_disabled_value = /*currentIndex*/ ctx[2] == /*indices*/ ctx[1];
-    			attr_dev(button1, "class", "svelte-3zac9f");
-    			add_location(button1, file$i, 106, 4, 2939);
-    			attr_dev(div, "class", "index svelte-3zac9f");
-    			add_location(div, file$i, 103, 2, 2697);
+    			t6 = text("Next");
+    			button0.disabled = button0_disabled_value = /*currentIndex*/ ctx[0] == 1 || /*currentIndex*/ ctx[0] == 0 || typeof /*currentIndex*/ ctx[0] == "string";
+    			attr_dev(button0, "class", "svelte-1gwmtbw");
+    			add_location(button0, file$i, 108, 4, 2932);
+    			attr_dev(p, "class", "svelte-1gwmtbw");
+    			add_location(p, file$i, 109, 4, 3064);
+    			button1.disabled = button1_disabled_value = /*currentIndex*/ ctx[0] == /*indices*/ ctx[3] || typeof /*currentIndex*/ ctx[0] == "string";
+    			attr_dev(button1, "class", "svelte-1gwmtbw");
+    			add_location(button1, file$i, 110, 4, 3108);
+    			attr_dev(div, "class", "index svelte-1gwmtbw");
+    			add_location(div, file$i, 107, 2, 2838);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, button0);
     			append_dev(button0, t0);
     			append_dev(div, t1);
-    			append_dev(div, input);
-    			set_input_value(input, /*currentIndex*/ ctx[2]);
-    			append_dev(div, t2);
+    			append_dev(div, p);
+    			append_dev(p, t2);
+    			append_dev(p, t3);
+    			append_dev(p, t4);
+    			append_dev(div, t5);
     			append_dev(div, button1);
-    			append_dev(button1, t3);
+    			append_dev(button1, t6);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*subtract*/ ctx[4], false, false, false),
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[8]),
-    					listen_dev(button1, "click", /*add*/ ctx[5], false, false, false)
+    					listen_dev(button0, "click", /*subtract*/ ctx[5], false, false, false),
+    					listen_dev(button1, "click", /*add*/ ctx[6], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*currentIndex*/ 4 && button0_disabled_value !== (button0_disabled_value = /*currentIndex*/ ctx[2] == 1 || /*currentIndex*/ ctx[2] == 0)) {
+    			if (!current || dirty & /*currentIndex*/ 1 && button0_disabled_value !== (button0_disabled_value = /*currentIndex*/ ctx[0] == 1 || /*currentIndex*/ ctx[0] == 0 || typeof /*currentIndex*/ ctx[0] == "string")) {
     				prop_dev(button0, "disabled", button0_disabled_value);
     			}
 
-    			if (dirty & /*currentIndex*/ 4 && input.value !== /*currentIndex*/ ctx[2]) {
-    				set_input_value(input, /*currentIndex*/ ctx[2]);
-    			}
+    			if (!current || dirty & /*currentIndex*/ 1) set_data_dev(t2, /*currentIndex*/ ctx[0]);
+    			if (!current || dirty & /*indices*/ 8) set_data_dev(t4, /*indices*/ ctx[3]);
 
-    			if (!current || dirty & /*currentIndex, indices*/ 6 && button1_disabled_value !== (button1_disabled_value = /*currentIndex*/ ctx[2] == /*indices*/ ctx[1])) {
+    			if (!current || dirty & /*currentIndex, indices*/ 9 && button1_disabled_value !== (button1_disabled_value = /*currentIndex*/ ctx[0] == /*indices*/ ctx[3] || typeof /*currentIndex*/ ctx[0] == "string")) {
     				prop_dev(button1, "disabled", button1_disabled_value);
     			}
     		},
@@ -1893,7 +1892,7 @@ var app = (function () {
 
     			add_render_callback(() => {
     				if (div_outro) div_outro.end(1);
-    				div_intro = create_in_transition(div, fade, { delay: 500, duration: 250 });
+    				div_intro = create_in_transition(div, fade, { delay: 500, duration: 200 });
     				div_intro.start();
     			});
 
@@ -1916,7 +1915,7 @@ var app = (function () {
     		block,
     		id: create_if_block$e.name,
     		type: "if",
-    		source: "(103:0) {#if indices}",
+    		source: "(107:0) {#if indices && navButton}",
     		ctx
     	});
 
@@ -1930,12 +1929,12 @@ var app = (function () {
     	let t;
     	let if_block1_anchor;
     	let current;
-    	const if_block_creators = [create_if_block_1$c, create_if_block_2$8];
+    	const if_block_creators = [create_if_block_1$c, create_if_block_2$9];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*StudentData*/ ctx[3]) return 0;
-    		if (/*StudentData*/ ctx[3] == "Error") return 1;
+    		if (/*StudentData*/ ctx[2]) return 0;
+    		if (/*StudentData*/ ctx[2] == "Error") return 1;
     		return -1;
     	}
 
@@ -1943,7 +1942,7 @@ var app = (function () {
     		if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
     	}
 
-    	let if_block1 = /*indices*/ ctx[1] && create_if_block$e(ctx);
+    	let if_block1 = /*indices*/ ctx[3] && /*navButton*/ ctx[4] && create_if_block$e(ctx);
 
     	const block = {
     		c: function create() {
@@ -1952,8 +1951,8 @@ var app = (function () {
     			t = space();
     			if (if_block1) if_block1.c();
     			if_block1_anchor = empty();
-    			attr_dev(div, "class", "cards svelte-3zac9f");
-    			add_location(div, file$i, 93, 0, 2416);
+    			attr_dev(div, "class", "cards svelte-1gwmtbw");
+    			add_location(div, file$i, 97, 0, 2534);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2006,11 +2005,11 @@ var app = (function () {
     				}
     			}
 
-    			if (/*indices*/ ctx[1]) {
+    			if (/*indices*/ ctx[3] && /*navButton*/ ctx[4]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty & /*indices*/ 2) {
+    					if (dirty & /*indices, navButton*/ 24) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -2069,8 +2068,8 @@ var app = (function () {
     	validate_slots('StudentsContainer', slots, []);
     	const io = require("socket.io-client");
     	const socket = io("http://127.0.0.1:14500");
-    	let { searchValue, selectedProfile } = $$props;
-    	let StudentData, indices, currentIndex;
+    	let { searchValue, selectedProfile, currentIndex } = $$props;
+    	let StudentData, indices, navButton = true;
 
     	onMount(() => {
     		socket.emit("studentDocumentCountGet");
@@ -2078,16 +2077,14 @@ var app = (function () {
 
     	onDestroy(() => {
     		socket.disconnect();
-    		$$invalidate(3, StudentData = undefined);
-    		$$invalidate(1, indices = undefined);
-    		$$invalidate(6, searchValue = "");
-    		$$invalidate(2, currentIndex = undefined);
+    		$$invalidate(2, StudentData = undefined);
+    		$$invalidate(3, indices = undefined);
+    		$$invalidate(7, searchValue = "");
     	});
 
     	socket.on("studentDocumentRetrieveList", value => {
     		try {
-    			$$invalidate(1, indices = value);
-    			$$invalidate(2, currentIndex = 1);
+    			$$invalidate(3, indices = value);
     			socket.emit("studentDataGet");
     		} catch {
     			value = undefined;
@@ -2096,7 +2093,7 @@ var app = (function () {
 
     	socket.on("studentDataRetrieveList", list => {
     		try {
-    			$$invalidate(3, StudentData = list);
+    			$$invalidate(2, StudentData = list);
     		} catch {
     			list = undefined;
     		}
@@ -2122,7 +2119,7 @@ var app = (function () {
     				}
     			});
 
-    			$$invalidate(3, StudentData);
+    			$$invalidate(2, StudentData);
     		} catch {
     			update = undefined;
     		}
@@ -2134,7 +2131,7 @@ var app = (function () {
     				return Student._id != deleted;
     			});
 
-    			$$invalidate(3, StudentData = updateStudentData);
+    			$$invalidate(2, StudentData = updateStudentData);
     		} catch {
     			deleted = undefined;
     		}
@@ -2142,17 +2139,26 @@ var app = (function () {
 
     	let subtract = () => {
     		currentIndex != 1 && currentIndex != 0
-    		? $$invalidate(2, currentIndex--, currentIndex)
+    		? $$invalidate(0, currentIndex--, currentIndex)
     		: currentIndex;
+
+    		socket.emit("studentDataGet", currentIndex - 1);
     	};
 
     	let add = () => {
     		currentIndex != indices
-    		? $$invalidate(2, currentIndex++, currentIndex)
+    		? $$invalidate(0, currentIndex++, currentIndex)
     		: currentIndex;
+
+    		socket.emit("studentDataGet", currentIndex - 1);
     	};
 
-    	const writable_props = ['searchValue', 'selectedProfile'];
+    	socket.on("searchResults", arrayResults => {
+    		$$invalidate(2, StudentData = arrayResults);
+    		$$invalidate(4, navButton = false);
+    	});
+
+    	const writable_props = ['searchValue', 'selectedProfile', 'currentIndex'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<StudentsContainer> was created with unknown prop '${key}'`);
@@ -2160,17 +2166,13 @@ var app = (function () {
 
     	function studentscard_selectedProfile_binding(value) {
     		selectedProfile = value;
-    		$$invalidate(0, selectedProfile);
-    	}
-
-    	function input_input_handler() {
-    		currentIndex = this.value;
-    		($$invalidate(2, currentIndex), $$invalidate(1, indices));
+    		$$invalidate(1, selectedProfile);
     	}
 
     	$$self.$$set = $$props => {
-    		if ('searchValue' in $$props) $$invalidate(6, searchValue = $$props.searchValue);
-    		if ('selectedProfile' in $$props) $$invalidate(0, selectedProfile = $$props.selectedProfile);
+    		if ('searchValue' in $$props) $$invalidate(7, searchValue = $$props.searchValue);
+    		if ('selectedProfile' in $$props) $$invalidate(1, selectedProfile = $$props.selectedProfile);
+    		if ('currentIndex' in $$props) $$invalidate(0, currentIndex = $$props.currentIndex);
     	};
 
     	$$self.$capture_state = () => ({
@@ -2182,21 +2184,23 @@ var app = (function () {
     		socket,
     		searchValue,
     		selectedProfile,
+    		currentIndex,
     		StudentData,
     		indices,
-    		currentIndex,
+    		navButton,
     		subtract,
     		add
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('searchValue' in $$props) $$invalidate(6, searchValue = $$props.searchValue);
-    		if ('selectedProfile' in $$props) $$invalidate(0, selectedProfile = $$props.selectedProfile);
-    		if ('StudentData' in $$props) $$invalidate(3, StudentData = $$props.StudentData);
-    		if ('indices' in $$props) $$invalidate(1, indices = $$props.indices);
-    		if ('currentIndex' in $$props) $$invalidate(2, currentIndex = $$props.currentIndex);
-    		if ('subtract' in $$props) $$invalidate(4, subtract = $$props.subtract);
-    		if ('add' in $$props) $$invalidate(5, add = $$props.add);
+    		if ('searchValue' in $$props) $$invalidate(7, searchValue = $$props.searchValue);
+    		if ('selectedProfile' in $$props) $$invalidate(1, selectedProfile = $$props.selectedProfile);
+    		if ('currentIndex' in $$props) $$invalidate(0, currentIndex = $$props.currentIndex);
+    		if ('StudentData' in $$props) $$invalidate(2, StudentData = $$props.StudentData);
+    		if ('indices' in $$props) $$invalidate(3, indices = $$props.indices);
+    		if ('navButton' in $$props) $$invalidate(4, navButton = $$props.navButton);
+    		if ('subtract' in $$props) $$invalidate(5, subtract = $$props.subtract);
+    		if ('add' in $$props) $$invalidate(6, add = $$props.add);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -2204,34 +2208,40 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*currentIndex, indices*/ 6) {
-    			if (currentIndex <= indices) {
-    				currentIndex == "" || currentIndex == 0
-    				? socket.emit("studentDataGet", currentIndex)
-    				: socket.emit("studentDataGet", currentIndex - 1);
-    			} else {
-    				$$invalidate(2, currentIndex = 1);
+    		if ($$self.$$.dirty & /*searchValue*/ 128) {
+    			socket.emit("searchQuery", searchValue, "student");
+    		}
+
+    		if ($$self.$$.dirty & /*searchValue, currentIndex*/ 129) {
+    			if (!searchValue) {
+    				$$invalidate(4, navButton = true);
+    				socket.emit("studentDataGet", currentIndex - 1);
     			}
     		}
     	};
 
     	return [
-    		selectedProfile,
-    		indices,
     		currentIndex,
+    		selectedProfile,
     		StudentData,
+    		indices,
+    		navButton,
     		subtract,
     		add,
     		searchValue,
-    		studentscard_selectedProfile_binding,
-    		input_input_handler
+    		studentscard_selectedProfile_binding
     	];
     }
 
     class StudentsContainer extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$i, create_fragment$i, safe_not_equal, { searchValue: 6, selectedProfile: 0 });
+
+    		init(this, options, instance$i, create_fragment$i, safe_not_equal, {
+    			searchValue: 7,
+    			selectedProfile: 1,
+    			currentIndex: 0
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2243,12 +2253,16 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*searchValue*/ ctx[6] === undefined && !('searchValue' in props)) {
+    		if (/*searchValue*/ ctx[7] === undefined && !('searchValue' in props)) {
     			console.warn("<StudentsContainer> was created without expected prop 'searchValue'");
     		}
 
-    		if (/*selectedProfile*/ ctx[0] === undefined && !('selectedProfile' in props)) {
+    		if (/*selectedProfile*/ ctx[1] === undefined && !('selectedProfile' in props)) {
     			console.warn("<StudentsContainer> was created without expected prop 'selectedProfile'");
+    		}
+
+    		if (/*currentIndex*/ ctx[0] === undefined && !('currentIndex' in props)) {
+    			console.warn("<StudentsContainer> was created without expected prop 'currentIndex'");
     		}
     	}
 
@@ -2265,6 +2279,14 @@ var app = (function () {
     	}
 
     	set selectedProfile(value) {
+    		throw new Error("<StudentsContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get currentIndex() {
+    		throw new Error("<StudentsContainer>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set currentIndex(value) {
     		throw new Error("<StudentsContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -2284,12 +2306,12 @@ var app = (function () {
     			attr_dev(path, "stroke-linecap", "round");
     			attr_dev(path, "stroke-linejoin", "round");
     			attr_dev(path, "d", "M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21");
-    			add_location(path, file$h, 18, 8, 914);
+    			add_location(path, file$h, 18, 8, 951);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			attr_dev(svg, "class", "cross svelte-11ljwr7");
+    			attr_dev(svg, "class", "cross svelte-1xmza8k");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "viewBox", "0 0 24 24");
-    			add_location(svg, file$h, 17, 6, 818);
+    			add_location(svg, file$h, 17, 6, 855);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, svg, anchor);
@@ -2325,16 +2347,16 @@ var app = (function () {
     			attr_dev(path0, "stroke-linecap", "round");
     			attr_dev(path0, "stroke-linejoin", "round");
     			attr_dev(path0, "d", "M15 12a3 3 0 11-6 0 3 3 0 016 0z");
-    			add_location(path0, file$h, 13, 8, 500);
+    			add_location(path0, file$h, 13, 8, 537);
     			attr_dev(path1, "stroke-linecap", "round");
     			attr_dev(path1, "stroke-linejoin", "round");
     			attr_dev(path1, "d", "M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z");
-    			add_location(path1, file$h, 14, 8, 602);
+    			add_location(path1, file$h, 14, 8, 639);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			attr_dev(svg, "class", "check svelte-11ljwr7");
+    			attr_dev(svg, "class", "check svelte-1xmza8k");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "viewBox", "0 0 24 24");
-    			add_location(svg, file$h, 12, 6, 404);
+    			add_location(svg, file$h, 12, 6, 441);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, svg, anchor);
@@ -2408,31 +2430,32 @@ var app = (function () {
     			button = element("button");
     			svg = svg_element("svg");
     			path = svg_element("path");
-    			attr_dev(div0, "class", "status svelte-11ljwr7");
+    			attr_dev(div0, "class", "status svelte-1xmza8k");
     			toggle_class(div0, "check", /*Employee*/ ctx[0].LoggedIn);
     			toggle_class(div0, "cross", !/*Employee*/ ctx[0].LoggedIn);
-    			add_location(div0, file$h, 10, 2, 282);
-    			attr_dev(p0, "class", "svelte-11ljwr7");
-    			add_location(p0, file$h, 23, 4, 1336);
-    			attr_dev(p1, "class", "svelte-11ljwr7");
-    			add_location(p1, file$h, 24, 4, 1392);
-    			attr_dev(div1, "class", "details svelte-11ljwr7");
-    			add_location(div1, file$h, 22, 2, 1309);
+    			add_location(div0, file$h, 10, 2, 319);
+    			attr_dev(p0, "class", "svelte-1xmza8k");
+    			add_location(p0, file$h, 23, 4, 1373);
+    			attr_dev(p1, "class", "svelte-1xmza8k");
+    			add_location(p1, file$h, 24, 4, 1429);
+    			attr_dev(div1, "class", "details svelte-1xmza8k");
+    			add_location(div1, file$h, 22, 2, 1346);
     			attr_dev(path, "stroke-linecap", "round");
     			attr_dev(path, "stroke-linejoin", "round");
     			attr_dev(path, "d", "M9 5l7 7-7 7");
-    			add_location(path, file$h, 28, 6, 1632);
+    			add_location(path, file$h, 28, 6, 1669);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			attr_dev(svg, "class", "carat svelte-11ljwr7");
+    			attr_dev(svg, "class", "carat svelte-1xmza8k");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "viewBox", "0 0 24 24");
     			toggle_class(svg, "check", /*Employee*/ ctx[0].LoggedIn);
     			toggle_class(svg, "cross", !/*Employee*/ ctx[0].LoggedIn);
-    			add_location(svg, file$h, 27, 4, 1473);
-    			attr_dev(button, "class", "svelte-11ljwr7");
-    			add_location(button, file$h, 26, 2, 1434);
-    			attr_dev(div2, "class", "card svelte-11ljwr7");
-    			add_location(div2, file$h, 9, 0, 184);
+    			add_location(svg, file$h, 27, 4, 1510);
+    			attr_dev(button, "class", "svelte-1xmza8k");
+    			add_location(button, file$h, 26, 2, 1471);
+    			attr_dev(div2, "class", "card svelte-1xmza8k");
+    			toggle_class(div2, "margin", /*indices*/ ctx[1] != 0);
+    			add_location(div2, file$h, 9, 0, 193);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2457,7 +2480,7 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*selectProfile*/ ctx[1], false, false, false);
+    				dispose = listen_dev(button, "click", /*selectProfile*/ ctx[2], false, false, false);
     				mounted = true;
     			}
     		},
@@ -2490,6 +2513,10 @@ var app = (function () {
 
     			if (dirty & /*Employee*/ 1) {
     				toggle_class(svg, "cross", !/*Employee*/ ctx[0].LoggedIn);
+    			}
+
+    			if (dirty & /*indices*/ 2) {
+    				toggle_class(div2, "margin", /*indices*/ ctx[1] != 0);
     			}
     		},
     		i: function intro(local) {
@@ -2531,13 +2558,13 @@ var app = (function () {
     function instance$h($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('EmployeesCard', slots, []);
-    	let { Employee, selectedProfile } = $$props;
+    	let { Employee, selectedProfile, indices } = $$props;
 
     	function selectProfile() {
-    		$$invalidate(2, selectedProfile = Employee);
+    		$$invalidate(3, selectedProfile = Employee);
     	}
 
-    	const writable_props = ['Employee', 'selectedProfile'];
+    	const writable_props = ['Employee', 'selectedProfile', 'indices'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<EmployeesCard> was created with unknown prop '${key}'`);
@@ -2545,7 +2572,8 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('Employee' in $$props) $$invalidate(0, Employee = $$props.Employee);
-    		if ('selectedProfile' in $$props) $$invalidate(2, selectedProfile = $$props.selectedProfile);
+    		if ('selectedProfile' in $$props) $$invalidate(3, selectedProfile = $$props.selectedProfile);
+    		if ('indices' in $$props) $$invalidate(1, indices = $$props.indices);
     	};
 
     	$$self.$capture_state = () => ({
@@ -2553,25 +2581,32 @@ var app = (function () {
     		fade,
     		Employee,
     		selectedProfile,
+    		indices,
     		selectProfile
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('Employee' in $$props) $$invalidate(0, Employee = $$props.Employee);
-    		if ('selectedProfile' in $$props) $$invalidate(2, selectedProfile = $$props.selectedProfile);
+    		if ('selectedProfile' in $$props) $$invalidate(3, selectedProfile = $$props.selectedProfile);
+    		if ('indices' in $$props) $$invalidate(1, indices = $$props.indices);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [Employee, selectProfile, selectedProfile];
+    	return [Employee, indices, selectProfile, selectedProfile];
     }
 
     class EmployeesCard extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$h, create_fragment$h, safe_not_equal, { Employee: 0, selectedProfile: 2 });
+
+    		init(this, options, instance$h, create_fragment$h, safe_not_equal, {
+    			Employee: 0,
+    			selectedProfile: 3,
+    			indices: 1
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2587,8 +2622,12 @@ var app = (function () {
     			console.warn("<EmployeesCard> was created without expected prop 'Employee'");
     		}
 
-    		if (/*selectedProfile*/ ctx[2] === undefined && !('selectedProfile' in props)) {
+    		if (/*selectedProfile*/ ctx[3] === undefined && !('selectedProfile' in props)) {
     			console.warn("<EmployeesCard> was created without expected prop 'selectedProfile'");
+    		}
+
+    		if (/*indices*/ ctx[1] === undefined && !('indices' in props)) {
+    			console.warn("<EmployeesCard> was created without expected prop 'indices'");
     		}
     	}
 
@@ -2607,6 +2646,14 @@ var app = (function () {
     	set selectedProfile(value) {
     		throw new Error("<EmployeesCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get indices() {
+    		throw new Error("<EmployeesCard>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set indices(value) {
+    		throw new Error("<EmployeesCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\components\containers\EmployeesContainer.svelte generated by Svelte v3.44.0 */
@@ -2618,15 +2665,16 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (97:36) 
-    function create_if_block_2$7(ctx) {
+    // (101:36) 
+    function create_if_block_2$8(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "There is a problem with your request.";
-    			add_location(p, file$g, 97, 4, 2534);
+    			p.textContent = "There is a problem with your request";
+    			attr_dev(p, "class", "svelte-1gwmtbw");
+    			add_location(p, file$g, 101, 4, 2665);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2641,22 +2689,22 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2$7.name,
+    		id: create_if_block_2$8.name,
     		type: "if",
-    		source: "(97:36) ",
+    		source: "(101:36) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (93:2) {#if EmployeeData}
+    // (97:2) {#if EmployeeData}
     function create_if_block_1$b(ctx) {
     	let each_blocks = [];
     	let each_1_lookup = new Map();
     	let each_1_anchor;
     	let current;
-    	let each_value = /*EmployeeData*/ ctx[3];
+    	let each_value = /*EmployeeData*/ ctx[2];
     	validate_each_argument(each_value);
     	const get_key = ctx => /*Employee*/ ctx[11]._id;
     	validate_each_keys(ctx, each_value, get_each_context$1, get_key);
@@ -2684,8 +2732,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*EmployeeData, selectedProfile*/ 9) {
-    				each_value = /*EmployeeData*/ ctx[3];
+    			if (dirty & /*indices, EmployeeData, selectedProfile*/ 14) {
+    				each_value = /*EmployeeData*/ ctx[2];
     				validate_each_argument(each_value);
     				group_outros();
     				validate_each_keys(ctx, each_value, get_each_context$1, get_key);
@@ -2722,14 +2770,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$b.name,
     		type: "if",
-    		source: "(93:2) {#if EmployeeData}",
+    		source: "(97:2) {#if EmployeeData}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (94:4) {#each EmployeeData as Employee (Employee._id)}
+    // (98:4) {#each EmployeeData as Employee (Employee._id)}
     function create_each_block$1(key_1, ctx) {
     	let first;
     	let employeescard;
@@ -2737,13 +2785,16 @@ var app = (function () {
     	let current;
 
     	function employeescard_selectedProfile_binding(value) {
-    		/*employeescard_selectedProfile_binding*/ ctx[7](value);
+    		/*employeescard_selectedProfile_binding*/ ctx[8](value);
     	}
 
-    	let employeescard_props = { Employee: /*Employee*/ ctx[11] };
+    	let employeescard_props = {
+    		indices: /*indices*/ ctx[3],
+    		Employee: /*Employee*/ ctx[11]
+    	};
 
-    	if (/*selectedProfile*/ ctx[0] !== void 0) {
-    		employeescard_props.selectedProfile = /*selectedProfile*/ ctx[0];
+    	if (/*selectedProfile*/ ctx[1] !== void 0) {
+    		employeescard_props.selectedProfile = /*selectedProfile*/ ctx[1];
     	}
 
     	employeescard = new EmployeesCard({
@@ -2769,11 +2820,12 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const employeescard_changes = {};
-    			if (dirty & /*EmployeeData*/ 8) employeescard_changes.Employee = /*Employee*/ ctx[11];
+    			if (dirty & /*indices*/ 8) employeescard_changes.indices = /*indices*/ ctx[3];
+    			if (dirty & /*EmployeeData*/ 4) employeescard_changes.Employee = /*Employee*/ ctx[11];
 
-    			if (!updating_selectedProfile && dirty & /*selectedProfile*/ 1) {
+    			if (!updating_selectedProfile && dirty & /*selectedProfile*/ 2) {
     				updating_selectedProfile = true;
-    				employeescard_changes.selectedProfile = /*selectedProfile*/ ctx[0];
+    				employeescard_changes.selectedProfile = /*selectedProfile*/ ctx[1];
     				add_flush_callback(() => updating_selectedProfile = false);
     			}
 
@@ -2798,24 +2850,27 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(94:4) {#each EmployeeData as Employee (Employee._id)}",
+    		source: "(98:4) {#each EmployeeData as Employee (Employee._id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (101:0) {#if indices}
+    // (105:0) {#if indices && navButton}
     function create_if_block$c(ctx) {
     	let div;
     	let button0;
     	let t0;
     	let button0_disabled_value;
     	let t1;
-    	let input;
+    	let p;
     	let t2;
-    	let button1;
     	let t3;
+    	let t4;
+    	let t5;
+    	let button1;
+    	let t6;
     	let button1_disabled_value;
     	let div_intro;
     	let div_outro;
@@ -2829,54 +2884,56 @@ var app = (function () {
     			button0 = element("button");
     			t0 = text("Back");
     			t1 = space();
-    			input = element("input");
-    			t2 = space();
+    			p = element("p");
+    			t2 = text(/*currentIndex*/ ctx[0]);
+    			t3 = text(" out of ");
+    			t4 = text(/*indices*/ ctx[3]);
+    			t5 = space();
     			button1 = element("button");
-    			t3 = text("Next");
-    			button0.disabled = button0_disabled_value = /*currentIndex*/ ctx[2] == 1 || /*currentIndex*/ ctx[2] == 0;
-    			attr_dev(button0, "class", "svelte-3zac9f");
-    			add_location(button0, file$g, 102, 4, 2708);
-    			attr_dev(input, "type", "text");
-    			attr_dev(input, "class", "svelte-3zac9f");
-    			add_location(input, file$g, 103, 4, 2805);
-    			button1.disabled = button1_disabled_value = /*currentIndex*/ ctx[2] == /*indices*/ ctx[1];
-    			attr_dev(button1, "class", "svelte-3zac9f");
-    			add_location(button1, file$g, 104, 4, 2856);
-    			attr_dev(div, "class", "index svelte-3zac9f");
-    			add_location(div, file$g, 101, 2, 2614);
+    			t6 = text("Next");
+    			button0.disabled = button0_disabled_value = /*currentIndex*/ ctx[0] == 1 || /*currentIndex*/ ctx[0] == 0 || typeof /*currentIndex*/ ctx[0] == "string";
+    			attr_dev(button0, "class", "svelte-1gwmtbw");
+    			add_location(button0, file$g, 106, 4, 2851);
+    			attr_dev(p, "class", "svelte-1gwmtbw");
+    			add_location(p, file$g, 107, 4, 2983);
+    			button1.disabled = button1_disabled_value = /*currentIndex*/ ctx[0] == /*indices*/ ctx[3] || typeof /*currentIndex*/ ctx[0] == "string";
+    			attr_dev(button1, "class", "svelte-1gwmtbw");
+    			add_location(button1, file$g, 108, 4, 3027);
+    			attr_dev(div, "class", "index svelte-1gwmtbw");
+    			add_location(div, file$g, 105, 2, 2757);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, button0);
     			append_dev(button0, t0);
     			append_dev(div, t1);
-    			append_dev(div, input);
-    			set_input_value(input, /*currentIndex*/ ctx[2]);
-    			append_dev(div, t2);
+    			append_dev(div, p);
+    			append_dev(p, t2);
+    			append_dev(p, t3);
+    			append_dev(p, t4);
+    			append_dev(div, t5);
     			append_dev(div, button1);
-    			append_dev(button1, t3);
+    			append_dev(button1, t6);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*subtract*/ ctx[4], false, false, false),
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[8]),
-    					listen_dev(button1, "click", /*add*/ ctx[5], false, false, false)
+    					listen_dev(button0, "click", /*subtract*/ ctx[5], false, false, false),
+    					listen_dev(button1, "click", /*add*/ ctx[6], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*currentIndex*/ 4 && button0_disabled_value !== (button0_disabled_value = /*currentIndex*/ ctx[2] == 1 || /*currentIndex*/ ctx[2] == 0)) {
+    			if (!current || dirty & /*currentIndex*/ 1 && button0_disabled_value !== (button0_disabled_value = /*currentIndex*/ ctx[0] == 1 || /*currentIndex*/ ctx[0] == 0 || typeof /*currentIndex*/ ctx[0] == "string")) {
     				prop_dev(button0, "disabled", button0_disabled_value);
     			}
 
-    			if (dirty & /*currentIndex*/ 4 && input.value !== /*currentIndex*/ ctx[2]) {
-    				set_input_value(input, /*currentIndex*/ ctx[2]);
-    			}
+    			if (!current || dirty & /*currentIndex*/ 1) set_data_dev(t2, /*currentIndex*/ ctx[0]);
+    			if (!current || dirty & /*indices*/ 8) set_data_dev(t4, /*indices*/ ctx[3]);
 
-    			if (!current || dirty & /*currentIndex, indices*/ 6 && button1_disabled_value !== (button1_disabled_value = /*currentIndex*/ ctx[2] == /*indices*/ ctx[1])) {
+    			if (!current || dirty & /*currentIndex, indices*/ 9 && button1_disabled_value !== (button1_disabled_value = /*currentIndex*/ ctx[0] == /*indices*/ ctx[3] || typeof /*currentIndex*/ ctx[0] == "string")) {
     				prop_dev(button1, "disabled", button1_disabled_value);
     			}
     		},
@@ -2885,7 +2942,7 @@ var app = (function () {
 
     			add_render_callback(() => {
     				if (div_outro) div_outro.end(1);
-    				div_intro = create_in_transition(div, fade, { delay: 500, duration: 250 });
+    				div_intro = create_in_transition(div, fade, { delay: 500, duration: 200 });
     				div_intro.start();
     			});
 
@@ -2908,7 +2965,7 @@ var app = (function () {
     		block,
     		id: create_if_block$c.name,
     		type: "if",
-    		source: "(101:0) {#if indices}",
+    		source: "(105:0) {#if indices && navButton}",
     		ctx
     	});
 
@@ -2922,12 +2979,12 @@ var app = (function () {
     	let t;
     	let if_block1_anchor;
     	let current;
-    	const if_block_creators = [create_if_block_1$b, create_if_block_2$7];
+    	const if_block_creators = [create_if_block_1$b, create_if_block_2$8];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*EmployeeData*/ ctx[3]) return 0;
-    		if (/*EmployeeData*/ ctx[3] == "Error") return 1;
+    		if (/*EmployeeData*/ ctx[2]) return 0;
+    		if (/*EmployeeData*/ ctx[2] == "Error") return 1;
     		return -1;
     	}
 
@@ -2935,7 +2992,7 @@ var app = (function () {
     		if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
     	}
 
-    	let if_block1 = /*indices*/ ctx[1] && create_if_block$c(ctx);
+    	let if_block1 = /*indices*/ ctx[3] && /*navButton*/ ctx[4] && create_if_block$c(ctx);
 
     	const block = {
     		c: function create() {
@@ -2944,8 +3001,8 @@ var app = (function () {
     			t = space();
     			if (if_block1) if_block1.c();
     			if_block1_anchor = empty();
-    			attr_dev(div, "class", "cards svelte-3zac9f");
-    			add_location(div, file$g, 91, 0, 2326);
+    			attr_dev(div, "class", "cards svelte-1gwmtbw");
+    			add_location(div, file$g, 95, 0, 2447);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2998,11 +3055,11 @@ var app = (function () {
     				}
     			}
 
-    			if (/*indices*/ ctx[1]) {
+    			if (/*indices*/ ctx[3] && /*navButton*/ ctx[4]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty & /*indices*/ 2) {
+    					if (dirty & /*indices, navButton*/ 24) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -3061,8 +3118,8 @@ var app = (function () {
     	validate_slots('EmployeesContainer', slots, []);
     	const io = require("socket.io-client");
     	const socket = io("http://127.0.0.1:14500");
-    	let { searchValue, selectedProfile } = $$props;
-    	let EmployeeData, indices, currentIndex;
+    	let { searchValue, selectedProfile, currentIndex } = $$props;
+    	let EmployeeData, indices, navButton = true;
 
     	onMount(() => {
     		socket.emit("employeeDocumentCountGet");
@@ -3070,16 +3127,14 @@ var app = (function () {
 
     	onDestroy(() => {
     		socket.disconnect();
-    		$$invalidate(3, EmployeeData = undefined);
-    		$$invalidate(1, indices = undefined);
-    		$$invalidate(6, searchValue = "");
-    		$$invalidate(2, currentIndex = undefined);
+    		$$invalidate(2, EmployeeData = undefined);
+    		$$invalidate(3, indices = undefined);
+    		$$invalidate(7, searchValue = "");
     	});
 
     	socket.on("employeeDocumentRetrieveList", value => {
     		try {
-    			$$invalidate(1, indices = value);
-    			$$invalidate(2, currentIndex = 1);
+    			$$invalidate(3, indices = value);
     			socket.emit("employeeDataGet");
     		} catch {
     			value = undefined;
@@ -3088,7 +3143,7 @@ var app = (function () {
 
     	socket.on("employeeDataRetrieveList", list => {
     		try {
-    			$$invalidate(3, EmployeeData = list);
+    			$$invalidate(2, EmployeeData = list);
     		} catch {
     			list = undefined;
     		}
@@ -3112,7 +3167,7 @@ var app = (function () {
     				}
     			});
 
-    			$$invalidate(3, EmployeeData);
+    			$$invalidate(2, EmployeeData);
     		} catch {
     			update = undefined;
     		}
@@ -3124,7 +3179,7 @@ var app = (function () {
     				return Employee._id != deleted;
     			});
 
-    			$$invalidate(3, EmployeeData = updateEmployeeData);
+    			$$invalidate(2, EmployeeData = updateEmployeeData);
     		} catch {
     			deleted = undefined;
     		}
@@ -3132,17 +3187,26 @@ var app = (function () {
 
     	let subtract = () => {
     		currentIndex != 1 && currentIndex != 0
-    		? $$invalidate(2, currentIndex--, currentIndex)
+    		? $$invalidate(0, currentIndex--, currentIndex)
     		: currentIndex;
+
+    		socket.emit("employeeDataGet", currentIndex - 1);
     	};
 
     	let add = () => {
     		currentIndex != indices
-    		? $$invalidate(2, currentIndex++, currentIndex)
+    		? $$invalidate(0, currentIndex++, currentIndex)
     		: currentIndex;
+
+    		socket.emit("employeeDataGet", currentIndex - 1);
     	};
 
-    	const writable_props = ['searchValue', 'selectedProfile'];
+    	socket.on("searchResults", arrayResults => {
+    		$$invalidate(2, EmployeeData = arrayResults);
+    		$$invalidate(4, navButton = false);
+    	});
+
+    	const writable_props = ['searchValue', 'selectedProfile', 'currentIndex'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<EmployeesContainer> was created with unknown prop '${key}'`);
@@ -3150,17 +3214,13 @@ var app = (function () {
 
     	function employeescard_selectedProfile_binding(value) {
     		selectedProfile = value;
-    		$$invalidate(0, selectedProfile);
-    	}
-
-    	function input_input_handler() {
-    		currentIndex = this.value;
-    		($$invalidate(2, currentIndex), $$invalidate(1, indices));
+    		$$invalidate(1, selectedProfile);
     	}
 
     	$$self.$$set = $$props => {
-    		if ('searchValue' in $$props) $$invalidate(6, searchValue = $$props.searchValue);
-    		if ('selectedProfile' in $$props) $$invalidate(0, selectedProfile = $$props.selectedProfile);
+    		if ('searchValue' in $$props) $$invalidate(7, searchValue = $$props.searchValue);
+    		if ('selectedProfile' in $$props) $$invalidate(1, selectedProfile = $$props.selectedProfile);
+    		if ('currentIndex' in $$props) $$invalidate(0, currentIndex = $$props.currentIndex);
     	};
 
     	$$self.$capture_state = () => ({
@@ -3172,21 +3232,23 @@ var app = (function () {
     		socket,
     		searchValue,
     		selectedProfile,
+    		currentIndex,
     		EmployeeData,
     		indices,
-    		currentIndex,
+    		navButton,
     		subtract,
     		add
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('searchValue' in $$props) $$invalidate(6, searchValue = $$props.searchValue);
-    		if ('selectedProfile' in $$props) $$invalidate(0, selectedProfile = $$props.selectedProfile);
-    		if ('EmployeeData' in $$props) $$invalidate(3, EmployeeData = $$props.EmployeeData);
-    		if ('indices' in $$props) $$invalidate(1, indices = $$props.indices);
-    		if ('currentIndex' in $$props) $$invalidate(2, currentIndex = $$props.currentIndex);
-    		if ('subtract' in $$props) $$invalidate(4, subtract = $$props.subtract);
-    		if ('add' in $$props) $$invalidate(5, add = $$props.add);
+    		if ('searchValue' in $$props) $$invalidate(7, searchValue = $$props.searchValue);
+    		if ('selectedProfile' in $$props) $$invalidate(1, selectedProfile = $$props.selectedProfile);
+    		if ('currentIndex' in $$props) $$invalidate(0, currentIndex = $$props.currentIndex);
+    		if ('EmployeeData' in $$props) $$invalidate(2, EmployeeData = $$props.EmployeeData);
+    		if ('indices' in $$props) $$invalidate(3, indices = $$props.indices);
+    		if ('navButton' in $$props) $$invalidate(4, navButton = $$props.navButton);
+    		if ('subtract' in $$props) $$invalidate(5, subtract = $$props.subtract);
+    		if ('add' in $$props) $$invalidate(6, add = $$props.add);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -3194,34 +3256,40 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*currentIndex, indices*/ 6) {
-    			if (currentIndex <= indices) {
-    				currentIndex == "" || currentIndex == 0
-    				? socket.emit("employeeDataGet", currentIndex)
-    				: socket.emit("employeeDataGet", currentIndex - 1);
-    			} else {
-    				$$invalidate(2, currentIndex = 1);
+    		if ($$self.$$.dirty & /*searchValue*/ 128) {
+    			socket.emit("searchQuery", searchValue, "employee");
+    		}
+
+    		if ($$self.$$.dirty & /*searchValue, currentIndex*/ 129) {
+    			if (!searchValue) {
+    				$$invalidate(4, navButton = true);
+    				socket.emit("employeeDataGet", currentIndex - 1);
     			}
     		}
     	};
 
     	return [
-    		selectedProfile,
-    		indices,
     		currentIndex,
+    		selectedProfile,
     		EmployeeData,
+    		indices,
+    		navButton,
     		subtract,
     		add,
     		searchValue,
-    		employeescard_selectedProfile_binding,
-    		input_input_handler
+    		employeescard_selectedProfile_binding
     	];
     }
 
     class EmployeesContainer extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$g, create_fragment$g, safe_not_equal, { searchValue: 6, selectedProfile: 0 });
+
+    		init(this, options, instance$g, create_fragment$g, safe_not_equal, {
+    			searchValue: 7,
+    			selectedProfile: 1,
+    			currentIndex: 0
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -3233,12 +3301,16 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*searchValue*/ ctx[6] === undefined && !('searchValue' in props)) {
+    		if (/*searchValue*/ ctx[7] === undefined && !('searchValue' in props)) {
     			console.warn("<EmployeesContainer> was created without expected prop 'searchValue'");
     		}
 
-    		if (/*selectedProfile*/ ctx[0] === undefined && !('selectedProfile' in props)) {
+    		if (/*selectedProfile*/ ctx[1] === undefined && !('selectedProfile' in props)) {
     			console.warn("<EmployeesContainer> was created without expected prop 'selectedProfile'");
+    		}
+
+    		if (/*currentIndex*/ ctx[0] === undefined && !('currentIndex' in props)) {
+    			console.warn("<EmployeesContainer> was created without expected prop 'currentIndex'");
     		}
     	}
 
@@ -3255,6 +3327,14 @@ var app = (function () {
     	}
 
     	set selectedProfile(value) {
+    		throw new Error("<EmployeesContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get currentIndex() {
+    		throw new Error("<EmployeesContainer>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set currentIndex(value) {
     		throw new Error("<EmployeesContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -3324,6 +3404,7 @@ var app = (function () {
     }
 
     /* src\components\interface\AttendanceCard.svelte generated by Svelte v3.44.0 */
+
     const file$e = "src\\components\\interface\\AttendanceCard.svelte";
 
     function create_fragment$e(ctx) {
@@ -3359,9 +3440,6 @@ var app = (function () {
     	let t13;
     	let t14_value = /*attendance*/ ctx[0].Time.Second + "";
     	let t14;
-    	let tr_intro;
-    	let tr_outro;
-    	let current;
 
     	const block = {
     		c: function create() {
@@ -3385,15 +3463,15 @@ var app = (function () {
     			t12 = text(t12_value);
     			t13 = text(":");
     			t14 = text(t14_value);
-    			attr_dev(td0, "class", "svelte-1iy12hp");
-    			add_location(td0, file$e, 6, 2, 183);
-    			attr_dev(td1, "class", "svelte-1iy12hp");
-    			add_location(td1, file$e, 7, 2, 246);
-    			attr_dev(td2, "class", "svelte-1iy12hp");
-    			add_location(td2, file$e, 8, 2, 275);
-    			attr_dev(td3, "class", "svelte-1iy12hp");
-    			add_location(td3, file$e, 9, 2, 356);
-    			add_location(tr, file$e, 5, 0, 99);
+    			attr_dev(td0, "class", "svelte-hd3ccf");
+    			add_location(td0, file$e, 5, 2, 57);
+    			attr_dev(td1, "class", "svelte-hd3ccf");
+    			add_location(td1, file$e, 6, 2, 120);
+    			attr_dev(td2, "class", "svelte-hd3ccf");
+    			add_location(td2, file$e, 7, 2, 149);
+    			attr_dev(td3, "class", "svelte-hd3ccf");
+    			add_location(td3, file$e, 8, 2, 230);
+    			add_location(tr, file$e, 4, 0, 49);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3419,40 +3497,24 @@ var app = (function () {
     			append_dev(td3, t12);
     			append_dev(td3, t13);
     			append_dev(td3, t14);
-    			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if ((!current || dirty & /*attendance*/ 1) && t0_value !== (t0_value = (/*attendance*/ ctx[0].LoggedIn
+    			if (dirty & /*attendance*/ 1 && t0_value !== (t0_value = (/*attendance*/ ctx[0].LoggedIn
     			? "Logged In"
     			: "Logged Out") + "")) set_data_dev(t0, t0_value);
 
-    			if ((!current || dirty & /*attendance*/ 1) && t2_value !== (t2_value = /*attendance*/ ctx[0].Via + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*attendance*/ 1) && t4_value !== (t4_value = /*attendance*/ ctx[0].Date.Day + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty & /*attendance*/ 1) && t6_value !== (t6_value = /*attendance*/ ctx[0].Date.Month + "")) set_data_dev(t6, t6_value);
-    			if ((!current || dirty & /*attendance*/ 1) && t8_value !== (t8_value = /*attendance*/ ctx[0].Date.Year + "")) set_data_dev(t8, t8_value);
-    			if ((!current || dirty & /*attendance*/ 1) && t10_value !== (t10_value = /*attendance*/ ctx[0].Time.Hour + "")) set_data_dev(t10, t10_value);
-    			if ((!current || dirty & /*attendance*/ 1) && t12_value !== (t12_value = /*attendance*/ ctx[0].Time.Minute + "")) set_data_dev(t12, t12_value);
-    			if ((!current || dirty & /*attendance*/ 1) && t14_value !== (t14_value = /*attendance*/ ctx[0].Time.Second + "")) set_data_dev(t14, t14_value);
+    			if (dirty & /*attendance*/ 1 && t2_value !== (t2_value = /*attendance*/ ctx[0].Via + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*attendance*/ 1 && t4_value !== (t4_value = /*attendance*/ ctx[0].Date.Day + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*attendance*/ 1 && t6_value !== (t6_value = /*attendance*/ ctx[0].Date.Month + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*attendance*/ 1 && t8_value !== (t8_value = /*attendance*/ ctx[0].Date.Year + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*attendance*/ 1 && t10_value !== (t10_value = /*attendance*/ ctx[0].Time.Hour + "")) set_data_dev(t10, t10_value);
+    			if (dirty & /*attendance*/ 1 && t12_value !== (t12_value = /*attendance*/ ctx[0].Time.Minute + "")) set_data_dev(t12, t12_value);
+    			if (dirty & /*attendance*/ 1 && t14_value !== (t14_value = /*attendance*/ ctx[0].Time.Second + "")) set_data_dev(t14, t14_value);
     		},
-    		i: function intro(local) {
-    			if (current) return;
-
-    			add_render_callback(() => {
-    				if (tr_outro) tr_outro.end(1);
-    				tr_intro = create_in_transition(tr, fly, { delay: 350, y: -50, duration: 250 });
-    				tr_intro.start();
-    			});
-
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			if (tr_intro) tr_intro.invalidate();
-    			tr_outro = create_out_transition(tr, fade, { duration: 200 });
-    			current = false;
-    		},
+    		i: noop,
+    		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
-    			if (detaching && tr_outro) tr_outro.end();
     		}
     	};
 
@@ -3481,7 +3543,7 @@ var app = (function () {
     		if ('attendance' in $$props) $$invalidate(0, attendance = $$props.attendance);
     	};
 
-    	$$self.$capture_state = () => ({ fly, fade, attendance });
+    	$$self.$capture_state = () => ({ attendance });
 
     	$$self.$inject_state = $$props => {
     		if ('attendance' in $$props) $$invalidate(0, attendance = $$props.attendance);
@@ -3528,11 +3590,11 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
+    	child_ctx[8] = list[i];
     	return child_ctx;
     }
 
-    // (70:0) {#if attendanceData}
+    // (82:0) {#if attendanceData && selectedProfile != null}
     function create_if_block$b(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -3542,7 +3604,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*attendanceData*/ ctx[0].length != 0) return 0;
+    		if (/*attendanceData*/ ctx[1].length != 0 && /*selectedProfile*/ ctx[0] != null) return 0;
     		return 1;
     	}
 
@@ -3605,14 +3667,14 @@ var app = (function () {
     		block,
     		id: create_if_block$b.name,
     		type: "if",
-    		source: "(70:0) {#if attendanceData}",
+    		source: "(82:0) {#if attendanceData && selectedProfile != null}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (83:2) {:else}
+    // (102:2) {:else}
     function create_else_block$6(ctx) {
     	let p0;
     	let p0_intro;
@@ -3630,10 +3692,10 @@ var app = (function () {
     			t1 = space();
     			p1 = element("p");
     			p1.textContent = "Please check again later.";
-    			attr_dev(p0, "class", "svelte-v6jmw9");
-    			add_location(p0, file$d, 83, 4, 2340);
-    			attr_dev(p1, "class", "svelte-v6jmw9");
-    			add_location(p1, file$d, 84, 4, 2467);
+    			attr_dev(p0, "class", "svelte-1sng2go");
+    			add_location(p0, file$d, 102, 4, 3291);
+    			attr_dev(p1, "class", "svelte-1sng2go");
+    			add_location(p1, file$d, 103, 4, 3411);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -3647,13 +3709,13 @@ var app = (function () {
 
     			add_render_callback(() => {
     				if (p0_outro) p0_outro.end(1);
-    				p0_intro = create_in_transition(p0, fly, { delay: 500, y: -50, duration: 250 });
+    				p0_intro = create_in_transition(p0, fade, { delay: 350, duration: 200 });
     				p0_intro.start();
     			});
 
     			add_render_callback(() => {
     				if (p1_outro) p1_outro.end(1);
-    				p1_intro = create_in_transition(p1, fly, { delay: 500, y: -50, duration: 250 });
+    				p1_intro = create_in_transition(p1, fade, { delay: 350, duration: 200 });
     				p1_intro.start();
     			});
 
@@ -3679,14 +3741,14 @@ var app = (function () {
     		block,
     		id: create_else_block$6.name,
     		type: "else",
-    		source: "(83:2) {:else}",
+    		source: "(102:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (71:2) {#if attendanceData.length != 0}
+    // (83:2) {#if attendanceData.length != 0 && selectedProfile != null}
     function create_if_block_1$a(ctx) {
     	let table;
     	let tr;
@@ -3702,10 +3764,12 @@ var app = (function () {
     	let each_1_lookup = new Map();
     	let table_intro;
     	let table_outro;
+    	let t8;
+    	let if_block_anchor;
     	let current;
-    	let each_value = /*attendanceData*/ ctx[0];
+    	let each_value = /*attendanceData*/ ctx[1];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*attendance*/ ctx[4]._id;
+    	const get_key = ctx => /*attendance*/ ctx[8]._id;
     	validate_each_keys(ctx, each_value, get_each_context, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -3713,6 +3777,8 @@ var app = (function () {
     		let key = get_key(child_ctx);
     		each_1_lookup.set(key, each_blocks[i] = create_each_block(key, child_ctx));
     	}
+
+    	let if_block = /*indices*/ ctx[3] && create_if_block_2$7(ctx);
 
     	const block = {
     		c: function create() {
@@ -3725,27 +3791,30 @@ var app = (function () {
     			th1.textContent = "Via";
     			t3 = space();
     			th2 = element("th");
-    			th2.textContent = "Date";
+    			th2.textContent = "Date DD-MM-YYYY";
     			t5 = space();
     			th3 = element("th");
-    			th3.textContent = "Time";
+    			th3.textContent = "Time HH:MM:SS";
     			t7 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(th0, "class", "svelte-v6jmw9");
-    			add_location(th0, file$d, 73, 8, 2096);
-    			attr_dev(th1, "class", "svelte-v6jmw9");
-    			add_location(th1, file$d, 74, 8, 2121);
-    			attr_dev(th2, "class", "svelte-v6jmw9");
-    			add_location(th2, file$d, 75, 8, 2143);
-    			attr_dev(th3, "class", "svelte-v6jmw9");
-    			add_location(th3, file$d, 76, 8, 2166);
-    			add_location(tr, file$d, 72, 6, 2082);
-    			attr_dev(table, "class", "container svelte-v6jmw9");
-    			add_location(table, file$d, 71, 4, 1975);
+    			t8 = space();
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    			attr_dev(th0, "class", "svelte-1sng2go");
+    			add_location(th0, file$d, 85, 8, 2587);
+    			attr_dev(th1, "class", "svelte-1sng2go");
+    			add_location(th1, file$d, 86, 8, 2612);
+    			attr_dev(th2, "class", "svelte-1sng2go");
+    			add_location(th2, file$d, 87, 8, 2634);
+    			attr_dev(th3, "class", "svelte-1sng2go");
+    			add_location(th3, file$d, 88, 8, 2668);
+    			add_location(tr, file$d, 84, 6, 2573);
+    			attr_dev(table, "class", "container svelte-1sng2go");
+    			add_location(table, file$d, 83, 4, 2473);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
@@ -3763,15 +3832,41 @@ var app = (function () {
     				each_blocks[i].m(table, null);
     			}
 
+    			insert_dev(target, t8, anchor);
+    			if (if_block) if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*attendanceData*/ 1) {
-    				each_value = /*attendanceData*/ ctx[0];
+    			if (dirty & /*attendanceData*/ 2) {
+    				each_value = /*attendanceData*/ ctx[1];
     				validate_each_argument(each_value);
     				group_outros();
     				validate_each_keys(ctx, each_value, get_each_context, get_key);
     				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, table, outro_and_destroy_block, create_each_block, null, get_each_context);
+    				check_outros();
+    			}
+
+    			if (/*indices*/ ctx[3]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+
+    					if (dirty & /*indices*/ 8) {
+    						transition_in(if_block, 1);
+    					}
+    				} else {
+    					if_block = create_if_block_2$7(ctx);
+    					if_block.c();
+    					transition_in(if_block, 1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+
+    				transition_out(if_block, 1, 1, () => {
+    					if_block = null;
+    				});
+
     				check_outros();
     			}
     		},
@@ -3784,10 +3879,11 @@ var app = (function () {
 
     			add_render_callback(() => {
     				if (table_outro) table_outro.end(1);
-    				table_intro = create_in_transition(table, fly, { delay: 500, y: -50, duration: 250 });
+    				table_intro = create_in_transition(table, fade, { delay: 350, duration: 200 });
     				table_intro.start();
     			});
 
+    			transition_in(if_block);
     			current = true;
     		},
     		o: function outro(local) {
@@ -3797,6 +3893,7 @@ var app = (function () {
 
     			if (table_intro) table_intro.invalidate();
     			table_outro = create_out_transition(table, fade, { duration: 200 });
+    			transition_out(if_block);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -3807,6 +3904,9 @@ var app = (function () {
     			}
 
     			if (detaching && table_outro) table_outro.end();
+    			if (detaching) detach_dev(t8);
+    			if (if_block) if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
     		}
     	};
 
@@ -3814,21 +3914,21 @@ var app = (function () {
     		block,
     		id: create_if_block_1$a.name,
     		type: "if",
-    		source: "(71:2) {#if attendanceData.length != 0}",
+    		source: "(83:2) {#if attendanceData.length != 0 && selectedProfile != null}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (79:6) {#each attendanceData as attendance (attendance._id)}
+    // (91:6) {#each attendanceData as attendance (attendance._id)}
     function create_each_block(key_1, ctx) {
     	let first;
     	let attendancecard;
     	let current;
 
     	attendancecard = new AttendanceCard({
-    			props: { attendance: /*attendance*/ ctx[4] },
+    			props: { attendance: /*attendance*/ ctx[8] },
     			$$inline: true
     		});
 
@@ -3848,7 +3948,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const attendancecard_changes = {};
-    			if (dirty & /*attendanceData*/ 1) attendancecard_changes.attendance = /*attendance*/ ctx[4];
+    			if (dirty & /*attendanceData*/ 2) attendancecard_changes.attendance = /*attendance*/ ctx[8];
     			attendancecard.$set(attendancecard_changes);
     		},
     		i: function intro(local) {
@@ -3870,7 +3970,122 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(79:6) {#each attendanceData as attendance (attendance._id)}",
+    		source: "(91:6) {#each attendanceData as attendance (attendance._id)}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (95:4) {#if indices}
+    function create_if_block_2$7(ctx) {
+    	let div;
+    	let button0;
+    	let t0;
+    	let button0_disabled_value;
+    	let t1;
+    	let p;
+    	let t2;
+    	let t3;
+    	let t4;
+    	let t5;
+    	let button1;
+    	let t6;
+    	let button1_disabled_value;
+    	let div_intro;
+    	let div_outro;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			button0 = element("button");
+    			t0 = text("Back");
+    			t1 = space();
+    			p = element("p");
+    			t2 = text(/*currentIndex*/ ctx[2]);
+    			t3 = text(" out of ");
+    			t4 = text(/*indices*/ ctx[3]);
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Next");
+    			button0.disabled = button0_disabled_value = /*currentIndex*/ ctx[2] == 1 || /*currentIndex*/ ctx[2] == 0 || typeof /*currentIndex*/ ctx[2] == "string";
+    			attr_dev(button0, "class", "svelte-1sng2go");
+    			add_location(button0, file$d, 96, 8, 2959);
+    			attr_dev(p, "class", "svelte-1sng2go");
+    			add_location(p, file$d, 97, 8, 3095);
+    			button1.disabled = button1_disabled_value = /*currentIndex*/ ctx[2] == /*indices*/ ctx[3] || typeof /*currentIndex*/ ctx[2] == "string";
+    			attr_dev(button1, "class", "svelte-1sng2go");
+    			add_location(button1, file$d, 98, 8, 3143);
+    			attr_dev(div, "class", "index svelte-1sng2go");
+    			add_location(div, file$d, 95, 6, 2861);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, button0);
+    			append_dev(button0, t0);
+    			append_dev(div, t1);
+    			append_dev(div, p);
+    			append_dev(p, t2);
+    			append_dev(p, t3);
+    			append_dev(p, t4);
+    			append_dev(div, t5);
+    			append_dev(div, button1);
+    			append_dev(button1, t6);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(button0, "click", /*subtract*/ ctx[4], false, false, false),
+    					listen_dev(button1, "click", /*add*/ ctx[5], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (!current || dirty & /*currentIndex*/ 4 && button0_disabled_value !== (button0_disabled_value = /*currentIndex*/ ctx[2] == 1 || /*currentIndex*/ ctx[2] == 0 || typeof /*currentIndex*/ ctx[2] == "string")) {
+    				prop_dev(button0, "disabled", button0_disabled_value);
+    			}
+
+    			if (!current || dirty & /*currentIndex*/ 4) set_data_dev(t2, /*currentIndex*/ ctx[2]);
+    			if (!current || dirty & /*indices*/ 8) set_data_dev(t4, /*indices*/ ctx[3]);
+
+    			if (!current || dirty & /*currentIndex, indices*/ 12 && button1_disabled_value !== (button1_disabled_value = /*currentIndex*/ ctx[2] == /*indices*/ ctx[3] || typeof /*currentIndex*/ ctx[2] == "string")) {
+    				prop_dev(button1, "disabled", button1_disabled_value);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			add_render_callback(() => {
+    				if (div_outro) div_outro.end(1);
+    				div_intro = create_in_transition(div, fade, { delay: 500, duration: 200 });
+    				div_intro.start();
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (div_intro) div_intro.invalidate();
+    			div_outro = create_out_transition(div, fade, { duration: 200 });
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (detaching && div_outro) div_outro.end();
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2$7.name,
+    		type: "if",
+    		source: "(95:4) {#if indices}",
     		ctx
     	});
 
@@ -3880,7 +4095,7 @@ var app = (function () {
     function create_fragment$d(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*attendanceData*/ ctx[0] && create_if_block$b(ctx);
+    	let if_block = /*attendanceData*/ ctx[1] && /*selectedProfile*/ ctx[0] != null && create_if_block$b(ctx);
 
     	const block = {
     		c: function create() {
@@ -3896,11 +4111,11 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (/*attendanceData*/ ctx[0]) {
+    			if (/*attendanceData*/ ctx[1] && /*selectedProfile*/ ctx[0] != null) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
-    					if (dirty & /*attendanceData*/ 1) {
+    					if (dirty & /*attendanceData, selectedProfile*/ 3) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -3951,32 +4166,34 @@ var app = (function () {
     	const io = require("socket.io-client");
     	const socket = io("http://127.0.0.1:14500");
     	let { selectedProfile } = $$props;
-    	let attendanceData;
+    	let attendanceData, currentIndex, indices;
 
     	onMount(() => {
-    		socket.emit("attendanceDataGet", selectedProfile._id);
+    		socket.emit("attendanceDocumentCountGet", selectedProfile._id);
     	});
 
     	onDestroy(() => {
     		socket.disconnect();
-    		$$invalidate(0, attendanceData = undefined);
+    		$$invalidate(1, attendanceData = undefined);
+    		$$invalidate(3, indices = undefined);
+    		$$invalidate(2, currentIndex = undefined);
+    	});
+
+    	socket.on("attendanceDocumentRetrieveList", value => {
+    		try {
+    			$$invalidate(3, indices = value);
+    			$$invalidate(2, currentIndex = 1);
+    			socket.emit("attendanceDataGet", selectedProfile._id);
+    		} catch {
+    			value = undefined;
+    		}
     	});
 
     	socket.on("attendanceDataRetrieveList", list => {
     		try {
-    			$$invalidate(0, attendanceData = list);
+    			$$invalidate(1, attendanceData = list);
     		} catch {
     			list = undefined;
-    		}
-    	});
-
-    	socket.on("attendanceDataInsert", insert => {
-    		try {
-    			if (insert.UserId == selectedProfile._id) {
-    				$$invalidate(0, attendanceData = [insert, ...attendanceData]);
-    			}
-    		} catch {
-    			insert = undefined;
     		}
     	});
 
@@ -3996,7 +4213,7 @@ var app = (function () {
     				}
     			});
 
-    			$$invalidate(0, attendanceData);
+    			$$invalidate(1, attendanceData);
     		} catch {
     			update = undefined;
     		}
@@ -4008,11 +4225,27 @@ var app = (function () {
     				return Attendance._id != deleted;
     			});
 
-    			$$invalidate(0, attendanceData = updatedAttendanceData);
+    			$$invalidate(1, attendanceData = updatedAttendanceData);
     		} catch {
     			deleted = undefined;
     		}
     	});
+
+    	let subtract = () => {
+    		currentIndex != 1 && currentIndex != 0
+    		? $$invalidate(2, currentIndex--, currentIndex)
+    		: currentIndex;
+
+    		socket.emit("attendanceDataGet", selectedProfile._id, currentIndex - 1);
+    	};
+
+    	let add = () => {
+    		currentIndex != indices
+    		? $$invalidate(2, currentIndex++, currentIndex)
+    		: currentIndex;
+
+    		socket.emit("attendanceDataGet", selectedProfile._id, currentIndex - 1);
+    	};
 
     	const writable_props = ['selectedProfile'];
 
@@ -4021,37 +4254,44 @@ var app = (function () {
     	});
 
     	$$self.$$set = $$props => {
-    		if ('selectedProfile' in $$props) $$invalidate(1, selectedProfile = $$props.selectedProfile);
+    		if ('selectedProfile' in $$props) $$invalidate(0, selectedProfile = $$props.selectedProfile);
     	};
 
     	$$self.$capture_state = () => ({
     		onDestroy,
     		onMount,
-    		fly,
     		fade,
     		AttendanceCard,
     		io,
     		socket,
     		selectedProfile,
-    		attendanceData
+    		attendanceData,
+    		currentIndex,
+    		indices,
+    		subtract,
+    		add
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('selectedProfile' in $$props) $$invalidate(1, selectedProfile = $$props.selectedProfile);
-    		if ('attendanceData' in $$props) $$invalidate(0, attendanceData = $$props.attendanceData);
+    		if ('selectedProfile' in $$props) $$invalidate(0, selectedProfile = $$props.selectedProfile);
+    		if ('attendanceData' in $$props) $$invalidate(1, attendanceData = $$props.attendanceData);
+    		if ('currentIndex' in $$props) $$invalidate(2, currentIndex = $$props.currentIndex);
+    		if ('indices' in $$props) $$invalidate(3, indices = $$props.indices);
+    		if ('subtract' in $$props) $$invalidate(4, subtract = $$props.subtract);
+    		if ('add' in $$props) $$invalidate(5, add = $$props.add);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [attendanceData, selectedProfile];
+    	return [selectedProfile, attendanceData, currentIndex, indices, subtract, add];
     }
 
     class AttendanceContainer extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$d, create_fragment$d, safe_not_equal, { selectedProfile: 1 });
+    		init(this, options, instance$d, create_fragment$d, safe_not_equal, { selectedProfile: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -4063,7 +4303,7 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*selectedProfile*/ ctx[1] === undefined && !('selectedProfile' in props)) {
+    		if (/*selectedProfile*/ ctx[0] === undefined && !('selectedProfile' in props)) {
     			console.warn("<AttendanceContainer> was created without expected prop 'selectedProfile'");
     		}
     	}
@@ -4396,7 +4636,7 @@ var app = (function () {
     /* src\components\EditScreen.svelte generated by Svelte v3.44.0 */
     const file$b = "src\\components\\EditScreen.svelte";
 
-    // (65:36) 
+    // (92:36) 
     function create_if_block_3$3(ctx) {
     	let formcompletepage;
     	let t0;
@@ -4408,7 +4648,7 @@ var app = (function () {
     	let dispose;
 
     	formcompletepage = new FormCompletePage({
-    			props: { completed: /*completed*/ ctx[3] },
+    			props: { completed: /*completed*/ ctx[2] },
     			$$inline: true
     		});
 
@@ -4418,9 +4658,9 @@ var app = (function () {
     			t0 = space();
     			button = element("button");
     			t1 = text("Close");
-    			button.disabled = button_disabled_value = /*completed*/ ctx[3] < 5;
-    			attr_dev(button, "class", "svelte-uf5se");
-    			add_location(button, file$b, 66, 6, 2990);
+    			button.disabled = button_disabled_value = /*completed*/ ctx[2] < 5;
+    			attr_dev(button, "class", "svelte-wt4wyj");
+    			add_location(button, file$b, 93, 6, 3863);
     		},
     		m: function mount(target, anchor) {
     			mount_component(formcompletepage, target, anchor);
@@ -4430,16 +4670,16 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*editButtonToggle*/ ctx[4], false, false, false);
+    				dispose = listen_dev(button, "click", /*editButtonToggle*/ ctx[5], false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
     			const formcompletepage_changes = {};
-    			if (dirty & /*completed*/ 8) formcompletepage_changes.completed = /*completed*/ ctx[3];
+    			if (dirty & /*completed*/ 4) formcompletepage_changes.completed = /*completed*/ ctx[2];
     			formcompletepage.$set(formcompletepage_changes);
 
-    			if (!current || dirty & /*completed*/ 8 && button_disabled_value !== (button_disabled_value = /*completed*/ ctx[3] < 5)) {
+    			if (!current || dirty & /*completed*/ 4 && button_disabled_value !== (button_disabled_value = /*completed*/ ctx[2] < 5)) {
     				prop_dev(button, "disabled", button_disabled_value);
     			}
     		},
@@ -4465,14 +4705,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$3.name,
     		type: "if",
-    		source: "(65:36) ",
+    		source: "(92:36) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:4) {#if updateProcess == false}
+    // (66:4) {#if updateProcess == false}
     function create_if_block$9(ctx) {
     	let div;
     	let section0;
@@ -4492,8 +4732,8 @@ var app = (function () {
     	let dispose;
 
     	function select_block_type_1(ctx, dirty) {
-    		if (/*tabIndex*/ ctx[1] == 0) return create_if_block_1$8;
-    		if (/*tabIndex*/ ctx[1] == 1) return create_if_block_2$5;
+    		if (/*tabIndex*/ ctx[0] == 0) return create_if_block_1$8;
+    		if (/*tabIndex*/ ctx[0] == 1) return create_if_block_2$5;
     	}
 
     	let current_block_type = select_block_type_1(ctx);
@@ -4520,11 +4760,11 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Update";
     			attr_dev(path, "d", "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2");
-    			add_location(path, file$b, 41, 220, 1491);
+    			add_location(path, file$b, 68, 220, 2321);
     			attr_dev(circle, "cx", "12");
     			attr_dev(circle, "cy", "7");
     			attr_dev(circle, "r", "4");
-    			add_location(circle, file$b, 41, 279, 1550);
+    			add_location(circle, file$b, 68, 279, 2380);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "width", "24");
     			attr_dev(svg, "height", "24");
@@ -4534,21 +4774,21 @@ var app = (function () {
     			attr_dev(svg, "stroke-width", "2");
     			attr_dev(svg, "stroke-linecap", "round");
     			attr_dev(svg, "stroke-linejoin", "round");
-    			attr_dev(svg, "class", "feather feather-user svelte-uf5se");
-    			add_location(svg, file$b, 41, 10, 1281);
-    			attr_dev(h1, "class", "svelte-uf5se");
-    			add_location(h1, file$b, 42, 10, 1606);
-    			attr_dev(section0, "class", "design svelte-uf5se");
-    			add_location(section0, file$b, 40, 8, 1245);
-    			attr_dev(section1, "class", "text-field svelte-uf5se");
-    			add_location(section1, file$b, 44, 8, 1662);
-    			add_location(div, file$b, 39, 6, 1230);
-    			attr_dev(button0, "class", "svelte-uf5se");
-    			add_location(button0, file$b, 61, 8, 2767);
-    			attr_dev(button1, "class", "svelte-uf5se");
-    			add_location(button1, file$b, 62, 8, 2827);
-    			attr_dev(section2, "class", "two-buttons svelte-uf5se");
-    			add_location(section2, file$b, 60, 6, 2728);
+    			attr_dev(svg, "class", "feather feather-user svelte-wt4wyj");
+    			add_location(svg, file$b, 68, 10, 2111);
+    			attr_dev(h1, "class", "svelte-wt4wyj");
+    			add_location(h1, file$b, 69, 10, 2436);
+    			attr_dev(section0, "class", "design svelte-wt4wyj");
+    			add_location(section0, file$b, 67, 8, 2075);
+    			attr_dev(section1, "class", "text-field svelte-wt4wyj");
+    			add_location(section1, file$b, 71, 8, 2492);
+    			add_location(div, file$b, 66, 6, 2060);
+    			attr_dev(button0, "class", "svelte-wt4wyj");
+    			add_location(button0, file$b, 88, 8, 3640);
+    			attr_dev(button1, "class", "svelte-wt4wyj");
+    			add_location(button1, file$b, 89, 8, 3700);
+    			attr_dev(section2, "class", "two-buttons svelte-wt4wyj");
+    			add_location(section2, file$b, 87, 6, 3601);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4569,8 +4809,8 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*editButtonToggle*/ ctx[4], false, false, false),
-    					listen_dev(button1, "click", /*userProfileUpdateRequest*/ ctx[5], false, false, false)
+    					listen_dev(button0, "click", /*editButtonToggle*/ ctx[5], false, false, false),
+    					listen_dev(button1, "click", /*userProfileUpdateRequest*/ ctx[6], false, false, false)
     				];
 
     				mounted = true;
@@ -4609,14 +4849,14 @@ var app = (function () {
     		block,
     		id: create_if_block$9.name,
     		type: "if",
-    		source: "(39:4) {#if updateProcess == false}",
+    		source: "(66:4) {#if updateProcess == false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:34) 
+    // (81:34) 
     function create_if_block_2$5(ctx) {
     	let input0;
     	let t0;
@@ -4635,48 +4875,48 @@ var app = (function () {
     			input2 = element("input");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Enter first name");
-    			attr_dev(input0, "class", "svelte-uf5se");
-    			add_location(input0, file$b, 54, 12, 2358);
+    			attr_dev(input0, "class", "svelte-wt4wyj");
+    			add_location(input0, file$b, 81, 12, 3213);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "placeholder", "Enter last name");
-    			attr_dev(input1, "class", "svelte-uf5se");
-    			add_location(input1, file$b, 55, 12, 2464);
+    			attr_dev(input1, "class", "svelte-wt4wyj");
+    			add_location(input1, file$b, 82, 12, 3325);
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "placeholder", "Enter employee occupation");
-    			attr_dev(input2, "class", "svelte-uf5se");
-    			add_location(input2, file$b, 56, 12, 2568);
+    			attr_dev(input2, "class", "svelte-wt4wyj");
+    			add_location(input2, file$b, 83, 12, 3435);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, input0, anchor);
-    			set_input_value(input0, /*selectedProfile*/ ctx[0].Name.First);
+    			set_input_value(input0, /*employeeProfileBackup*/ ctx[4].Name.First);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, input1, anchor);
-    			set_input_value(input1, /*selectedProfile*/ ctx[0].Name.Last);
+    			set_input_value(input1, /*employeeProfileBackup*/ ctx[4].Name.Last);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, input2, anchor);
-    			set_input_value(input2, /*selectedProfile*/ ctx[0].Occupation);
+    			set_input_value(input2, /*employeeProfileBackup*/ ctx[4].Occupation);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler_1*/ ctx[12]),
-    					listen_dev(input1, "input", /*input1_input_handler_1*/ ctx[13]),
-    					listen_dev(input2, "input", /*input2_input_handler_1*/ ctx[14])
+    					listen_dev(input0, "input", /*input0_input_handler_1*/ ctx[14]),
+    					listen_dev(input1, "input", /*input1_input_handler_1*/ ctx[15]),
+    					listen_dev(input2, "input", /*input2_input_handler_1*/ ctx[16])
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*selectedProfile*/ 1 && input0.value !== /*selectedProfile*/ ctx[0].Name.First) {
-    				set_input_value(input0, /*selectedProfile*/ ctx[0].Name.First);
+    			if (dirty & /*employeeProfileBackup*/ 16 && input0.value !== /*employeeProfileBackup*/ ctx[4].Name.First) {
+    				set_input_value(input0, /*employeeProfileBackup*/ ctx[4].Name.First);
     			}
 
-    			if (dirty & /*selectedProfile*/ 1 && input1.value !== /*selectedProfile*/ ctx[0].Name.Last) {
-    				set_input_value(input1, /*selectedProfile*/ ctx[0].Name.Last);
+    			if (dirty & /*employeeProfileBackup*/ 16 && input1.value !== /*employeeProfileBackup*/ ctx[4].Name.Last) {
+    				set_input_value(input1, /*employeeProfileBackup*/ ctx[4].Name.Last);
     			}
 
-    			if (dirty & /*selectedProfile*/ 1 && input2.value !== /*selectedProfile*/ ctx[0].Occupation) {
-    				set_input_value(input2, /*selectedProfile*/ ctx[0].Occupation);
+    			if (dirty & /*employeeProfileBackup*/ 16 && input2.value !== /*employeeProfileBackup*/ ctx[4].Occupation) {
+    				set_input_value(input2, /*employeeProfileBackup*/ ctx[4].Occupation);
     			}
     		},
     		d: function destroy(detaching) {
@@ -4694,14 +4934,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$5.name,
     		type: "if",
-    		source: "(54:34) ",
+    		source: "(81:34) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:10) {#if tabIndex == 0}
+    // (73:10) {#if tabIndex == 0}
     function create_if_block_1$8(ctx) {
     	let input0;
     	let t0;
@@ -4731,75 +4971,75 @@ var app = (function () {
     			attr_dev(input0, "id", "firstname");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Enter first name");
-    			attr_dev(input0, "class", "svelte-uf5se");
-    			add_location(input0, file$b, 46, 12, 1735);
+    			attr_dev(input0, "class", "svelte-wt4wyj");
+    			add_location(input0, file$b, 73, 12, 2565);
     			attr_dev(input1, "id", "lastname");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "placeholder", "Enter last name");
-    			attr_dev(input1, "class", "svelte-uf5se");
-    			add_location(input1, file$b, 47, 12, 1856);
+    			attr_dev(input1, "class", "svelte-wt4wyj");
+    			add_location(input1, file$b, 74, 12, 2691);
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "placeholder", "Enter student course");
-    			attr_dev(input2, "class", "svelte-uf5se");
-    			add_location(input2, file$b, 48, 12, 1974);
+    			attr_dev(input2, "class", "svelte-wt4wyj");
+    			add_location(input2, file$b, 75, 12, 2814);
     			attr_dev(input3, "type", "text");
     			attr_dev(input3, "placeholder", "Year");
-    			attr_dev(input3, "class", "svelte-uf5se");
-    			add_location(input3, file$b, 50, 14, 2126);
+    			attr_dev(input3, "class", "svelte-wt4wyj");
+    			add_location(input3, file$b, 77, 14, 2971);
     			attr_dev(input4, "type", "text");
-    			attr_dev(input4, "class", "svelte-uf5se");
-    			add_location(input4, file$b, 51, 14, 2224);
-    			attr_dev(div, "class", "sub-form svelte-uf5se");
-    			add_location(div, file$b, 49, 12, 2088);
+    			attr_dev(input4, "class", "svelte-wt4wyj");
+    			add_location(input4, file$b, 78, 14, 3074);
+    			attr_dev(div, "class", "sub-form svelte-wt4wyj");
+    			add_location(div, file$b, 76, 12, 2933);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, input0, anchor);
-    			set_input_value(input0, /*selectedProfile*/ ctx[0].Name.First);
+    			set_input_value(input0, /*studentProfileBackup*/ ctx[3].Name.First);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, input1, anchor);
-    			set_input_value(input1, /*selectedProfile*/ ctx[0].Name.Last);
+    			set_input_value(input1, /*studentProfileBackup*/ ctx[3].Name.Last);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, input2, anchor);
-    			set_input_value(input2, /*selectedProfile*/ ctx[0].Student.Course);
+    			set_input_value(input2, /*studentProfileBackup*/ ctx[3].Student.Course);
     			insert_dev(target, t2, anchor);
     			insert_dev(target, div, anchor);
     			append_dev(div, input3);
-    			set_input_value(input3, /*selectedProfile*/ ctx[0].Student.Year);
+    			set_input_value(input3, /*studentProfileBackup*/ ctx[3].Student.Year);
     			append_dev(div, t3);
     			append_dev(div, input4);
-    			set_input_value(input4, /*selectedProfile*/ ctx[0].Student.Section);
+    			set_input_value(input4, /*studentProfileBackup*/ ctx[3].Student.Section);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[7]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[8]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[9]),
-    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[10]),
-    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[11])
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[10]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[11]),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[12]),
+    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[13])
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*selectedProfile*/ 1 && input0.value !== /*selectedProfile*/ ctx[0].Name.First) {
-    				set_input_value(input0, /*selectedProfile*/ ctx[0].Name.First);
+    			if (dirty & /*studentProfileBackup*/ 8 && input0.value !== /*studentProfileBackup*/ ctx[3].Name.First) {
+    				set_input_value(input0, /*studentProfileBackup*/ ctx[3].Name.First);
     			}
 
-    			if (dirty & /*selectedProfile*/ 1 && input1.value !== /*selectedProfile*/ ctx[0].Name.Last) {
-    				set_input_value(input1, /*selectedProfile*/ ctx[0].Name.Last);
+    			if (dirty & /*studentProfileBackup*/ 8 && input1.value !== /*studentProfileBackup*/ ctx[3].Name.Last) {
+    				set_input_value(input1, /*studentProfileBackup*/ ctx[3].Name.Last);
     			}
 
-    			if (dirty & /*selectedProfile*/ 1 && input2.value !== /*selectedProfile*/ ctx[0].Student.Course) {
-    				set_input_value(input2, /*selectedProfile*/ ctx[0].Student.Course);
+    			if (dirty & /*studentProfileBackup*/ 8 && input2.value !== /*studentProfileBackup*/ ctx[3].Student.Course) {
+    				set_input_value(input2, /*studentProfileBackup*/ ctx[3].Student.Course);
     			}
 
-    			if (dirty & /*selectedProfile*/ 1 && input3.value !== /*selectedProfile*/ ctx[0].Student.Year) {
-    				set_input_value(input3, /*selectedProfile*/ ctx[0].Student.Year);
+    			if (dirty & /*studentProfileBackup*/ 8 && input3.value !== /*studentProfileBackup*/ ctx[3].Student.Year) {
+    				set_input_value(input3, /*studentProfileBackup*/ ctx[3].Student.Year);
     			}
 
-    			if (dirty & /*selectedProfile*/ 1 && input4.value !== /*selectedProfile*/ ctx[0].Student.Section) {
-    				set_input_value(input4, /*selectedProfile*/ ctx[0].Student.Section);
+    			if (dirty & /*studentProfileBackup*/ 8 && input4.value !== /*studentProfileBackup*/ ctx[3].Student.Section) {
+    				set_input_value(input4, /*studentProfileBackup*/ ctx[3].Student.Section);
     			}
     		},
     		d: function destroy(detaching) {
@@ -4819,7 +5059,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$8.name,
     		type: "if",
-    		source: "(46:10) {#if tabIndex == 0}",
+    		source: "(73:10) {#if tabIndex == 0}",
     		ctx
     	});
 
@@ -4840,8 +5080,8 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*updateProcess*/ ctx[2] == false) return 0;
-    		if (/*updateProcess*/ ctx[2] == true) return 1;
+    		if (/*updateProcess*/ ctx[1] == false) return 0;
+    		if (/*updateProcess*/ ctx[1] == true) return 1;
     		return -1;
     	}
 
@@ -4854,10 +5094,10 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			if (if_block) if_block.c();
-    			attr_dev(div0, "class", "forms svelte-uf5se");
-    			add_location(div0, file$b, 37, 2, 1085);
-    			attr_dev(div1, "class", "container svelte-uf5se");
-    			add_location(div1, file$b, 36, 0, 990);
+    			attr_dev(div0, "class", "forms svelte-wt4wyj");
+    			add_location(div0, file$b, 64, 2, 1915);
+    			attr_dev(div1, "class", "container svelte-wt4wyj");
+    			add_location(div1, file$b, 63, 0, 1820);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4914,7 +5154,7 @@ var app = (function () {
 
     			add_render_callback(() => {
     				if (div0_outro) div0_outro.end(1);
-    				div0_intro = create_in_transition(div0, fly, { delay: 250, y: 500, duration: 250 });
+    				div0_intro = create_in_transition(div0, fly, { delay: 250, y: 500, duration: 200 });
     				div0_intro.start();
     			});
 
@@ -4963,26 +5203,58 @@ var app = (function () {
     	const io = require("socket.io-client");
     	const socket = io("http://127.0.0.1:14500");
     	let { editButtonClicked, selectedProfile, tabIndex } = $$props;
-    	let updateProcess = false, completed = 0;
+
+    	let updateProcess = false,
+    		completed = 0,
+    		studentProfileBackup,
+    		employeeProfileBackup;
+
+    	try {
+    		studentProfileBackup = {
+    			LoggedIn: selectedProfile.LoggedIn,
+    			Name: {
+    				First: selectedProfile.Name.First,
+    				Last: selectedProfile.Name.Last
+    			},
+    			Student: {
+    				Course: selectedProfile.Student.Course,
+    				Year: selectedProfile.Student.Year,
+    				Section: selectedProfile.Student.Section
+    			},
+    			_id: selectedProfile._id
+    		};
+    	} catch {
+    		employeeProfileBackup = {
+    			LoggedIn: selectedProfile.LoggedIn,
+    			Name: {
+    				First: selectedProfile.Name.First,
+    				Last: selectedProfile.Name.Last
+    			},
+    			Occupation: selectedProfile.Occupation,
+    			_id: selectedProfile._id
+    		};
+    	}
 
     	onDestroy(() => {
-    		$$invalidate(2, updateProcess = undefined);
+    		$$invalidate(1, updateProcess = undefined);
+    		$$invalidate(3, studentProfileBackup = undefined);
+    		$$invalidate(4, employeeProfileBackup = undefined);
     	});
 
     	let editButtonToggle = () => {
-    		$$invalidate(6, editButtonClicked = !editButtonClicked);
+    		$$invalidate(7, editButtonClicked = !editButtonClicked);
     	};
 
     	let userProfileUpdateRequest = () => {
-    		$$invalidate(2, updateProcess = true);
-    		$$invalidate(3, completed = 4);
+    		$$invalidate(1, updateProcess = true);
+    		$$invalidate(2, completed = 4);
 
     		switch (tabIndex) {
     			case 0:
-    				socket.emit("studentDataPatchRequest", selectedProfile);
+    				socket.emit("studentDataPatchRequest", studentProfileBackup);
     				break;
     			case 1:
-    				socket.emit("employeeDataPatchRequest", selectedProfile);
+    				socket.emit("employeeDataPatchRequest", employeeProfileBackup);
     				break;
     		}
     	};
@@ -4991,8 +5263,8 @@ var app = (function () {
     		setTimeout(
     			() => {
     				status
-    				? $$invalidate(3, completed = 7)
-    				: $$invalidate(3, completed = 6);
+    				? $$invalidate(2, completed = 7)
+    				: $$invalidate(2, completed = 6);
     			},
     			1000
     		);
@@ -5005,49 +5277,49 @@ var app = (function () {
     	});
 
     	function input0_input_handler() {
-    		selectedProfile.Name.First = this.value;
-    		$$invalidate(0, selectedProfile);
+    		studentProfileBackup.Name.First = this.value;
+    		$$invalidate(3, studentProfileBackup);
     	}
 
     	function input1_input_handler() {
-    		selectedProfile.Name.Last = this.value;
-    		$$invalidate(0, selectedProfile);
+    		studentProfileBackup.Name.Last = this.value;
+    		$$invalidate(3, studentProfileBackup);
     	}
 
     	function input2_input_handler() {
-    		selectedProfile.Student.Course = this.value;
-    		$$invalidate(0, selectedProfile);
+    		studentProfileBackup.Student.Course = this.value;
+    		$$invalidate(3, studentProfileBackup);
     	}
 
     	function input3_input_handler() {
-    		selectedProfile.Student.Year = this.value;
-    		$$invalidate(0, selectedProfile);
+    		studentProfileBackup.Student.Year = this.value;
+    		$$invalidate(3, studentProfileBackup);
     	}
 
     	function input4_input_handler() {
-    		selectedProfile.Student.Section = this.value;
-    		$$invalidate(0, selectedProfile);
+    		studentProfileBackup.Student.Section = this.value;
+    		$$invalidate(3, studentProfileBackup);
     	}
 
     	function input0_input_handler_1() {
-    		selectedProfile.Name.First = this.value;
-    		$$invalidate(0, selectedProfile);
+    		employeeProfileBackup.Name.First = this.value;
+    		$$invalidate(4, employeeProfileBackup);
     	}
 
     	function input1_input_handler_1() {
-    		selectedProfile.Name.Last = this.value;
-    		$$invalidate(0, selectedProfile);
+    		employeeProfileBackup.Name.Last = this.value;
+    		$$invalidate(4, employeeProfileBackup);
     	}
 
     	function input2_input_handler_1() {
-    		selectedProfile.Occupation = this.value;
-    		$$invalidate(0, selectedProfile);
+    		employeeProfileBackup.Occupation = this.value;
+    		$$invalidate(4, employeeProfileBackup);
     	}
 
     	$$self.$$set = $$props => {
-    		if ('editButtonClicked' in $$props) $$invalidate(6, editButtonClicked = $$props.editButtonClicked);
-    		if ('selectedProfile' in $$props) $$invalidate(0, selectedProfile = $$props.selectedProfile);
-    		if ('tabIndex' in $$props) $$invalidate(1, tabIndex = $$props.tabIndex);
+    		if ('editButtonClicked' in $$props) $$invalidate(7, editButtonClicked = $$props.editButtonClicked);
+    		if ('selectedProfile' in $$props) $$invalidate(8, selectedProfile = $$props.selectedProfile);
+    		if ('tabIndex' in $$props) $$invalidate(0, tabIndex = $$props.tabIndex);
     	};
 
     	$$self.$capture_state = () => ({
@@ -5062,18 +5334,22 @@ var app = (function () {
     		tabIndex,
     		updateProcess,
     		completed,
+    		studentProfileBackup,
+    		employeeProfileBackup,
     		editButtonToggle,
     		userProfileUpdateRequest
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('editButtonClicked' in $$props) $$invalidate(6, editButtonClicked = $$props.editButtonClicked);
-    		if ('selectedProfile' in $$props) $$invalidate(0, selectedProfile = $$props.selectedProfile);
-    		if ('tabIndex' in $$props) $$invalidate(1, tabIndex = $$props.tabIndex);
-    		if ('updateProcess' in $$props) $$invalidate(2, updateProcess = $$props.updateProcess);
-    		if ('completed' in $$props) $$invalidate(3, completed = $$props.completed);
-    		if ('editButtonToggle' in $$props) $$invalidate(4, editButtonToggle = $$props.editButtonToggle);
-    		if ('userProfileUpdateRequest' in $$props) $$invalidate(5, userProfileUpdateRequest = $$props.userProfileUpdateRequest);
+    		if ('editButtonClicked' in $$props) $$invalidate(7, editButtonClicked = $$props.editButtonClicked);
+    		if ('selectedProfile' in $$props) $$invalidate(8, selectedProfile = $$props.selectedProfile);
+    		if ('tabIndex' in $$props) $$invalidate(0, tabIndex = $$props.tabIndex);
+    		if ('updateProcess' in $$props) $$invalidate(1, updateProcess = $$props.updateProcess);
+    		if ('completed' in $$props) $$invalidate(2, completed = $$props.completed);
+    		if ('studentProfileBackup' in $$props) $$invalidate(3, studentProfileBackup = $$props.studentProfileBackup);
+    		if ('employeeProfileBackup' in $$props) $$invalidate(4, employeeProfileBackup = $$props.employeeProfileBackup);
+    		if ('editButtonToggle' in $$props) $$invalidate(5, editButtonToggle = $$props.editButtonToggle);
+    		if ('userProfileUpdateRequest' in $$props) $$invalidate(6, userProfileUpdateRequest = $$props.userProfileUpdateRequest);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -5081,13 +5357,15 @@ var app = (function () {
     	}
 
     	return [
-    		selectedProfile,
     		tabIndex,
     		updateProcess,
     		completed,
+    		studentProfileBackup,
+    		employeeProfileBackup,
     		editButtonToggle,
     		userProfileUpdateRequest,
     		editButtonClicked,
+    		selectedProfile,
     		input0_input_handler,
     		input1_input_handler,
     		input2_input_handler,
@@ -5104,9 +5382,9 @@ var app = (function () {
     		super(options);
 
     		init(this, options, instance$b, create_fragment$b, safe_not_equal, {
-    			editButtonClicked: 6,
-    			selectedProfile: 0,
-    			tabIndex: 1
+    			editButtonClicked: 7,
+    			selectedProfile: 8,
+    			tabIndex: 0
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -5119,15 +5397,15 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*editButtonClicked*/ ctx[6] === undefined && !('editButtonClicked' in props)) {
+    		if (/*editButtonClicked*/ ctx[7] === undefined && !('editButtonClicked' in props)) {
     			console.warn("<EditScreen> was created without expected prop 'editButtonClicked'");
     		}
 
-    		if (/*selectedProfile*/ ctx[0] === undefined && !('selectedProfile' in props)) {
+    		if (/*selectedProfile*/ ctx[8] === undefined && !('selectedProfile' in props)) {
     			console.warn("<EditScreen> was created without expected prop 'selectedProfile'");
     		}
 
-    		if (/*tabIndex*/ ctx[1] === undefined && !('tabIndex' in props)) {
+    		if (/*tabIndex*/ ctx[0] === undefined && !('tabIndex' in props)) {
     			console.warn("<EditScreen> was created without expected prop 'tabIndex'");
     		}
     	}
@@ -5178,11 +5456,11 @@ var app = (function () {
     	let button1;
     	let t8;
     	let button2;
-    	let div0_intro;
-    	let div0_outro;
     	let t10;
     	let div1;
     	let attendancecontainer;
+    	let div2_intro;
+    	let div2_outro;
     	let t11;
     	let if_block1_anchor;
     	let current;
@@ -5232,22 +5510,22 @@ var app = (function () {
     			t11 = space();
     			if (if_block1) if_block1.c();
     			if_block1_anchor = empty();
-    			attr_dev(h1, "class", "svelte-1kfgacd");
-    			add_location(h1, file$a, 42, 6, 1196);
-    			attr_dev(button0, "class", "svelte-1kfgacd");
-    			add_location(button0, file$a, 49, 8, 1536);
-    			attr_dev(button1, "class", "danger svelte-1kfgacd");
-    			add_location(button1, file$a, 50, 8, 1603);
-    			attr_dev(button2, "class", "danger svelte-1kfgacd");
-    			add_location(button2, file$a, 51, 8, 1684);
-    			attr_dev(section, "class", "svelte-1kfgacd");
-    			add_location(section, file$a, 48, 6, 1517);
-    			attr_dev(div0, "class", "details-section svelte-1kfgacd");
-    			add_location(div0, file$a, 41, 4, 1083);
+    			attr_dev(h1, "class", "svelte-53bpal");
+    			add_location(h1, file$a, 42, 6, 1184);
+    			attr_dev(button0, "class", "svelte-53bpal");
+    			add_location(button0, file$a, 49, 8, 1524);
+    			attr_dev(button1, "class", "danger svelte-53bpal");
+    			add_location(button1, file$a, 50, 8, 1591);
+    			attr_dev(button2, "class", "danger svelte-53bpal");
+    			add_location(button2, file$a, 51, 8, 1672);
+    			attr_dev(section, "class", "svelte-53bpal");
+    			add_location(section, file$a, 48, 6, 1505);
+    			attr_dev(div0, "class", "details-section svelte-53bpal");
+    			add_location(div0, file$a, 41, 4, 1147);
     			attr_dev(div1, "class", "attendance-section");
-    			add_location(div1, file$a, 55, 4, 1791);
-    			attr_dev(div2, "class", "container svelte-1kfgacd");
-    			add_location(div2, file$a, 40, 2, 1054);
+    			add_location(div1, file$a, 55, 4, 1779);
+    			attr_dev(div2, "class", "container svelte-53bpal");
+    			add_location(div2, file$a, 40, 2, 1049);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -5328,29 +5606,29 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(attendancecontainer.$$.fragment, local);
 
     			add_render_callback(() => {
-    				if (div0_outro) div0_outro.end(1);
-    				div0_intro = create_in_transition(div0, fly, { delay: 350, y: -50, duration: 250 });
-    				div0_intro.start();
+    				if (div2_outro) div2_outro.end(1);
+    				div2_intro = create_in_transition(div2, fade, { delay: 350, duration: 200 });
+    				div2_intro.start();
     			});
 
-    			transition_in(attendancecontainer.$$.fragment, local);
     			transition_in(if_block1);
     			current = true;
     		},
     		o: function outro(local) {
-    			if (div0_intro) div0_intro.invalidate();
-    			div0_outro = create_out_transition(div0, fade, { duration: 200 });
     			transition_out(attendancecontainer.$$.fragment, local);
+    			if (div2_intro) div2_intro.invalidate();
+    			div2_outro = create_out_transition(div2, fade, { duration: 200 });
     			transition_out(if_block1);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
     			if_block0.d();
-    			if (detaching && div0_outro) div0_outro.end();
     			destroy_component(attendancecontainer);
+    			if (detaching && div2_outro) div2_outro.end();
     			if (detaching) detach_dev(t11);
     			if (if_block1) if_block1.d(detaching);
     			if (detaching) detach_dev(if_block1_anchor);
@@ -5380,8 +5658,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "subtitle svelte-1kfgacd");
-    			add_location(p, file$a, 46, 8, 1444);
+    			attr_dev(p, "class", "subtitle svelte-53bpal");
+    			add_location(p, file$a, 46, 8, 1432);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5426,8 +5704,8 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = text("-");
     			t4 = text(t4_value);
-    			attr_dev(p, "class", "subtitle svelte-1kfgacd");
-    			add_location(p, file$a, 44, 8, 1298);
+    			attr_dev(p, "class", "subtitle svelte-53bpal");
+    			add_location(p, file$a, 44, 8, 1286);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5648,7 +5926,6 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		onDestroy,
-    		fly,
     		fade,
     		AttendanceContainer,
     		EditScreen,
@@ -5760,7 +6037,7 @@ var app = (function () {
     			attr_dev(svg, "stroke-width", "2");
     			attr_dev(svg, "stroke-linecap", "round");
     			attr_dev(svg, "stroke-linejoin", "round");
-    			attr_dev(svg, "class", "delete svelte-1i0k8a3");
+    			attr_dev(svg, "class", "delete svelte-6dr52l");
     			add_location(svg, file$9, 28, 6, 830);
     		},
     		m: function mount(target, anchor) {
@@ -5813,7 +6090,7 @@ var app = (function () {
     			attr_dev(svg, "stroke-width", "2");
     			attr_dev(svg, "stroke-linecap", "round");
     			attr_dev(svg, "stroke-linejoin", "round");
-    			attr_dev(svg, "class", "feather feather-search svelte-1i0k8a3");
+    			attr_dev(svg, "class", "feather feather-search svelte-6dr52l");
     			add_location(svg, file$9, 13, 6, 374);
     		},
     		m: function mount(target, anchor) {
@@ -5864,11 +6141,11 @@ var app = (function () {
     			button = element("button");
     			if_block.c();
     			attr_dev(input, "placeholder", "Search...");
-    			attr_dev(input, "class", "svelte-1i0k8a3");
+    			attr_dev(input, "class", "svelte-6dr52l");
     			add_location(input, file$9, 10, 2, 245);
-    			attr_dev(button, "class", "svelte-1i0k8a3");
+    			attr_dev(button, "class", "svelte-6dr52l");
     			add_location(button, file$9, 11, 2, 307);
-    			attr_dev(div, "class", "svelte-1i0k8a3");
+    			attr_dev(div, "class", "svelte-6dr52l");
     			add_location(div, file$9, 9, 0, 153);
     		},
     		l: function claim(nodes) {
@@ -6012,14 +6289,14 @@ var app = (function () {
     /* src\components\MainContainer.svelte generated by Svelte v3.44.0 */
     const file$8 = "src\\components\\MainContainer.svelte";
 
-    // (27:2) {:else}
+    // (37:2) {:else}
     function create_else_block_1$2(ctx) {
     	let selectedprofilecontainer;
     	let updating_selectedProfile;
     	let current;
 
     	function selectedprofilecontainer_selectedProfile_binding(value) {
-    		/*selectedprofilecontainer_selectedProfile_binding*/ ctx[8](value);
+    		/*selectedprofilecontainer_selectedProfile_binding*/ ctx[12](value);
     	}
 
     	let selectedprofilecontainer_props = { tabIndex: /*tabIndex*/ ctx[1] };
@@ -6073,14 +6350,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1$2.name,
     		type: "else",
-    		source: "(27:2) {:else}",
+    		source: "(37:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (12:2) {#if selectedProfile == null}
+    // (22:2) {#if selectedProfile == null}
     function create_if_block$6(ctx) {
     	let t;
     	let current_block_type_index;
@@ -6186,21 +6463,21 @@ var app = (function () {
     		block,
     		id: create_if_block$6.name,
     		type: "if",
-    		source: "(12:2) {#if selectedProfile == null}",
+    		source: "(22:2) {#if selectedProfile == null}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (13:4) {#if tabIndex === 0 || tabIndex === 1}
+    // (23:4) {#if tabIndex === 0 || tabIndex === 1}
     function create_if_block_4$1(ctx) {
     	let searchbar;
     	let updating_searchValue;
     	let current;
 
     	function searchbar_searchValue_binding(value) {
-    		/*searchbar_searchValue_binding*/ ctx[3](value);
+    		/*searchbar_searchValue_binding*/ ctx[5](value);
     	}
 
     	let searchbar_props = {};
@@ -6249,14 +6526,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(13:4) {#if tabIndex === 0 || tabIndex === 1}",
+    		source: "(23:4) {#if tabIndex === 0 || tabIndex === 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (24:4) {:else}
+    // (34:4) {:else}
     function create_else_block$3(ctx) {
     	let logbookcontainer;
     	let current;
@@ -6289,14 +6566,14 @@ var app = (function () {
     		block,
     		id: create_else_block$3.name,
     		type: "else",
-    		source: "(24:4) {:else}",
+    		source: "(34:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (16:4) {#if tabIndex === 0 || tabIndex === 1}
+    // (26:4) {#if tabIndex === 0 || tabIndex === 1}
     function create_if_block_1$6(ctx) {
     	let div;
     	let current_block_type_index;
@@ -6319,8 +6596,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", "body svelte-1nasks9");
-    			add_location(div, file$8, 16, 6, 655);
+    			attr_dev(div, "class", "body svelte-5xtm1");
+    			add_location(div, file$8, 26, 6, 889);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6389,26 +6666,31 @@ var app = (function () {
     		block,
     		id: create_if_block_1$6.name,
     		type: "if",
-    		source: "(16:4) {#if tabIndex === 0 || tabIndex === 1}",
+    		source: "(26:4) {#if tabIndex === 0 || tabIndex === 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (20:33) 
+    // (30:33) 
     function create_if_block_3$2(ctx) {
     	let employeescontainer;
     	let updating_searchValue;
     	let updating_selectedProfile;
+    	let updating_currentIndex;
     	let current;
 
     	function employeescontainer_searchValue_binding(value) {
-    		/*employeescontainer_searchValue_binding*/ ctx[6](value);
+    		/*employeescontainer_searchValue_binding*/ ctx[9](value);
     	}
 
     	function employeescontainer_selectedProfile_binding(value) {
-    		/*employeescontainer_selectedProfile_binding*/ ctx[7](value);
+    		/*employeescontainer_selectedProfile_binding*/ ctx[10](value);
+    	}
+
+    	function employeescontainer_currentIndex_binding(value) {
+    		/*employeescontainer_currentIndex_binding*/ ctx[11](value);
     	}
 
     	let employeescontainer_props = {};
@@ -6421,6 +6703,10 @@ var app = (function () {
     		employeescontainer_props.selectedProfile = /*selectedProfile*/ ctx[0];
     	}
 
+    	if (/*employeeIndex*/ ctx[4] !== void 0) {
+    		employeescontainer_props.currentIndex = /*employeeIndex*/ ctx[4];
+    	}
+
     	employeescontainer = new EmployeesContainer({
     			props: employeescontainer_props,
     			$$inline: true
@@ -6428,6 +6714,7 @@ var app = (function () {
 
     	binding_callbacks.push(() => bind(employeescontainer, 'searchValue', employeescontainer_searchValue_binding));
     	binding_callbacks.push(() => bind(employeescontainer, 'selectedProfile', employeescontainer_selectedProfile_binding));
+    	binding_callbacks.push(() => bind(employeescontainer, 'currentIndex', employeescontainer_currentIndex_binding));
 
     	const block = {
     		c: function create() {
@@ -6452,6 +6739,12 @@ var app = (function () {
     				add_flush_callback(() => updating_selectedProfile = false);
     			}
 
+    			if (!updating_currentIndex && dirty & /*employeeIndex*/ 16) {
+    				updating_currentIndex = true;
+    				employeescontainer_changes.currentIndex = /*employeeIndex*/ ctx[4];
+    				add_flush_callback(() => updating_currentIndex = false);
+    			}
+
     			employeescontainer.$set(employeescontainer_changes);
     		},
     		i: function intro(local) {
@@ -6472,26 +6765,31 @@ var app = (function () {
     		block,
     		id: create_if_block_3$2.name,
     		type: "if",
-    		source: "(20:33) ",
+    		source: "(30:33) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (18:8) {#if tabIndex === 0}
+    // (28:8) {#if tabIndex === 0}
     function create_if_block_2$3(ctx) {
     	let studentscontainer;
     	let updating_searchValue;
     	let updating_selectedProfile;
+    	let updating_currentIndex;
     	let current;
 
     	function studentscontainer_searchValue_binding(value) {
-    		/*studentscontainer_searchValue_binding*/ ctx[4](value);
+    		/*studentscontainer_searchValue_binding*/ ctx[6](value);
     	}
 
     	function studentscontainer_selectedProfile_binding(value) {
-    		/*studentscontainer_selectedProfile_binding*/ ctx[5](value);
+    		/*studentscontainer_selectedProfile_binding*/ ctx[7](value);
+    	}
+
+    	function studentscontainer_currentIndex_binding(value) {
+    		/*studentscontainer_currentIndex_binding*/ ctx[8](value);
     	}
 
     	let studentscontainer_props = {};
@@ -6504,6 +6802,10 @@ var app = (function () {
     		studentscontainer_props.selectedProfile = /*selectedProfile*/ ctx[0];
     	}
 
+    	if (/*studentIndex*/ ctx[3] !== void 0) {
+    		studentscontainer_props.currentIndex = /*studentIndex*/ ctx[3];
+    	}
+
     	studentscontainer = new StudentsContainer({
     			props: studentscontainer_props,
     			$$inline: true
@@ -6511,6 +6813,7 @@ var app = (function () {
 
     	binding_callbacks.push(() => bind(studentscontainer, 'searchValue', studentscontainer_searchValue_binding));
     	binding_callbacks.push(() => bind(studentscontainer, 'selectedProfile', studentscontainer_selectedProfile_binding));
+    	binding_callbacks.push(() => bind(studentscontainer, 'currentIndex', studentscontainer_currentIndex_binding));
 
     	const block = {
     		c: function create() {
@@ -6535,6 +6838,12 @@ var app = (function () {
     				add_flush_callback(() => updating_selectedProfile = false);
     			}
 
+    			if (!updating_currentIndex && dirty & /*studentIndex*/ 8) {
+    				updating_currentIndex = true;
+    				studentscontainer_changes.currentIndex = /*studentIndex*/ ctx[3];
+    				add_flush_callback(() => updating_currentIndex = false);
+    			}
+
     			studentscontainer.$set(studentscontainer_changes);
     		},
     		i: function intro(local) {
@@ -6555,7 +6864,7 @@ var app = (function () {
     		block,
     		id: create_if_block_2$3.name,
     		type: "if",
-    		source: "(18:8) {#if tabIndex === 0}",
+    		source: "(28:8) {#if tabIndex === 0}",
     		ctx
     	});
 
@@ -6582,8 +6891,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if_block.c();
-    			attr_dev(div, "class", "wrapper svelte-1nasks9");
-    			add_location(div, file$8, 10, 0, 456);
+    			attr_dev(div, "class", "wrapper svelte-5xtm1");
+    			add_location(div, file$8, 20, 0, 690);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6651,6 +6960,7 @@ var app = (function () {
     	validate_slots('MainContainer', slots, []);
     	let { tabIndex, selectedProfile } = $$props;
     	let searchValue = "";
+    	let studentIndex = 1, employeeIndex = 1;
     	const writable_props = ['tabIndex', 'selectedProfile'];
 
     	Object.keys($$props).forEach(key => {
@@ -6672,6 +6982,11 @@ var app = (function () {
     		$$invalidate(0, selectedProfile);
     	}
 
+    	function studentscontainer_currentIndex_binding(value) {
+    		studentIndex = value;
+    		($$invalidate(3, studentIndex), $$invalidate(1, tabIndex));
+    	}
+
     	function employeescontainer_searchValue_binding(value) {
     		searchValue = value;
     		$$invalidate(2, searchValue);
@@ -6680,6 +6995,11 @@ var app = (function () {
     	function employeescontainer_selectedProfile_binding(value) {
     		selectedProfile = value;
     		$$invalidate(0, selectedProfile);
+    	}
+
+    	function employeescontainer_currentIndex_binding(value) {
+    		employeeIndex = value;
+    		($$invalidate(4, employeeIndex), $$invalidate(1, tabIndex));
     	}
 
     	function selectedprofilecontainer_selectedProfile_binding(value) {
@@ -6700,28 +7020,49 @@ var app = (function () {
     		SearchBar,
     		tabIndex,
     		selectedProfile,
-    		searchValue
+    		searchValue,
+    		studentIndex,
+    		employeeIndex
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('tabIndex' in $$props) $$invalidate(1, tabIndex = $$props.tabIndex);
     		if ('selectedProfile' in $$props) $$invalidate(0, selectedProfile = $$props.selectedProfile);
     		if ('searchValue' in $$props) $$invalidate(2, searchValue = $$props.searchValue);
+    		if ('studentIndex' in $$props) $$invalidate(3, studentIndex = $$props.studentIndex);
+    		if ('employeeIndex' in $$props) $$invalidate(4, employeeIndex = $$props.employeeIndex);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*tabIndex*/ 2) {
+    			if (tabIndex == 0) {
+    				$$invalidate(4, employeeIndex = 1);
+    			} else if (tabIndex == 1) {
+    				$$invalidate(3, studentIndex = 1);
+    			} else if (tabIndex == 2) {
+    				$$invalidate(4, employeeIndex = 1);
+    				$$invalidate(3, studentIndex = 1);
+    			}
+    		}
+    	};
+
     	return [
     		selectedProfile,
     		tabIndex,
     		searchValue,
+    		studentIndex,
+    		employeeIndex,
     		searchbar_searchValue_binding,
     		studentscontainer_searchValue_binding,
     		studentscontainer_selectedProfile_binding,
+    		studentscontainer_currentIndex_binding,
     		employeescontainer_searchValue_binding,
     		employeescontainer_selectedProfile_binding,
+    		employeescontainer_currentIndex_binding,
     		selectedprofilecontainer_selectedProfile_binding
     	];
     }
@@ -9203,7 +9544,7 @@ var app = (function () {
 
     			add_render_callback(() => {
     				if (div0_outro) div0_outro.end(1);
-    				div0_intro = create_in_transition(div0, fly, { delay: 250, y: 500, duration: 250 });
+    				div0_intro = create_in_transition(div0, fly, { delay: 250, y: 500, duration: 200 });
     				div0_intro.start();
     			});
 

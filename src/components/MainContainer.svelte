@@ -6,6 +6,16 @@
   import SearchBar from "./interface/SearchBar.svelte";
   export let tabIndex, selectedProfile;
   let searchValue = "";
+  let studentIndex = 1, employeeIndex = 1;
+
+  $: if (tabIndex == 0) {
+    employeeIndex = 1;
+  } else if (tabIndex == 1) {
+    studentIndex = 1;
+  } else if (tabIndex == 2) {
+    employeeIndex = 1;
+    studentIndex = 1;
+  }
 </script>
 
 <div class="wrapper">
@@ -16,9 +26,9 @@
     {#if tabIndex === 0 || tabIndex === 1}
       <div class="body">
         {#if tabIndex === 0}
-          <StudentsContainer bind:searchValue bind:selectedProfile />
+          <StudentsContainer bind:searchValue bind:selectedProfile bind:currentIndex={studentIndex} />
         {:else if tabIndex === 1}
-          <EmployeesContainer bind:searchValue bind:selectedProfile />
+          <EmployeesContainer bind:searchValue bind:selectedProfile bind:currentIndex={employeeIndex} />
         {/if}
       </div>
     {:else}
@@ -39,6 +49,6 @@
     flex-flow: column nowrap;
   }
   .body {
-    margin: 32px 75px;
+    margin: 55px 75px 32px;
   }
 </style>

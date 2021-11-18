@@ -5,10 +5,37 @@
   const io = require("socket.io-client");
   const socket = io("http://127.0.0.1:14500");
   export let editButtonClicked, selectedProfile, tabIndex;
-  let updateProcess = false, completed = 0;
+  let updateProcess = false, completed = 0, studentProfileBackup, employeeProfileBackup;
+  try {
+    studentProfileBackup = {
+      LoggedIn: selectedProfile.LoggedIn,
+      Name: {
+        First: selectedProfile.Name.First,
+        Last: selectedProfile.Name.Last,
+      },
+      Student: {
+        Course: selectedProfile.Student.Course,
+        Year: selectedProfile.Student.Year,
+        Section: selectedProfile.Student.Section,
+      },
+      _id: selectedProfile._id
+    };
+  } catch {
+    employeeProfileBackup = {
+      LoggedIn: selectedProfile.LoggedIn,
+      Name: {
+        First: selectedProfile.Name.First,
+        Last: selectedProfile.Name.Last,
+      },
+      Occupation: selectedProfile.Occupation,
+      _id: selectedProfile._id
+    }
+  }
 
   onDestroy(() => {
     updateProcess = undefined;
+    studentProfileBackup = undefined;
+    employeeProfileBackup = undefined;
   });
 
   let editButtonToggle = () => {
@@ -19,10 +46,10 @@
     completed = 4;
     switch (tabIndex) {
       case 0:
-        socket.emit("studentDataPatchRequest", selectedProfile);
+        socket.emit("studentDataPatchRequest", studentProfileBackup);
         break;
       case 1:
-        socket.emit("employeeDataPatchRequest", selectedProfile);
+        socket.emit("employeeDataPatchRequest", employeeProfileBackup);
         break
     }
   }
@@ -35,7 +62,7 @@
 </script>
 
 <div class="container" in:fade={{ duration: 200 }} out:fade={{delay: 250, duration: 200 }}>
-  <div class="forms" in:fly={{ delay: 250, y: 500, duration: 250 }} out:fly="{{y: 50,  duration: 200 }}">
+  <div class="forms" in:fly={{ delay: 250, y: 500, duration: 200 }} out:fly="{{y: 50,  duration: 200 }}">
     {#if updateProcess == false}
       <div>
         <section class="design">
@@ -44,17 +71,17 @@
         </section>
         <section class="text-field">
           {#if tabIndex == 0}
-            <input bind:value={selectedProfile.Name.First} id="firstname" type="text" placeholder="Enter first name" />
-            <input bind:value={selectedProfile.Name.Last} id="lastname" type="text" placeholder="Enter last name" />
-            <input bind:value={selectedProfile.Student.Course} type="text" placeholder="Enter student course" />
+            <input bind:value={studentProfileBackup.Name.First} id="firstname" type="text" placeholder="Enter first name" />
+            <input bind:value={studentProfileBackup.Name.Last} id="lastname" type="text" placeholder="Enter last name" />
+            <input bind:value={studentProfileBackup.Student.Course} type="text" placeholder="Enter student course" />
             <div class="sub-form">
-              <input bind:value={selectedProfile.Student.Year} type="text" placeholder="Year" />
-              <input bind:value={selectedProfile.Student.Section} type="text">
+              <input bind:value={studentProfileBackup.Student.Year} type="text" placeholder="Year" />
+              <input bind:value={studentProfileBackup.Student.Section} type="text">
             </div>
           {:else if tabIndex == 1}
-            <input bind:value={selectedProfile.Name.First} type="text" placeholder="Enter first name" />
-            <input bind:value={selectedProfile.Name.Last} type="text" placeholder="Enter last name" />
-            <input bind:value={selectedProfile.Occupation} type="text" placeholder="Enter employee occupation" />
+            <input bind:value={employeeProfileBackup.Name.First} type="text" placeholder="Enter first name" />
+            <input bind:value={employeeProfileBackup.Name.Last} type="text" placeholder="Enter last name" />
+            <input bind:value={employeeProfileBackup.Occupation} type="text" placeholder="Enter employee occupation" />
           {/if}
         </section>
       </div>
@@ -108,6 +135,7 @@
     justify-self: center;
   }
   section.two-buttons {
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }

@@ -1,13 +1,13 @@
 <script>
   import { fly, fade } from 'svelte/transition';
-  export let Employee, selectedProfile;
+  export let Employee, selectedProfile, indices;
 
   function selectProfile() {
     selectedProfile = Employee;
   }
 </script>
 
-<div class="card" in:fly={{ delay: 350, y: -50, duration: 200 }} out:fade={{ duration: 200 }}>
+<div class:margin={indices != 0} class="card" in:fly={{ delay: 350, y: -50, duration: 200 }} out:fade={{ duration: 200 }}>
   <div class="status" class:check={Employee.LoggedIn} class:cross={!Employee.LoggedIn}>
     {#if Employee.LoggedIn}
       <svg xmlns="http://www.w3.org/2000/svg" class="check" fill="none" viewBox="0 0 24 24">
@@ -43,6 +43,9 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+  }
+  div.card.margin:last-child {
+    margin-bottom: 64px;
   }
   div.status {
     display: grid;

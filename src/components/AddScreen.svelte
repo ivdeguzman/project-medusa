@@ -112,7 +112,7 @@
 </script>
 
 <div class="container" in:fade="{{ duration: 200 }}" out:fade="{{delay: 250, duration: 200 }}">
-  <div class="forms" in:fly={{ delay: 250, y: 500, duration: 250 }} out:fly="{{y: 50,  duration: 200 }}">
+  <div class="forms" in:fly={{ delay: 250, y: 500, duration: 200 }} out:fly="{{y: 50,  duration: 200 }}">
     <section class="top-button">
     {#if completed < 4}
       {#if !cancelPressed}
